@@ -6,23 +6,23 @@ Wanted a music focused skin to put in a car and this is the result.  Effort also
 
 Why the name?  Using the old expression, "To a child with a hammer, everything is a nail"   I am very much a child when it comes to skinning for Kodi, and the skinning engine has been used as a hammer on this skin.
 
-###A few usage notes:
+A few usage notes:
 
-####Dependency:
+Dependency:
 script.listhammer is needed for the skin to fully function.  It available in the same repository as this skin.
 
-####Control:
+Control:
 This will work with a keyboard an mouse.   
 Touch functions will generally work, but not for everything.
 A custom keyboard file is in the /other folder.  It allows F1 through F4 to control the soft buttons at the bottom of most windows.  F5 will function as select/enter as appropriate, and a longpress F5 will bring up contect menus (this is important for playlists, below)
 
-####Playlists:
+Playlists:
 The playlists window has a menu that functions the same as a context window.  Longpress F5 will produce a popup selection allows - 
-*Choose an icon for the playlist.  Images for the icons are stored in /media/playlist.icons, and can be readily replaced with any other images.
-*Create a new playlist
-*Edit an existing playlist
-*Delete an existing playlist
+Choose an icon for the playlist.  Images for the icons are stored in /media/playlist.icons, and can be readily replaced with any other images.
+Create a new playlist
+Edit an existing playlist
+Delete an existing playlist
 
-####Skin Settings:
+Skin Settings:
 The skin colors are user selectable from a menu.
 Under options, the softbuttons can be disabled.  But they remain visible for use via keyboard only, when using the custom keyboard file.
