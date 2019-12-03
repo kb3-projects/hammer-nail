@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes> 
+
+<include name="FlowHomeNotMoving">
+
+<param name="ArtType"/>
+	
+	<definition>
+
+	<control type="group">
+	<visible>true</visible>
+	
+					<animation type="WindowClose">
+						<effect type="fade" end="0" time="Flow.openfadetime"/>
+					</animation>
+
+			<control type="image">
+				<description>Animated Album Cover Right 6</description>
+					<left>Flow.Home.Left</left>
+					<top>Flow.Home.Top</top>
+					<width>Flow.Home.Wd</width>
+					<height>Flow.Home.Ht</height>
+					
+				<camera x="Camera.X.home" y="Camera.Y.home"/>
+				
+					<animation type="WindowOpen">
+						<effect type="slide" end="Flow.Home.Sld.L6,Flow.Home.Sld.Z6" time="Flow.opentime"/>
+						<effect type="rotatey" end="Flow.Home.Ang.L6" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="Flow.Home.Fade.6" time="Flow.openfadetime"/>
+						<effect type="zoom" end="Flow.Home.Zoom.6" center="0,0" time="Flow.Scrolltime"/>
+					</animation>
+					
+					<animation type="WindowClose">
+						<effect type="slide" start="Flow.Home.Sld.L6,Flow.Home.Sld.Z6" end="0,0" time="Flow.opentime"/>
+						<effect type="rotatey" start="Flow.Home.Ang.L6" end="0" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="0" time="Flow.openfadetime"/>
+					</animation>	
+
+					
+				<animation reversible="false" type="Visible">
+						<effect type="fade" delay="Flow.Scrolltime" end="100" time="0"/>
+					</animation> 
+					
+					<animation reversible="false" type="Hidden">
+						<effect type="fade" delay="10" end="0" time="10"/>
+					</animation> 	
+					
+				<visible>![Container(50000).OnPrevious|Container(50000).OnNext]</visible>
+				<!-- <visible>![Container(50000).OnPrevious|Container(50000).OnNext]</visible> -->
+				
+				
+				<texture background="true">Container(50000).ListItem(-6).$PARAM[ArtType]</texture>
+			</control>			
+			
+			<control type="image">
+				<description>Animated Album Cover Right 5</description>
+					<left>Flow.Home.Left</left>
+					<top>Flow.Home.Top</top>
+					<width>Flow.Home.Wd</width>
+					<height>Flow.Home.Ht</height>
+				<camera x="Camera.X.home" y="Camera.Y.home"/>
+					<animation type="WindowOpen">
+						<effect type="slide" end="Flow.Home.Sld.L5,Flow.Home.Sld.Z5" time="Flow.opentime"/>
+						<effect type="rotatey" end="Flow.Home.Ang.L5" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="Flow.Home.Fade.5" time="Flow.openfadetime"/>
+						<effect type="zoom" end="Flow.Home.Zoom.5" center="0,0" time="Flow.Scrolltime"/>
+					</animation> 
+					
+					<animation type="WindowClose">
+						<effect type="slide" start="Flow.Home.Sld.L5,Flow.Home.Sld.Z5" end="0,0" time="Flow.opentime"/>
+						<effect type="rotatey" start="Flow.Home.Ang.L5" end="0" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="0" time="Flow.openfadetime"/>
+					</animation> 
+					
+					<animation reversible="false" type="Visible">
+						<effect type="fade" delay="Flow.Scrolltime" end="100" time="0"/>
+					</animation> 
+					
+						<animation reversible="false" type="Hidden">
+						<effect type="fade" delay="10" end="10" time="10"/>
+					</animation> 
+					
+				<visible>![Container(50000).OnPrevious|Container(50000).OnNext]</visible>
+				
+				
+				<texture background="true">$INFO[Container(50000).ListItem(-5).$PARAM[ArtType]]</texture>
+			</control>
+			
+			<control type="image">
+				<description>Animated Album Cover Right 4</description>
+					<left>Flow.Home.Left</left>
+					<top>Flow.Home.Top</top>
+					<width>Flow.Home.Wd</width>
+					<height>Flow.Home.Ht</height>
+				<camera x="Camera.X.home" y="Camera.Y.home"/>
+					<animation type="WindowOpen">
+						<effect type="slide" end="Flow.Home.Sld.L4,Flow.Home.Sld.Z4" time="Flow.opentime"/>
+						<effect type="rotatey" end="Flow.Home.Ang.L4" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="Flow.Home.Fade.4" time="Flow.openfadetime"/>
+						<effect type="zoom" end="Flow.Home.Zoom.4" center="0,0" time="Flow.Scrolltime"/>
+					</animation> 
+					
+					<animation type="WindowClose">
+						<effect type="slide" start="Flow.Home.Sld.L4,Flow.Home.Sld.Z4" end="0,0" time="Flow.opentime"/>
+						<effect type="rotatey" start="Flow.Home.Ang.L4" end="0" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="0" time="Flow.openfadetime"/>
+					</animation>
+				
+				<animation reversible="false" type="Visible">
+						<effect type="fade" delay="Flow.Scrolltime" end="100" time="0"/>
+					</animation> 
+					
+						<animation reversible="false" type="Hidden">
+						<effect type="fade" delay="10" end="10" time="10"/>
+					</animation> 
+					
+					
+				<visible>![Container(50000).OnPrevious|Container(50000).OnNext]</visible>
+				
+				
+				<texture background="true">$INFO[Container(50000).ListItem(-4).$PARAM[ArtType]]</texture>
+			</control>
+			
+			<control type="image">
+				<description>Animated Album Cover Right 3</description>
+					<left>Flow.Home.Left</left>
+					<top>Flow.Home.Top</top>
+					<width>Flow.Home.Wd</width>
+					<height>Flow.Home.Ht</height>
+				<camera x="Camera.X.home" y="Camera.Y.home"/>
+					<animation type="WindowOpen">
+						<effect type="slide" end="Flow.Home.Sld.L3,Flow.Home.Sld.Z3" time="Flow.opentime"/>
+						<effect type="rotatey" end="Flow.Home.Ang.L3" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="Flow.Home.Fade.3" time="Flow.openfadetime"/>
+						<effect type="zoom" end="Flow.Home.Zoom.3" center="0,0" time="Flow.Scrolltime"/>
+					</animation> 
+					
+					<animation type="WindowClose">
+						<effect type="slide" start="Flow.Home.Sld.L3,Flow.Home.Sld.Z3" end="0,0" time="Flow.opentime"/>
+						<effect type="rotatey" start="Flow.Home.Ang.L3" end="0" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="0" time="Flow.openfadetime"/>
+					</animation>
+				
+					<animation reversible="false" type="Visible">
+						<effect type="fade" delay="Flow.Scrolltime" end="100" time="0"/>
+					</animation> 
+					
+				<animation reversible="false" type="Hidden">
+						<effect type="fade" delay="10" end="10" time="10"/>
+					</animation> 
+					
+				<visible>![Container(50000).OnPrevious|Container(50000).OnNext]</visible>
+				
+				<texture background="true">$INFO[Container(50000).ListItem(-3).$PARAM[ArtType]]</texture>
+			</control>
+			
+			<control type="image">
+				<description>Animated Album Cover Right 2</description>
+					<left>Flow.Home.Left</left>
+					<top>Flow.Home.Top</top>
+					<width>Flow.Home.Wd</width>
+					<height>Flow.Home.Ht</height>
+				<camera x="Camera.X.home" y="Camera.Y.home"/>
+					<animation type="WindowOpen">
+						<effect type="slide" end="Flow.Home.Sld.L2,Flow.Home.Sld.Z2" time="Flow.opentime"/>
+						<effect type="rotatey" end="Flow.Home.Ang.L2" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="Flow.Home.Fade.2" time="Flow.openfadetime"/>
+						<effect type="zoom" end="Flow.Home.Zoom.2" center="0,0" time="Flow.Scrolltime"/>
+					</animation> 
+					
+					<animation type="WindowClose">
+						<effect type="slide" start="Flow.Home.Sld.L2,Flow.Home.Sld.Z2" end="0,0" time="Flow.opentime"/>
+						<effect type="rotatey" start="Flow.Home.Ang.L2" end="0" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="0" time="Flow.openfadetime"/>
+					</animation>
+					
+					<animation reversible="false" type="Visible">
+						<effect type="fade" delay="Flow.Scrolltime" end="100" time="0"/>
+					</animation> 
+					
+					<animation reversible="false" type="Hidden">
+						<effect type="fade" delay="10" end="10" time="10"/>
+					</animation> 
+					
+				<visible>![Container(50000).OnPrevious|Container(50000).OnNext]</visible>
+				
+				<texture background="true">$INFO[Container(50000).ListItem(-2).$PARAM[ArtType]]</texture>
+			</control>
+
+			<control type="image">
+				<description>Album Cover Right 1</description>
+					<left>Flow.Home.Left</left>
+					<top>Flow.Home.Top</top>
+					<width>Flow.Home.Wd</width>
+					<height>Flow.Home.Ht</height>
+				<camera x="Camera.X.home" y="Camera.Y.home"/>
+				
+					<animation type="WindowOpen">
+						<effect type="slide" end="Flow.Home.Sld.L1,Flow.Home.Sld.Z1" time="Flow.opentime"/>
+						<effect  type="rotatey" end="Flow.Home.Ang.L1" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="Flow.Home.Fade.1" time="Flow.openfadetime"/>
+						<effect type="zoom" end="Flow.Home.Zoom.1" center="0,0" time="Flow.Scrolltime"/>
+					</animation> 
+					
+					<animation type="WindowClose">
+						<effect type="slide" start="Flow.Home.Sld.L1,Flow.Home.Sld.Z1" end="0,0" time="Flow.opentime"/>
+						<effect type="rotatey" start="Flow.Home.Ang.L1" end="0" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="0" time="Flow.openfadetime"/>
+					</animation>
+					
+					<animation reversible="false" type="Visible">
+						<effect type="fade" delay="Flow.Scrolltime" end="100" time="0"/>
+					</animation> 
+					
+					<animation reversible="false" type="Hidden">
+						<effect type="fade" delay="10" end="10" time="10"/>
+					</animation> 
+					
+					
+				<visible>![Container(50000).OnPrevious|Container(50000).OnNext]</visible>
+				
+				<texture background="true">$INFO[Container(50000).ListItem(-1).$PARAM[ArtType]]</texture>
+			</control>
+			
+			<control type="image">
+				<description>Album Cover Left 6</description>
+					<left>Flow.Home.Left</left>
+					<top>Flow.Home.Top</top>
+					<width>Flow.Home.Wd</width>
+					<height>Flow.Home.Wd</height>
+				<camera x="Camera.X.home" y="Camera.Y.home"/>
+					<animation type="WindowOpen">
+						<effect type="slide" end="Flow.Home.Sld.R6,Flow.Home.Sld.Z6" time="Flow.opentime"/>
+						<effect type="rotatey" end="Flow.Home.Ang.R6,0" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="0" time="Flow.openfadetime"/>
+						<effect type="zoom" end="Flow.Home.Zoom.6" center="0,0" time="Flow.Scrolltime"/>
+					</animation> 
+					
+				<animation reversible="false" type="Visible">
+						<effect type="fade" delay="Flow.Scrolltime" end="100" time="0"/>
+					</animation> 
+					
+					<animation type="WindowClose">
+						<effect type="slide" start="Flow.Home.Sld.R6,Flow.Home.Sld.Z6" end="0,0" time="Flow.opentime"/>
+						<effect type="rotatey" start="Flow.Home.Ang.R6" end="0" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="0" time="Flow.openfadetime"/>
+					</animation>
+					
+					<animation reversible="false" type="Hidden">
+						<effect type="fade" delay="10" end="10" time="10"/>
+					</animation> 
+					
+				<visible>![Container(50000).OnPrevious|Container(50000).OnNext]</visible>
+				<texture background="true">$INFO[Container(50000).ListItem(6).$PARAM[ArtType]]</texture>
+			</control>
+		
+			<control type="image">
+				<description>Album Cover Left 5</description>
+					<left>Flow.Home.Left</left>
+					<top>Flow.Home.Top</top>
+					<width>Flow.Home.Wd</width>
+					<height>Flow.Home.Wd</height>
+				<camera x="Camera.X.home" y="Camera.Y.home"/>
+					<animation type="WindowOpen">
+						<effect type="slide" end="Flow.Home.Sld.R5,Flow.Home.Sld.Z5" time="Flow.opentime"/>
+						<effect type="rotatey" end="Flow.Home.Ang.R5,0" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="Flow.Home.Fade.5" time="Flow.openfadetime"/>
+						<effect type="zoom" end="Flow.Home.Zoom.5" center="0,0" time="Flow.Scrolltime"/>
+					</animation> 
+					
+					<animation type="WindowClose">
+						<effect type="slide" start="Flow.Home.Sld.R5,Flow.Home.Sld.Z5" end="0,0" time="Flow.opentime"/>
+						<effect type="rotatey" start="Flow.Home.Ang.R5" end="0" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="0" time="Flow.openfadetime"/>
+					</animation>
+					
+					
+		<animation reversible="false" type="Visible">
+						<effect type="fade" delay="Flow.Scrolltime" end="100" time="0"/>
+					</animation> 
+					
+					<animation reversible="false" type="Hidden">
+						<effect type="fade" delay="10" end="10" time="10"/>
+					</animation> 
+					
+				<visible>![Container(50000).OnPrevious|Container(50000).OnNext]</visible>
+				<texture background="true">$INFO[Container(50000).ListItem(5).$PARAM[ArtType]]</texture>
+			</control>
+				
+			<control type="image">
+				<description>Album Cover Left 4</description>
+					<left>Flow.Home.Left</left>
+					<top>Flow.Home.Top</top>
+					<width>Flow.Home.Wd</width>
+					<height>Flow.Home.Wd</height>
+				<camera x="Camera.X.home" y="Camera.Y.home"/>
+					<animation type="WindowOpen">
+						<effect type="slide" end="Flow.Home.Sld.R4,Flow.Home.Sld.Z4" time="Flow.opentime"/>
+						<effect type="rotatey" end="Flow.Home.Ang.R4,0" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="Flow.Home.Fade.4" time="Flow.openfadetime"/>
+						<effect type="zoom" end="Flow.Home.Zoom.4" center="0,0" time="Flow.Scrolltime"/>
+					</animation> 
+								
+					<animation type="WindowClose">
+						<effect type="slide" start="Flow.Home.Sld.R4,Flow.Home.Sld.Z4" end="0,0" time="Flow.opentime"/>
+						<effect type="rotatey" start="Flow.Home.Ang.R4" end="0" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="0" time="Flow.openfadetime"/>
+					</animation>
+					
+					
+			<animation reversible="false" type="Visible">
+						<effect type="fade" delay="Flow.Scrolltime" end="100" time="0"/>
+					</animation> 
+					
+					<animation reversible="false" type="Hidden">
+						<effect type="fade" delay="10" end="10" time="10"/>
+					</animation> 
+					
+				<visible>![Container(50000).OnPrevious|Container(50000).OnNext]</visible>
+				<texture background="true">$INFO[Container(50000).ListItem(4).$PARAM[ArtType]]</texture>
+			</control>
+				
+			<control type="image">
+				<description>Album Cover Left 3</description>
+					<left>Flow.Home.Left</left>
+					<top>Flow.Home.Top</top>
+					<width>Flow.Home.Wd</width>
+					<height>Flow.Home.Wd</height>
+				<camera x="Camera.X.home" y="Camera.Y.home"/>
+					<animation type="WindowOpen">
+						<effect type="slide" end="Flow.Home.Sld.R3,Flow.Home.Sld.Z3" time="Flow.opentime"/>
+						<effect type="rotatey" end="Flow.Home.Ang.R3,0" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="Flow.Home.Fade.3" time="Flow.openfadetime"/>
+						<effect type="zoom" end="Flow.Home.Zoom.3" center="0,0" time="Flow.Scrolltime"/>
+					</animation> 
+					
+					<animation type="WindowClose">
+						<effect type="slide" start="Flow.Home.Sld.R3,Flow.Home.Sld.Z3" end="0,0" time="Flow.opentime"/>
+						<effect type="rotatey" start="Flow.Home.Ang.R3" end="0" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="0" time="Flow.openfadetime"/>
+					</animation> 
+					
+				<animation reversible="false" type="Visible">
+						<effect type="fade" delay="Flow.Scrolltime" end="100" time="0"/>
+					</animation> 
+					
+					<animation reversible="false" type="Hidden">
+						<effect type="fade" delay="10" end="10" time="10"/>
+					</animation> 
+					
+				<visible>![Container(50000).OnPrevious|Container(50000).OnNext]</visible>
+				<texture background="true">$INFO[Container(50000).ListItem(3).$PARAM[ArtType]]</texture>
+			</control>
+				
+			<control type="image">
+				<description>Album Cover Left 2</description>
+					<left>Flow.Home.Left</left>
+					<top>Flow.Home.Top</top>
+					<width>Flow.Home.Wd</width>
+					<height>Flow.Home.Wd</height>
+				<camera x="Camera.X.home" y="Camera.Y.home"/>
+					<animation type="WindowOpen">
+						<effect type="slide" end="Flow.Home.Sld.R2,Flow.Home.Sld.Z2" time="Flow.opentime"/>
+						<effect type="rotatey" end="Flow.Home.Ang.R2,0" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="Flow.Home.Fade.2" time="Flow.openfadetime"/>
+						<effect type="zoom" end="Flow.Home.Zoom.2" center="0,0" time="Flow.Scrolltime"/>
+					</animation> 
+					
+					<animation type="WindowClose">
+						<effect type="slide" start="Flow.Home.Sld.R2,Flow.Home.Sld.Z2" end="0,0" time="Flow.opentime"/>
+						<effect type="rotatey" start="Flow.Home.Ang.R2" end="0" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="0" time="Flow.openfadetime"/>
+					</animation> 
+					
+				<animation reversible="false" type="Visible">
+						<effect type="fade" delay="Flow.Scrolltime" end="100" time="0"/>
+					</animation> 
+					
+					<animation reversible="false" type="Hidden">
+						<effect type="fade" delay="10" end="10" time="10"/>
+					</animation> 
+					
+				<visible>![Container(50000).OnPrevious|Container(50000).OnNext]</visible>
+				
+				
+				<texture background="true">$INFO[Container(50000).ListItem(2).$PARAM[ArtType]]</texture>
+			</control>
+				
+			<control type="image">
+				<description>Album Cover Left 1</description>
+					<left>Flow.Home.Left</left>
+					<top>Flow.Home.Top</top>
+					<width>Flow.Home.Wd</width>
+					<height>Flow.Home.Wd</height>
+				<camera x="Camera.X.home" y="Camera.Y.home"/>
+					<animation type="WindowOpen">
+						<effect type="slide" end="Flow.Home.Sld.R1,Flow.Home.Sld.Z1" time="Flow.opentime"/>
+						<effect type="rotatey" end="Flow.Home.Ang.R1,0" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="Flow.Home.Fade.1" time="Flow.openfadetime"/>
+						<effect type="zoom" end="Flow.Home.Zoom.1" center="0,0" time="Flow.Scrolltime"/>
+					</animation> 
+					
+					<animation type="WindowClose">
+						<effect type="slide" start="Flow.Home.Sld.R1,Flow.Home.Sld.Z1" end="0,0" time="Flow.opentime"/>
+						<effect type="rotatey" start="Flow.Home.Ang.R1" end="0" center="0,0" time="Flow.opentime"/>
+						<effect type="fade" end="0" time="Flow.openfadetime"/>
+					</animation>
+				
+				<animation reversible="false" type="Visible">
+						<effect type="fade" delay="Flow.Scrolltime" end="100" time="0"/>
+					</animation> 
+					
+					<animation reversible="false" type="Hidden">
+						<effect type="fade" delay="10" end="10" time="10"/>
+					</animation> 
+					
+				<visible>![Container(50000).OnPrevious|Container(50000).OnNext]</visible>
+				
+				
+				<texture background="true">$INFO[Container(50000).ListItem(1).$PARAM[ArtType]]</texture>
+			</control>	
+		
+			<control type="image">
+				<description>Album Cover Center</description>
+					<left>Flow.Home.Left</left>
+					<top>Flow.Home.Top</top>
+					<width>Flow.Home.Wd</width>
+					<height>Flow.Home.Wd</height>
+				<camera x="Camera.X.home" y="Camera.Y.home"/>
+					<animation type="WindowOpen">
+						<effect type="fade" delay="0" start="0" end="100" time="Flow.openfadetime"/>
+						<effect type="zoom" end="Flow.Home.Zoom.0" center="0,0" time="10"/>
+					</animation> 
+					
+					<animation type="WindowClose">
+						<!-- <effect type="slide" end="Flow.Home.Sld.R6,0" time="Flow.opentime"/> -->
+						<!-- <effect type="rotatey" end="Flow.Home.Ang.R6" center="0,0" time="Flow.opentime"/> -->
+						<effect type="fade" end="0" time="Flow.openfadetime"/>
+					</animation>
+					
+				<animation reversible="false" type="Visible">
+						<effect type="fade" delay="Flow.Scrolltime" end="100" time="0"/>
+					</animation> 
+					
+					<animation reversible="false" type="Hidden">
+						<effect type="fade" delay="10" end="10" time="10"/>
+					</animation> 
+					
+				<visible>![Container(50000).OnPrevious|Container(50000).OnNext]</visible>
+				<texture background="true">$INFO[Container(50000).ListItem(0).$PARAM[ArtType]]</texture>
+			</control>
+			
+			
+			
+
+
+</control>
+</definition>
+</include>		
+</includes>

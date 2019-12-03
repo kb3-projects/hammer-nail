@@ -1,0 +1,185 @@
+<window id="1123">
+
+	<!-- <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation> -->
+	<!-- <animation effect="fade"  start="100" end="0" time="300">WindowClose</animation> -->
+	<onload>setfocus(50000)</onload>
+
+	<defaultcontrol>50000</defaultcontrol>
+	<!-- <include>Window_OpenClose_Fade</include> -->
+	<!-- <backgroundcolor>0</backgroundcolor> -->
+	<controls>
+	
+	<include>StandardBackground</include>
+	<include content="SoftButtons">
+		<param name="SoftButton1" value="PAUSE"/>
+		<param name="SoftButton1Alternate" value="PLAY"/>
+		<param name="SoftButton1Visible" value="Player.HasAudio"/>		
+		<param name="SoftButton1VisibleAlternate" value="Player.Paused"/>	
+		<param name="SoftButton1Action" value="PlayerControl(Play)"/>	
+		
+		<param name="SoftButton2" value="< ABC"/>
+		<param name="SoftButton2Alternate" value=""/>
+		<param name="SoftButton2Visible" value="!String.IsEmpty(Container(50000).ListItemNoWrap(-1).Artist)"/>
+		<param name="SoftButton2VisibleAlternate" value="false"/>		
+		<param name="SoftButton2Action" value="PrevLetter"/>
+		
+		<param name="SoftButton3" value="ABC >"/>
+		<param name="SoftButton3Alternate" value=""/>
+		<param name="SoftButton3Visible" value="!String.IsEmpty(Container(50000).ListItemNoWrap(1).Artist)"/>
+		<param name="SoftButton3VisibleAlternate" value="false"/>	
+		<param name="SoftButton3Action" value="NextLetter"/>		
+		
+		<param name="SoftButton4" value="HOME"/>
+		<param name="SoftButton4Alternate" value="set"/>
+		<param name="SoftButton4Visible" value="true"/>
+		<param name="SoftButton4VisibleAlternate" value="false"/>
+		<param name="SoftButton4Action" value="ActivateWindow(Home)"/>
+	</include>
+ 
+
+<!-- Top right buttons for other windows to avoid a lot of navigation while editing xml-->
+	<!-- <control type="button" id="998"> -->
+			<!-- <description>random test button</description> -->
+			<!-- <top>5</top> -->
+			<!-- <left>5</left> -->
+			<!-- <height>55</height> -->
+			<!-- <width>55</width> -->
+			<!-- <texturenofocus colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">NowPlaying.png</texturenofocus> -->
+			<!-- <texturefocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">NowPlaying.png</texturefocus> -->
+			<!-- <onclick>ActivateWindow(111)</onclick> -->
+	<!-- </control> -->
+	
+	<!-- <control type="button" id="995"> -->
+			<!-- <description>random test button 2</description> -->
+			<!-- <top>5</top> -->
+			<!-- <left>725</left> -->
+			<!-- <height>55</height> -->
+			<!-- <width>55</width> -->
+			<!-- <texturenofocus colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">questionmark_red.png</texturenofocus> -->
+			<!-- <texturefocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">questionmark_red.png</texturefocus> -->
+			<!-- <onclick>ActivateWindow(10111)</onclick> -->
+	<!-- </control> -->
+
+
+
+
+<!-- The home xml file actually starts here -->
+
+
+
+<!-- Title Label for the List -->
+	<control type="label">
+			<description>Albums</description>
+			<left>75</left>
+			<top>10</top>
+			<width>400</width>
+			<height>25</height>
+			<font>font40_bold</font>
+			<visible>false</visible>
+			<label>132</label>
+			<animation effect="fade" time="500">VisibleChange</animation>
+	</control>
+	
+	
+	
+
+	<!-- <control type="label"> -->
+			<!-- <description>Albums</description> -->
+			<!-- <left>125</left> -->
+			<!-- <top>10</top> -->
+			<!-- <width>400</width> -->
+			<!-- <height>25</height> -->
+			<!-- <font>font44_bold</font> -->
+			<!-- <visible>String.IsEmpty(Container(50000).ListItemNoWrap(1).Artist)</visible> -->
+
+			<!-- <label>Last Item in list</label> -->
+			<!-- <info>Container(50000).ListItemNoWrap(0).Album</info> -->
+	<!-- </control> -->
+
+		<control type="group">
+		<description>animation for album list</description>
+			<top>Flow.Main.Top</top>  <!-- The centerline of the list is the top -->
+			<left>Flow.Main.Left</left>	
+		
+			<include content="FlowLeft">
+				<param name="ArtType" value="thumb"/>
+			</include>
+			<include content="FlowRight">
+				<param name="ArtType" value="thumb"/>
+			</include>	  
+			<include content="FlowNotMoving">
+				<param name="ArtType" value="thumb"/>
+			</include>	
+	  
+		</control>
+
+<!-- Wraplist to control the animation -->
+		<control type="wraplist" id="50000">
+				<description>Albums view</description>
+				<left>0</left>
+				<top>0</top>
+				<width>1280</width>
+				<height>720</height>
+			
+		
+				<hitrect x="0" y="0" w="0" h="0" />			
+
+				<viewtype label="3D list">list</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>25</pagecontrol>
+				<scrolltime tween="linear" easing="inout">MusicList.Scrolltime</scrolltime>
+				<autoscroll>false</autoscroll>
+				<focusposition>0</focusposition>
+				
+		<!-- this is the list navigation and labels.   Item Diplay is handled separately. -->
+			<itemlayout width="0" height="0">
+					<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>1</width>
+							<height>1</height>
+					</control>
+			</itemlayout>
+				<focusedlayout width="0" height="0">
+					<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>1</width>
+							<height>1</height>
+					</control>
+					
+					<control type="label">
+						<description>Album Name</description>	
+						<include>FlowTitle</include>
+						<label>$INFO[ListItem.Album]</label>
+					</control>
+					
+					<control type="label">
+						<description>Artist Name</description>	
+						<include>TopCornerTitle</include>
+						<label>$INFO[ListItem.Artist]</label>
+					</control>
+					
+				</focusedlayout>
+				
+
+            <onclick>Skin.Reset(NotAnAlbum)</onclick>
+			<onclick>PlayMedia($INFO[ListItem.FolderPath],isdir)</onclick>
+			<onclick>ActivateWindow(1120)</onclick>
+			<content target="music" sortby="artist" >musicdb://albums/</content>
+		</control>
+	
+	
+
+	
+    <!-- this label is here so it is drawn on top of the album covers -->
+    <!-- <control type="label"> -->
+        <!-- <description>Artist Name</description>	 -->
+        <!-- <include>TopCornerTitle</include> -->
+        <!-- <label>$INFO[ListItem.Artist]</label> -->
+    <!-- </control> -->
+
+
+ 		
+	</controls>	
+</window>

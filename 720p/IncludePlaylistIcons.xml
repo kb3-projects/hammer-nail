@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<includes> 
+<include name="PlaylistIcons">
+
+<item id="1">
+<label>80's</label>
+<label2>playlist.icons/80's.png</label2>
+<icon>playlist.icons/80's.png</icon>
+</item> 
+
+<item id="2">
+<label>90's</label>
+<label2>playlist.icons/90's.png</label2>
+<icon>playlist.icons/90's.png</icon>
+</item> 
+
+<item id="3">
+<label>acoustic</label>
+<label2>playlist.icons/acoustic.png</label2>
+<icon>playlist.icons/acoustic.png</icon>
+</item> 
+
+<item id="4">
+<label>blues</label>
+<label2>playlist.icons/blues.png</label2>
+<icon>playlist.icons/blues.png</icon>
+</item> 
+
+<item id="5">
+<label>childrens_music</label>
+<label2>playlist.icons/childrens_music.png</label2>
+<icon>playlist.icons/childrens_music.png</icon>
+</item> 
+
+<item id="6">
+<label>chill_out</label>
+<label2>playlist.icons/chill_out.png</label2>
+<icon>playlist.icons/chill_out.png</icon>
+</item> 
+
+<item id="7">
+<label>christmas_carols</label>
+<label2>playlist.icons/christmas_carols.png</label2>
+<icon>playlist.icons/christmas_carols.png</icon>
+</item> 
+
+<item id="8">
+<label>clasical</label>
+<label2>playlist.icons/clasical.png</label2>
+<icon>playlist.icons/clasical.png</icon>
+</item> 
+
+<item id="9">
+<label>country</label>
+<label2>playlist.icons/country.png</label2>
+<icon>playlist.icons/country.png</icon>
+</item> 
+
+<item id="10">
+<label>disco</label>
+<label2>playlist.icons/disco.png</label2>
+<icon>playlist.icons/disco.png</icon>
+</item> 
+
+<item id="11">
+<label>edm</label>
+<label2>playlist.icons/edm.png</label2>
+<icon>playlist.icons/edm.png</icon>
+</item> 
+
+<item id="12">
+<label>ethnic</label>
+<label2>playlist.icons/ethnic.png</label2>
+<icon>playlist.icons/ethnic.png</icon>
+</item> 
+
+<item id="13">
+<label>excercise</label>
+<label2>playlist.icons/excercise.png</label2>
+<icon>playlist.icons/excercise.png</icon>
+</item> 
+
+<item id="14">
+<label>funk</label>
+<label2>playlist.icons/funk.png</label2>
+<icon>playlist.icons/funk.png</icon>
+</item> 
+
+<item id="15">
+<label>gospel</label>
+<label2>playlist.icons/gospel.png</label2>
+<icon>playlist.icons/gospel.png</icon>
+</item> 
+
+<item id="16">
+<label>hippie</label>
+<label2>playlist.icons/hippie.png</label2>
+<icon>playlist.icons/hippie.png</icon>
+</item> 
+
+<item id="17">
+<label>hip_hop</label>
+<label2>playlist.icons/hip_hop.png</label2>
+<icon>playlist.icons/hip_hop.png</icon>
+</item> 
+
+<item id="18">
+<label>indie</label>
+<label2>playlist.icons/indie.png</label2>
+<icon>playlist.icons/indie.png</icon>
+</item> 
+
+<item id="19">
+<label>jazz</label>
+<label2>playlist.icons/jazz.png</label2>
+<icon>playlist.icons/jazz.png</icon>
+</item> 
+
+<item id="20">
+<label>k-pop</label>
+<label2>playlist.icons/k-pop.png</label2>
+<icon>playlist.icons/k-pop.png</icon>
+</item> 
+
+<item id="21">
+<label>latin</label>
+<label2>playlist.icons/latin.png</label2>
+<icon>playlist.icons/latin.png</icon>
+</item> 
+
+<item id="22">
+<label>metal</label>
+<label2>playlist.icons/metal.png</label2>
+<icon>playlist.icons/metal.png</icon>
+</item> 
+
+<item id="23">
+<label>pop</label>
+<label2>playlist.icons/pop.png</label2>
+<icon>playlist.icons/pop.png</icon>
+</item> 
+
+<item id="24">
+<label>punk</label>
+<label2>playlist.icons/punk.png</label2>
+<icon>playlist.icons/punk.png</icon>
+</item> 
+
+<item id="25">
+<label>reggae</label>
+<label2>playlist.icons/reggae.png</label2>
+<icon>playlist.icons/reggae.png</icon>
+</item> 
+
+<item id="26">
+<label>rock</label>
+<label2>playlist.icons/rock.png</label2>
+<icon>playlist.icons/rock.png</icon>
+</item> 
+
+<item id="27">
+<label>romantic</label>
+<label2>playlist.icons/romantic.png</label2>
+<icon>playlist.icons/romantic.png</icon>
+</item> 
+
+<item id="28">
+<label>tango</label>
+<label2>playlist.icons/tango.png</label2>
+<icon>playlist.icons/tango.png</icon>
+</item> 
+
+<item id="29">
+<label>trending</label>
+<label2>playlist.icons/trending.png</label2>
+<icon>playlist.icons/trending.png</icon>
+</item> 
+
+<item id="30">
+<label>vocal</label>
+<label2>playlist.icons/vocal.png</label2>
+<icon>playlist.icons/vocal.png</icon>
+</item> 
+
+</include> 
+</includes> 

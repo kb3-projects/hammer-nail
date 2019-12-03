@@ -1,0 +1,62 @@
+<window id="40">
+	<defaultcontrol always="true">50</defaultcontrol>
+
+	<!-- removed allowoverlay -->
+	<views>50</views>
+	<onunload>Skin.Reset(MediaSubMenuVisible2)</onunload>
+	<backgroundcolor>0</backgroundcolor>
+	<controls>
+		<include>StandardBackground</include>
+		<!-- <include>FileCountCommons</include> -->
+
+		<include content="SoftButtons">
+			<param name="SoftButton1" value="PAUSE"/>
+			<param name="SoftButton1Alternate" value="PLAY"/>
+			<param name="SoftButton1Visible" value="Player.HasAudio"/>		
+			<param name="SoftButton1VisibleAlternate" value="Player.Paused"/>	
+			<param name="SoftButton1Action" value="PlayerControl(Play)"/>	
+			
+			<param name="SoftButton2" value="PREV"/>
+			<param name="SoftButton2Alternate" value=""/>
+			<param name="SoftButton2Visible" value="false"/>
+			<param name="SoftButton2VisibleAlternate" value="false"/>		
+			<param name="SoftButton2Action" value="PlayerControl(Previous)"/>
+			
+			<param name="SoftButton3" value="BACK"/>
+			<param name="SoftButton3Alternate" value=""/>
+			<param name="SoftButton3Visible" value="true"/>
+			<param name="SoftButton3VisibleAlternate" value="false"/>	
+			<param name="SoftButton3Action" value="back"/>		
+			
+			<param name="SoftButton4" value="HOME"/>
+			<param name="SoftButton4Alternate" value="set"/>
+			<param name="SoftButton4Visible" value="true"/>
+			<param name="SoftButton4VisibleAlternate" value="false"/>
+			<param name="SoftButton4Action" value="ActivateWindow(Home)"/>
+		</include>
+
+
+<!--	<include>OptionsButtonCommons</include> -->
+		<control type="label">
+			<description>Window label</description>
+			<include>TopCornerTitle</include>
+			<label>$LOCALIZE[24001]$INFO[Container.FolderName, - ]</label>
+		</control>
+		<control type="group">
+			<include>Window_OpenClose_Animation_Zoom</include>
+			<include>CommonListView</include> <!-- view id = 50 -->
+			<!-- <include>ThumbnailView</include>  --> <!-- view id = 500 -->
+		</control>
+		<control type="scrollbar" id="60">
+			<include>ScrollBarCommon</include>
+		</control>
+		
+
+		
+		
+		
+		
+		<include>ScrollOffsetLabel</include>
+		<!-- <include>BehindDialogFadeOut</include> -->
+	</controls>
+</window>

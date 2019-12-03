@@ -1,0 +1,150 @@
+<window id="1125">
+
+	<!-- <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation> -->
+	<!-- <animation effect="fade"  start="100" end="0" time="300">WindowClose</animation> -->
+	<onload>setfocus(50000)</onload>
+
+	<defaultcontrol>50000</defaultcontrol>
+	
+	<!-- <backgroundcolor>0</backgroundcolor> -->
+	<controls>
+		
+	<include>StandardBackground</include>
+	<include content="SoftButtons">
+		<param name="SoftButton1" value="PAUSE"/>
+		<param name="SoftButton1Alternate" value="PLAY"/>
+		<param name="SoftButton1Visible" value="Player.HasAudio"/>		
+		<param name="SoftButton1VisibleAlternate" value="Player.Paused"/>	
+		<param name="SoftButton1Action" value="PlayerControl(Play)"/>	
+		
+		<param name="SoftButton2" value="ALL"/>
+		<param name="SoftButton2Alternate" value=""/>
+		<param name="SoftButton2Visible" value="Player.HasAudio"/>
+		<param name="SoftButton2VisibleAlternate" value="false"/>		
+		<param name="SoftButton2Action" value="Runscript(script.simplekeyboard,playartist)"/>
+		
+		<param name="SoftButton3" value="ART"/>
+		<param name="SoftButton3Alternate" value=""/>
+		<param name="SoftButton3Visible" value="false"/>
+		<param name="SoftButton3VisibleAlternate" value="false"/>	
+		<param name="SoftButton3Action" value=""/>			
+		
+		<param name="SoftButton4" value="HOME"/>
+		<param name="SoftButton4Alternate" value="set"/>
+		<param name="SoftButton4Visible" value="true"/>
+		<param name="SoftButton4VisibleAlternate" value="false"/>
+		<param name="SoftButton4Action" value="ActivateWindow(Home)"/>
+	</include>
+	<!-- <include>PlayerButtons</include> -->
+ 	<!-- <include>BehindDialogFadeOut</include> -->
+
+
+
+<!-- Labels for the window -->
+	<control type="label">
+			<description>Artists</description>
+			<include>TopCornerTitle</include>
+			<!-- <visible>String.IsEqual(Window(Home).Property(ToControl),50000)</visible> -->
+			<label>133</label>
+			<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+	
+
+
+
+<!-- Wraplist of Artist Names -->
+		<control type="wraplist" id="50000">
+				<description>Artists view</description>
+				<left>0</left>
+				<top>00</top>
+				<width>1280</width>
+				<height>720</height>
+			
+			<!-- This is to prevent the mouse from affecting the focus -->
+				<hitrect x="0" y="0" w="0" h="0" />			
+
+				<viewtype label="3D list">list</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>25</pagecontrol>
+				<scrolltime tween="linear" easing="inout">MusicList.Scrolltime</scrolltime>
+				<autoscroll>false</autoscroll>
+				<focusposition>0</focusposition>
+
+				
+		<!-- this is the list navigation.   Display is handled separately. -->
+			<itemlayout width="0" height="0">
+					<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>1</width>
+							<height>1</height>
+					</control>
+			</itemlayout>
+			
+				<focusedlayout width="0" height="0">
+					<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>1</width>
+							<height>1</height>
+					</control>
+					
+					<control type="label">
+						<include>FlowTitle</include>
+						
+							<label>$INFO[ListItem.Artist]</label>
+							<!-- <label colordiffuse="77777777">$INFO[ListItem.Album]</label> -->
+		
+					</control>
+					
+					
+				</focusedlayout>
+				
+				<onclick>Skin.SetString(PickedArtist,$INFO[ListItem.FolderPath])</onclick>
+				<onclick>Skin.SetString(PickedArtist2,$INFO[ListItem.Artist])</onclick>
+				<onclick>ActivateWindow(1126)</onclick>
+
+				<!-- <onclick>PlayMedia(musicdb://artists/$INFO[ListItem.DBID]/-1/)</onclick> -->
+				
+			
+
+			<content target="music">musicdb://artists/</content>
+
+		</control>
+	
+
+
+		
+		<control type="group">
+		<description>overall group for coverflow</description>
+			<top>Flow.Home.Main.Top</top>  <!-- The centerline of the list is the top -->
+			<left>Flow.Home.Main.Left</left>	
+			
+		
+			<include content="FlowHomeLeft">
+				<param name="ArtType" value="Art(clearlogo)"/>
+			</include>
+			<include content="FlowHomeRight">
+				<param name="ArtType" value="Art(clearlogo)"/>
+			</include>	  
+			<include content="FlowHomeNotMoving">
+				<param name="ArtType" value="Art(clearlogo)"/>
+			</include>	
+
+  
+		</control>
+		
+
+
+
+
+
+
+<!-- Window Bottom Controls -->
+
+
+
+
+ 		
+	</controls>	
+</window>

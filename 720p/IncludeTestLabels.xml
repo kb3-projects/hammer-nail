@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes> 
+ 	<!-- Random labels for testing -->
+	
+	<include name="TestLabels">
+	<control type="group">
+	
+		<control type="label">
+			<left>50</left>
+			<top>10</top>
+			<width>140</width>
+			<height>52</height>
+			<font>font12</font>
+			<label>ListItem.Album[CR]$INFO[ListItem.Album]</label>
+		</control>
+		<control type="label">
+			<left>200</left>
+			<top>10</top>
+			<width>140</width>
+			<height>52</height>
+			<font>font12</font>
+			<label>ListItem.Artist[CR]$INFO[ListItem.Artist]</label>
+		</control>	
+		<control type="label">
+			<left>350</left>
+			<top>10</top>
+			<width>150</width>
+			<height>52</height>
+			<font>font12</font>
+			<!-- <info>Skin.String(PickedArtist)</info> -->
+			<label>From Control[CR]$INFO[Window(Home).Property(FromControl)]</label>
+		</control>	
+		<control type="label">
+			<left>500</left>
+			<top>10</top>
+			<width>400</width>
+			<height>52</height>
+			<font>font12</font>
+			<!-- <label>List Length[CR]$INFO[Container(50002).NumItems]</label> -->
+			<label>To Control[CR]$INFO[Window(Home).Property(ToControl)]</label>
+		</control>	
+	</control>
+</include>
+
+<!-- More random labels for testing -->
+<include name="MoreTestLabels">
+<control type="group">
+	
+	<control type="label">
+			<left>50</left>
+			<top>10</top>
+			<width>40</width>
+			<height>52</height>
+			<font>font12</font>
+			<label>Visible</label>
+		</control>
+
+	<control type="label">
+			<left>90</left>
+			<top>10</top>
+			<width>40</width>
+			<height>52</height>
+			<font>font12</font>
+			<visible>Control.IsVisible(50000)</visible>
+			<label>50000.</label>
+		</control>
+		
+		<control type="label">
+			<left>130</left>
+			<top>10</top>
+			<width>40</width>
+			<height>52</height>
+			<font>font12</font>
+			<visible>Control.IsVisible(50001)</visible>
+			<label>50001.</label>
+		</control>
+		
+		<control type="label">
+			<left>170</left>
+			<top>10</top>
+			<width>40</width>
+			<height>52</height>
+			<font>font12</font>
+			<visible>Control.IsVisible(50002)</visible>
+			<label>50002.</label>
+		</control>
+
+		<control type="label">
+			<left>210</left>
+			<top>10</top>
+			<width>40</width>
+			<height>52</height>
+			<font>font12</font>
+			<visible>Control.IsVisible(50003)</visible>
+			<label>50003.</label>
+		</control>
+
+		<control type="label">
+			<left>50</left>
+			<top>30</top>
+			<width>40</width>
+			<height>52</height>
+			<font>font12</font>
+			<label>Focus</label>
+		</control>
+		
+		<control type="label">
+			<left>90</left>
+			<top>30</top>
+			<width>40</width>
+			<height>52</height>
+			<font>font12</font>
+			<visible>Control.HasFocus(50000)</visible>
+			<label>50000.</label>
+		</control>
+		
+		<control type="label">
+			<left>130</left>
+			<top>30</top>
+			<width>40</width>
+			<height>52</height>
+			<font>font12</font>
+			<visible>Control.HasFocus(50001)</visible>
+			<label>50001.</label>
+		</control>
+		
+		<control type="label">
+			<left>170</left>
+			<top>30</top>
+			<width>40</width>
+			<height>52</height>
+			<font>font12</font>
+			<visible>Control.HasFocus(50002)</visible>
+			<label>50002.</label>
+		</control>
+
+		<control type="label">
+			<left>210</left>
+			<top>30</top>
+			<width>40</width>
+			<height>52</height>
+			<font>font12</font>
+			<visible>Control.HasFocus(50003)</visible>
+			<label>50003.</label>
+		</control>
+
+		<control type="label">
+			<left>350</left>
+			<top>10</top>
+			<width>150</width>
+			<height>52</height>
+			<font>font12</font>
+			<!-- <info>Skin.String(PickedArtist)</info> -->
+			<label>From Control[CR]$INFO[Window(Home).Property(FromControl)]</label>
+		</control>	
+		
+		<control type="label">
+			<left>450</left>
+			<top>10</top>
+			<width>150</width>
+			<height>52</height>
+			<font>font12</font>
+			<!-- <info>Skin.String(PickedArtist)</info> -->
+			<label>To Control[CR]$INFO[Window(Home).Property(ToControl)]</label>
+		</control>	
+		
+		<control type="label">
+			<left>550</left>
+			<top>10</top>
+			<width>150</width>
+			<height>52</height>
+			<font>font12</font>
+			<!-- <info>Skin.String(PickedArtist)</info> -->
+			<!-- <label>$INFO[Skin.String(PlayerButtonsFocus)]</label> -->
+			<info>System.ScreenHeight</info>
+		</control>
+		
+		<control type="label">
+			<left>550</left>
+			<top>25</top>
+			<width>150</width>
+			<height>52</height>
+			<font>font12</font>
+			<!-- <info>Skin.String(PickedArtist)</info> -->
+			<!-- <label>$INFO[Skin.String(PlayerButtonsFocus)]</label> -->
+			<info>System.ScreenWidth</info>
+		</control>			
+		
+	</control>
+</include>
+
+</includes>

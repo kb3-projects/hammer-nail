@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes> 
+	
+	<include name="SoftButtons">
+	
+	<control type="group">
+	   <description>the entire cluster of buttons/bars/etc</description>
+	   		<left>0</left>
+			<top>605</top>
+	   
+	   
+		<control type="group">
+			<left>0</left>
+			<top>0</top>
+			<include>MusicProgressBar</include>
+		</control>
+		
+		<control type="group">
+			<description>Music Playing Info Small</description>
+			<visible>String.IsEqual(Window(Home).Property(SmallPlayerVisible),1)</visible>
+			<left>450</left>
+			<top>20</top>
+			<width>400</width>
+			<height>80</height>
+			<include>SmallNowPlaying</include>
+		</control>
+	
+		<control type="group">
+				<description>soft button1</description>
+				<left>3</left>
+				<top>20</top>
+				<visible>$PARAM[SoftButton1Visible]</visible>
+				<animation effect="fade" time="200">Hidden</animation>
+				<animation effect="fade" time="200">Visible</animation>
+			
+			<control type="button" id="500">
+				<description>Soft button1</description>
+				<visible>!Skin.HasSetting(DisableSoftButtons)</visible>
+				<left>0</left>
+				<top>0</top>
+				<width>200</width>
+				<height>90</height>
+				<texturenofocus colordiffuse="$INFO[Skin.String(SoftButtonColor)]">softbuttonbackground.png</texturenofocus>
+			    <texturefocus colordiffuse="$INFO[Skin.String(SoftButtonFocus)]">softbuttonbackground.png</texturefocus>
+				<onclick>setfocus(50000)</onclick>
+				<onclick>$PARAM[SoftButton1Action]</onclick>
+			</control>
+			
+			<control type="image">
+				<description>replacement image if softbutton is disabled</description>
+				<visible>Skin.HasSetting(DisableSoftButtons)</visible>
+				<left>0</left>
+				<top>0</top>
+				<width>200</width>
+				<height>90</height>
+				<texture colordiffuse="$INFO[Skin.String(SoftButtonColor)]">softbuttonbackground.png</texture>
+			</control>
+			
+			<control type="image">
+				<width>200</width>
+				<height>90</height>
+				<description>Soft button1 outline</description>
+				<texture colordiffuse="$INFO[Skin.String(SoftButtonOutlineColor)]">softbuttonoutline.png</texture>
+			</control>
+			
+			<control type="label">
+				<description>Soft button1 label</description>
+				<visible>!$PARAM[SoftButton1VisibleAlternate]</visible>
+				<left>0</left>
+				<top>0</top>
+				<width>200</width>
+				<height>90</height>
+		        <textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+				<align>center</align>
+		        <aligny>center</aligny>
+		        <font>font44</font>
+				<label>$PARAM[SoftButton1]</label>
+			</control>
+
+			<control type="label">
+				<description>Soft button1 alternate label</description>
+				<visible>$PARAM[SoftButton1VisibleAlternate]</visible>
+				<left>0</left>
+				<top>0</top>
+				<width>200</width>
+				<height>90</height>
+		        <textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+				<align>center</align>
+		        <aligny>center</aligny>
+		        <font>font44</font>
+				<label>$PARAM[SoftButton1Alternate]</label>
+			</control>
+		</control>
+		
+			<control type="group">
+				<description>soft button2</description>
+				<left>206</left>
+				<top>20</top>
+				<visible>$PARAM[SoftButton2Visible]</visible>
+				<animation effect="fade" time="200">Hidden</animation>
+				<animation effect="fade" time="200">Visible</animation>
+			
+			<control type="button" id="501">
+				<description>Soft button2</description>
+				<visible>!Skin.HasSetting(DisableSoftButtons)</visible>
+				<left>0</left>
+				<top>0</top>
+				<width>200</width>
+				<height>90</height>
+				<texturenofocus colordiffuse="$INFO[Skin.String(SoftButtonColor)]">softbuttonbackground.png</texturenofocus>
+			    <texturefocus colordiffuse="$INFO[Skin.String(SoftButtonFocus)]">softbuttonbackground.png</texturefocus>
+				<onclick>setfocus(50000)</onclick>
+				<onclick>$PARAM[SoftButton2Action]</onclick>
+			</control>
+
+			<control type="image">
+				<description>replacement image if softbutton is disabled</description>
+				<visible>Skin.HasSetting(DisableSoftButtons)</visible>
+				<left>0</left>
+				<top>0</top>
+				<width>200</width>
+				<height>90</height>
+				<texture colordiffuse="$INFO[Skin.String(SoftButtonColor)]">softbuttonbackground.png</texture>
+			</control>
+			
+			<control type="image">
+				<width>200</width>
+				<height>90</height>
+				<description>Soft button2 outline</description>
+				<texture colordiffuse="$INFO[Skin.String(SoftButtonOutlineColor)]">softbuttonoutline.png</texture>
+			</control>
+			
+			<control type="label">
+				<description>Soft button2 label</description>
+				<visible>!$PARAM[SoftButton2VisibleAlternate]</visible>
+				<left>0</left>
+				<top>0</top>
+				<width>200</width>
+				<height>90</height>
+		        <textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+				<align>center</align>
+		        <aligny>center</aligny>
+		        <font>font44</font>
+				<label>$PARAM[SoftButton2]</label>
+			</control>
+
+			<control type="label">
+				<description>Soft button2 alternate label</description>
+				<visible>$PARAM[SoftButton2VisibleAlternate]</visible>
+				<left>0</left>
+				<top>0</top>
+				<width>200</width>
+				<height>90</height>
+		        <textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+				<align>center</align>
+		        <aligny>center</aligny>
+		        <font>font44</font>
+				<label>$PARAM[SoftButton2Alternate]</label>
+			</control>
+		</control>
+
+		<control type="group">
+				<description>soft Button3</description>
+				<left>874</left>
+				<top>20</top>
+				<visible>$PARAM[SoftButton3Visible]</visible>
+				<animation effect="fade" time="200">Hidden</animation>
+				<animation effect="fade" time="200">Visible</animation>
+			
+			<control type="button" id="502">
+				<description>Soft Button3</description>
+				<visible>!Skin.HasSetting(DisableSoftButtons)</visible>
+				<left>0</left>
+				<top>0</top>
+				<width>200</width>
+				<height>90</height>
+				<texturenofocus colordiffuse="$INFO[Skin.String(SoftButtonColor)]">softbuttonbackground.png</texturenofocus>
+			    <texturefocus colordiffuse="$INFO[Skin.String(SoftButtonFocus)]">softbuttonbackground.png</texturefocus>
+				<onclick>setfocus(50000)</onclick>
+				<onclick condition="!Skin.HasSetting(DisableSoftButtons)">$PARAM[SoftButton3Action]</onclick>
+				<onclick condition="Skin.HasSetting(DisableSoftButtons)">noop</onclick>
+			</control>
+
+			<control type="image">
+				<description>replacement image if softbutton is disabled</description>
+				<visible>Skin.HasSetting(DisableSoftButtons)</visible>
+				<left>0</left>
+				<top>0</top>
+				<width>200</width>
+				<height>90</height>
+				<texture colordiffuse="$INFO[Skin.String(SoftButtonColor)]">softbuttonbackground.png</texture>
+			</control>
+			
+			<control type="image">
+				<width>200</width>
+				<height>90</height>
+				<description>Soft Button3 outline</description>
+				<texture colordiffuse="$INFO[Skin.String(SoftButtonOutlineColor)]">softbuttonoutline.png</texture>
+			</control>
+			
+			<control type="label">
+				<description>Soft Button3 label</description>
+				<visible>!$PARAM[SoftButton3VisibleAlternate]</visible>
+				<left>0</left>
+				<top>0</top>
+				<width>200</width>
+				<height>90</height>
+		        <textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+				<align>center</align>
+		        <aligny>center</aligny>
+		        <font>font44</font>
+				<label>$PARAM[SoftButton3]</label>
+			</control>
+
+			<control type="label">
+				<description>Soft Button3 alternate label</description>
+				<visible>$PARAM[SoftButton3VisibleAlternate]</visible>
+				<left>0</left>
+				<top>0</top>
+				<width>200</width>
+				<height>90</height>
+		        <textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+				<align>center</align>
+		        <aligny>center</aligny>
+		        <font>font44</font>
+				<label>$PARAM[SoftButton3Alternate]</label>
+			</control>
+		</control>
+		
+		<control type="group">
+				<description>soft button4</description>
+				<left>1077</left>
+				<top>20</top>
+				<visible>$PARAM[SoftButton4Visible]</visible>
+				<animation effect="fade" time="200">Hidden</animation>
+				<animation effect="fade" time="200">Visible</animation>
+			
+			<control type="button" id="504">
+				<description>Soft Button4</description>
+				<visible>!Skin.HasSetting(DisableSoftButtons)</visible>
+				<left>0</left>
+				<top>0</top>
+				<width>200</width>
+				<height>90</height>
+				<texturenofocus colordiffuse="$INFO[Skin.String(SoftButtonColor)]">softbuttonbackground.png</texturenofocus>
+			    <texturefocus colordiffuse="$INFO[Skin.String(SoftButtonFocus)]">softbuttonbackground.png</texturefocus>
+				<onclick>setfocus(50000)</onclick>
+				<onclick condition="!Skin.HasSetting(DisableSoftButtons)">$PARAM[SoftButton4Action]</onclick>
+				<onclick condition="Skin.HasSetting(DisableSoftButtons)">noop</onclick>
+			</control>
+
+			<control type="image">
+				<description>replacement image if softbutton is disabled</description>
+				<visible>Skin.HasSetting(DisableSoftButtons)</visible>
+				<left>0</left>
+				<top>0</top>
+				<width>200</width>
+				<height>90</height>
+				<texture colordiffuse="$INFO[Skin.String(SoftButtonColor)]">softbuttonbackground.png</texture>
+			</control>
+			
+			<control type="image">
+				<width>200</width>
+				<height>90</height>
+				<description>Soft button4 outline</description>
+				<texture colordiffuse="$INFO[Skin.String(SoftButtonOutlineColor)]">softbuttonoutline.png</texture>
+			</control>
+			
+			<control type="label">
+				<description>Soft button4 label</description>
+				<visible>!$PARAM[SoftButton4VisibleAlternate]</visible>
+				<left>0</left>
+				<top>0</top>
+				<width>200</width>
+				<height>90</height>
+		        <textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+				<align>center</align>
+		        <aligny>center</aligny>
+		        <font>font44</font>
+				<label>$PARAM[SoftButton4]</label>
+			</control>
+
+			<control type="label">
+				<description>Soft Button4 alternate label</description>
+				<visible>$PARAM[SoftButton4VisibleAlternate]</visible>
+				<left>0</left>
+				<top>0</top>
+				<width>200</width>
+				<height>90</height>
+		        <textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+				<align>center</align>
+		        <aligny>center</aligny>
+		        <font>font44</font>
+				<label>$PARAM[SoftButton4Alternate]</label>
+			</control>
+		</control>
+	</control>
+	</include>		
+
+	
+
+
+</includes>

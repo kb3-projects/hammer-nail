@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include file="defaults.xml" />
+    <include file="ViewsCommon.xml" />
+    <include file="ViewsAddonBrowser.xml" />
+    <include file="IncludesKeypad.xml" />
+    <include file="IncludesScripts.xml" />
+	<include file="Variables.xml" />
+    <include file="IncludesSkinColor.xml" />
+	<include file="Includes2.xml" />
+	<include file="constants.xml" />
+    <include file="IncludeFirstRun.xml" />
+
+	<include file="IncludeStandardButtons.xml" />
+	<include file="PlayerControlCommons.xml" />
+	<include file="IncludeSoftButtons.xml" />
+	
+	<include file="IncludePlaylistContent.xml" />
+
+	<include file="IncludeFlowRight.xml" />
+	<include file="IncludeFlowLeft.xml" />
+	<include file="IncludeFlowNotMoving.xml" />
+	
+	<include file="IncludeFlowHomeNotMoving.xml" />
+	<include file="IncludeFlowHomeRight.xml" />
+	<include file="IncludeFlowHomeLeft.xml" />
+
+	<include file="IncludePlaylistsList.xml" />
+	<include file="IncludePlaylistIcons.xml" />
+	
+	<include file="IncludeTestLabels.xml" />
+	<include file="IncludeFlowLabels.xml" />
+	
+    <!-- <include name="Window_OpenClose_Fade"> -->
+        <!-- <animation effect="fade" start="50" end="100" time="300">WindowOpen</animation> -->
+        <!-- <animation effect="fade" start="100" end="50" time="300">WindowClose</animation> -->
+    <!-- </include> -->
+
+    <include name="Window_OpenClose_Fade">
+        <animation type="WindowOpen" reversible="true">
+            <effect type="fade" start="0" end="100" time="300" />			
+        </animation>
+        <animation type="WindowClose" reversible="true">
+            <effect type="fade" start="100" end="0" time="300" />
+        </animation>
+    </include>
+	
+
+
+    <include name="Window_OpenClose_Animation_Zoom">
+        <animation type="WindowOpen" reversible="false">
+            <effect type="zoom" start="10" end="100" center="640,360" easing="out"  time="200" />
+            <effect type="fade" start="0" end="100" time="200" />			
+        </animation>
+        <animation type="WindowClose" reversible="false">
+            <effect type="zoom" start="100" end="10" center="640,360" easing="in"  time="200" />
+            <effect type="fade" start="100" end="0" time="200" />
+        </animation>
+    </include>
+
+    <include name="dialogeffect">
+        <animation effect="fade" time="300">WindowOpen</animation>
+        <animation effect="fade" time="300">WindowClose</animation>
+    </include>
+
+    <include name="VisibleFadeEffect">
+        <animation effect="fade" time="300">Visible</animation>
+        <animation effect="fade" time="300">Hidden</animation>
+    </include>
+	
+	<include name="SmallNowPlaying">
+		<control type="group">
+		<description>small now playing info</description>
+
+		
+		<control type="image">
+		<description>cover image</description>
+			<visible>Player.HasAudio</visible>
+			<animation condition="Player.Paused" effect="fade" start="100" end="25" time="500">Conditional</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>80</width>
+			<height>80</height>
+			<info>MusicPlayer.Cover</info>
+			<!-- <texture>$INFO[MusicPlayer.Cover]</texture> -->
+			<bordersize>2</bordersize>
+			<!-- <fadetime>400</fadetime> -->
+		</control>
+		
+		<control type="group">
+		<description>Lumping the miniplayer labels together for easier control of visibility and animation</description>
+			<visible>Player.HasAudio</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>80</width>
+			<height>80</height>
+			<animation condition="Player.Paused" effect="fade" start="100" end="50" time="500">Conditional</animation>
+			
+			<control type="label">
+				<description>Album label</description>
+				<posx>85</posx>
+				<posy>44</posy>
+				<width>290</width>
+				<height>20</height>
+				<align>left</align>
+				<font>font24</font>
+				<scroll>false</scroll>
+				<label>$INFO[MusicPlayer.Album]</label>
+				<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+			</control>
+
+			<control type="label">
+				<posx>85</posx>
+				<posy>0</posy>
+				<width>290</width>
+				<height>0</height>
+				<font>font36</font>
+				<align>left</align>
+				<scroll>false</scroll>
+				<label>$INFO[MusicPlayer.Title]</label>
+				<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+			</control>
+		</control>
+		
+		<control type="button" id="3052">
+		<description>invisible button to activate now playing window</description>
+			<posx>0</posx>
+			<posy>10</posy>
+			<width>380</width>
+			<height>80</height>
+			<texturefocus>1px_transparent.png</texturefocus>
+			<texturenofocus>1px_transparent.png</texturenofocus>
+			<onclick>ActivateWindow(1120)</onclick>
+		</control>
+		
+	</control>
+	</include>
+ 
+
+<!-- 	<include name="RandomRepeatButtons">
+		<control type="group" id="9010">
+            <visible>Player.HasDuration + Player.HasAudio + !Skin.HasSetting(HideHomeButtonMusicPlayerTitle) + !Skin.HasSetting(HideRandomRepeat)</visible>
+			<posx>1056</posx>
+			<posy>522</posy> 
+            <include>Window_OpenClose_Fade</include>
+            <onfocus>Control.SetFocus(606)</onfocus>
+			<control type="button" id="606">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>54</width>
+				<height>54</height>
+				<label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
+				<font>-</font>
+				<onclick>XBMC.PlayerControl(Repeat)</onclick>
+				<onleft>noop</onleft>
+				<onright>607</onright>
+				<onup>Control.SetFocus(3006)</onup>
+				<ondown condition="Control.IsVisible(3050)">Control.SetFocus(3050)</ondown>
+				<ondown condition="Control.IsVisible(9003) + !Control.IsVisible(3050)">Control.SetFocus(9003)</ondown>
+				<ondown condition="Control.IsVisible(100) + !Control.IsVisible(3050)">Control.SetFocus(100)</ondown>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>54</width>
+				<height>54</height>
+				<texture colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">OSDRepeatNF.png</texture>
+				<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+				<visible>!Control.HasFocus(606)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>54</width>
+				<height>54</height>
+				<texture colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">OSDRepeatNF.png</texture>
+				<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+				<visible>Control.HasFocus(606)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>54</width>
+				<height>54</height>
+				<texture colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">OSDRepeatOneNF.png</texture>
+				<visible>Playlist.IsRepeatOne</visible>
+				<visible>!Control.HasFocus(606)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>54</width>
+				<height>54</height>
+				<texture colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">OSDRepeatOneNF.png</texture>
+				<visible>Playlist.IsRepeatOne</visible>
+				<visible>Control.HasFocus(606)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>54</width>
+				<height>54</height>
+				<texture colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">OSDRepeatAllNF.png</texture>
+				<visible>Playlist.IsRepeat</visible>
+				<visible>!Control.HasFocus(606)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>64</width>
+				<height>64</height>
+				<texture colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">OSDRepeatAllNF.png</texture>
+				<visible>Playlist.IsRepeat</visible>
+				<visible>Control.HasFocus(606)</visible>
+			</control>
+			<control type="togglebutton" id="607">
+				<posx>72</posx>
+				<posy>0</posy>
+				<width>54</width>
+				<height>54</height>
+				<label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
+				<font>-</font>
+				<texturefocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">OSDRandomOffNF.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">OSDRandomOffNF.png</texturenofocus>
+				<usealttexture>Playlist.IsRandom</usealttexture>
+				<alttexturefocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">OSDRandomOnNF.png</alttexturefocus>
+				<alttexturenofocus colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">OSDRandomOnNF.png</alttexturenofocus>
+				<onclick>XBMC.PlayerControl(Random)</onclick>
+				<onleft>606</onleft>
+				<onright condition="Skin.HasSetting(ShowRecentlyAdded) + Control.IsVisible(2011)">Control.SetFocus(2011)</onright>
+				<onup>Control.SetFocus(3006)</onup>
+				<ondown condition="Control.IsVisible(3050)">Control.SetFocus(3050)</ondown>
+				<ondown condition="Control.IsVisible(9003) + !Control.IsVisible(3050)">Control.SetFocus(9003)</ondown>
+				<ondown condition="Control.IsVisible(100) + !Control.IsVisible(3050)">Control.SetFocus(100)</ondown>
+			</control>
+		</control>	
+	</include> -->
+
+
+   
+
+    <include name="BehindDialogFadeOut">
+        <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>ScreenWidth</width>
+            <height>ScreenHeight</height>
+            <texture>black-back.png</texture>
+            <!-- <animation effect="fade" time="400">Visible</animation> -->
+            <!-- <animation effect="fade" time="200">Hidden</animation> -->
+			<animation type="WindowClose" reversible="false">
+				<effect type="fade" start="100" end="0" time="250" />
+			</animation>
+
+			<animation type="WindowOpen" reversible="false">
+				<effect type="fade" start="0" end="100" time="250" />
+			</animation>
+         </control>
+    </include>
+	
+    <include name="BehindContextFadeOut">
+        <control type="image">
+            <left>-640</left>
+            <top>-360</top>
+            <width>1940</width>
+            <height>980</height>
+            <texture>black-back.png</texture>
+            <!-- <animation effect="fade" time="400">Visible</animation> -->
+            <!-- <animation effect="fade" time="200">Hidden</animation> -->
+			<animation type="WindowClose" reversible="false">
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
+
+			<animation type="WindowOpen" reversible="false">
+				<effect type="fade" start="0" end="100" time="300" />
+			</animation>
+         </control>
+    </include>
+    
+	    <include name="DialogTitle">
+       		<description>header label</description>
+			<left>00</left>
+			<top>00</top>
+			<width>1180</width>
+			<height>60</height>
+			<aligny>center</aligny>
+			<align>center</align>
+			<font>font40_bold</font>
+        
+    </include>
+
+    <include name="FileCountCommons">
+        <control type="group">
+            <posx>7</posx>
+            <posy>15</posy>
+            <visible>true</visible>
+            <!--<include>Window_OpenClose_Animation</include>-->
+            <include>Window_OpenClose_Animation_Slide_Down</include>
+            <control type="image">
+                <posx>50r</posx>
+                <posy>0</posy>
+                <width>60</width>
+                <height>60</height>
+                <aspectratio>keep</aspectratio>
+                <texture>filecount.png</texture>
+            </control>
+            <control type="label">
+                <description>Page Count Label 1</description>
+                <posx>57r</posx>
+                <posy>9</posy>
+                <width>375</width>
+                <height>15</height>
+                <font>font25</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <scroll>false</scroll>
+                <align>right</align>
+                <aligny>center</aligny>
+                <label>$INFO[Window.Property(filter),$LOCALIZE[587] , - ]$INFO[Container.NumItems,, $LOCALIZE[31025]]</label>
+            </control>
+            <control type="label">
+                <description>Page Count Label 2</description>
+                <posx>57r</posx>
+                <posy>31</posy>
+                <width>375</width>
+                <height>15</height>
+                <font>font25</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <scroll>false</scroll>
+                <align>right</align>
+                <aligny>center</aligny>
+                <label>$INFO[Container.CurrentPage,$LOCALIZE[31024] ]$INFO[Container.NumPages, of ,]</label>
+            </control>
+        </control>
+    </include>
+
+<include name="ScrollBarCommon">
+  
+			<!-- <visible>Skin.HasSetting(ScrollbarBold)</visible> -->
+			<right>20</right>
+			<top>80</top>
+			<width>40</width>
+			<height>494</height>
+			<texturesliderbackground colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">scrollbarv_bar_bold2.png</texturesliderbackground>
+			<texturesliderbar colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">osdsliderbar_square.png</texturesliderbar>
+			<texturesliderbarfocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">osdsliderbar_square.png</texturesliderbarfocus>
+			<textureslidernib colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">osdslidernib_square.png</textureslidernib>
+			<textureslidernibfocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">osdslidernib_square.png</textureslidernibfocus>
+			<!-- <ondown>61</ondown> -->
+			<!-- <onup>61</onup> -->
+			<!-- <onright>9000</onright> -->
+			<showonepage>true</showonepage>
+			<orientation>vertical</orientation>
+			<animation effect="fade" time="150">Visible</animation>
+			<animation effect="fade" time="150">Hidden</animation>
+
+        </include>
+
+    <include name="ScrollBarCommonsSaveThisForNow">
+        <control type="group">
+			<description>Slim Scrollbar</description>
+	        <visible>!Skin.HasSetting(ScrollbarBold)</visible>
+            <animation effect="slide" start="200,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+            <animation effect="slide" start="0,0" end="200,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
+            <posx>75r</posx>
+            <posy>70</posy>
+<!-- 
+            <visible>Control.IsVisible(60)</visible>
+ -->
+            <animation effect="slide" start="90,0" end="0,0" time="400">Visible</animation>
+            <animation effect="slide" start="0,0" end="90,0" time="400">Hidden</animation>
+	        <control type="image">
+                <description>Scroll Bar Background Image</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>75</width>
+                <height>575</height>
+                <texture border="0,60,0,60">ScrollBarBackground.png</texture>
+                <colordiffuse>66FFFFFF</colordiffuse>
+            </control> 
+            <control type="button" id="6001">
+                <description>Button PageUp</description>
+                <posx>18</posx>
+                <posy>43</posy>
+                <width>50</width>
+                <height>50</height>
+				<texturefocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">arrow-up.png</texturefocus>
+				<texturenofocus>arrow-up.png</texturenofocus>
+                <colordiffuse>99FFFFFF</colordiffuse>
+                <onclick>pageup(60)</onclick>
+            </control>
+            <control type="scrollbar" id="60">
+                <posx>30</posx>
+                <posy>100</posy>
+                <width>25</width>
+                <height>380</height>
+				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="2,16,2,16"></texturesliderbar>
+				<texturesliderbarfocus border="2,16,2,16"></texturesliderbarfocus>
+				<textureslidernib>osdslidernib.png</textureslidernib>
+				<textureslidernibfocus>osdslidernib.png</textureslidernibfocus>
+                <onleft>50</onleft>
+                <onright condition="Control.IsVisible(9002)">9002</onright>
+                <ondown>60</ondown>
+                <onup>60</onup>
+                <showonepage>false</showonepage>
+                <orientation>vertical</orientation>
+                <animation effect="fade" time="150">Visible</animation>
+                <animation effect="fade" time="150">Hidden</animation>
+            </control>
+            <control type="button" id="6002">
+                <description>Button PageDown</description>
+                <posx>18</posx>
+                <posy>482</posy>
+                <width>50</width>
+                <height>50</height>
+				<texturefocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">arrow-down.png</texturefocus>
+				<texturenofocus>arrow-down.png</texturenofocus>
+                <colordiffuse>99FFFFFF</colordiffuse>
+                <onclick>pagedown(60)</onclick>
+            </control>
+        </control>
+	   <control type="group">
+			<description>Bold Scrollbar</description>
+			<visible>Skin.HasSetting(ScrollbarBold)</visible>
+            <animation effect="slide" start="200,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+            <animation effect="slide" start="0,0" end="200,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
+            <posx>75r</posx>
+            <posy>70</posy>
+<!-- 
+            <visible>Control.IsVisible(60)</visible>
+ -->
+            <animation effect="slide" start="90,0" end="0,0" time="400">Visible</animation>
+            <animation effect="slide" start="0,0" end="90,0" time="400">Hidden</animation>
+	        <control type="image">
+                <description>Scroll Bar Background Image</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>75</width>
+                <height>575</height>
+                <texture border="0,60,0,60">ScrollBarBackground.png</texture>
+                <colordiffuse>66FFFFFF</colordiffuse>
+            </control> 
+            <control type="button" id="6001">
+                <description>Button PageUp</description>
+                <posx>14</posx>
+                <posy>45</posy>
+                <width>48</width>
+                <height>48</height>
+				<texturefocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">arrow-up.png</texturefocus>
+				<texturenofocus>arrow-up.png</texturenofocus>
+                <colordiffuse>99FFFFFF</colordiffuse>
+                <onclick>pageup(60)</onclick>
+            </control>
+            <control type="scrollbar" id="60">
+                <posx>14</posx>
+                <posy>95</posy>
+                <width>48</width>
+                <height>390</height>
+                <texturesliderbackground colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">scrollbarv_bar_bold2.png</texturesliderbackground>
+                <texturesliderbar colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">osdsliderbar_square.png</texturesliderbar>
+                <texturesliderbarfocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">osdsliderbar_square.png</texturesliderbarfocus>
+                <textureslidernib colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">osdslidernib_square.png</textureslidernib>
+                <textureslidernibfocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">osdslidernib_square.png</textureslidernibfocus>
+                <onleft>50</onleft>
+                <onright condition="Control.IsVisible(9002)">9002</onright>
+                <ondown>60</ondown>
+                <onup>60</onup>
+                <showonepage>false</showonepage>
+                <orientation>vertical</orientation>
+                <animation effect="fade" time="150">Visible</animation>
+                <animation effect="fade" time="150">Hidden</animation>
+            </control>
+            <control type="button" id="6002">
+                <description>Button PageDown</description>
+                <posx>14</posx>
+                <posy>487</posy>
+                <width>48</width>
+                <height>48</height>
+				<texturefocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">arrow-down.png</texturefocus>
+				<texturenofocus>arrow-down.png</texturenofocus>
+                <colordiffuse>99FFFFFF</colordiffuse>
+                <onclick>pagedown(60)</onclick>
+            </control>
+        </control> 
+        </include>
+
+
+    <!-- <include name="OptionsButtonCommons"> -->
+        <!-- <control type="group"> -->
+            <!-- <include>Window_OpenClose_Animation_Slide_Down</include> -->
+            <!-- <posx>75r</posx> -->
+            <!-- <posy>1</posy> -->
+            <!-- <visible>!Window.IsActive(PlayerControls)</visible> -->
+            <!-- <include>VisibleFadeEffect</include> -->
+            <!-- <control type="image"> -->
+                <!-- <description>Options Button Image</description> -->
+                <!-- <posx>0</posx> -->
+                <!-- <posy>0</posy> -->
+                <!-- <width>75</width> -->
+                <!-- <height>75</height> -->
+                <!-- <texture>icon_system.png</texture> -->
+            <!-- </control> -->
+            <!-- <control type="button" id="557"> -->
+                <!-- <description>Options Button</description> -->
+                <!-- <posx>0</posx> -->
+                <!-- <posy>0</posy> -->
+                <!-- <width>75</width> -->
+                <!-- <height>75</height> -->
+                <!-- <font>-</font> -->
+                <!-- <texturenofocus colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]" border="5">floor_buttonfo.png</texturenofocus> -->
+                <!-- <texturefocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]" border="5">floor_buttonfo.png</texturefocus> -->
+                <!-- <onclick>Skin.ToggleSetting(MediaSubMenuVisible2)</onclick> -->
+				<!-- <onleft>666</onleft> -->
+				<!-- <onright>noop</onright> -->
+				<!-- <onup>noop</onup> -->
+				<!-- <ondown condition="Control.IsVisible(50)">50</ondown> -->
+				<!-- <ondown condition="Control.IsVisible(500)">500</ondown> -->
+            <!-- </control> -->
+        <!-- </control> -->
+    <!-- </include> -->
+
+    <!-- <include name="OptionsButtonCommons2"> -->
+        <!-- <control type="group"> -->
+            <!-- <include>Window_OpenClose_Animation_Slide_Down</include> -->
+            <!-- <posx>75r</posx> -->
+            <!-- <posy>75r</posy> -->
+            <!-- <visible>!Window.IsActive(PlayerControls)</visible> -->
+            <!-- <include>VisibleFadeEffect</include> -->
+            <!-- <control type="image"> -->
+                <!-- <description>Options Button Image</description> -->
+                <!-- <posx>0</posx> -->
+                <!-- <posy>0</posy> -->
+                <!-- <width>75</width> -->
+                <!-- <height>75</height> -->
+                <!-- <texture>icon_system.png</texture> -->
+            <!-- </control> -->
+            <!-- <control type="button" id="557"> -->
+                <!-- <description>Options Button</description> -->
+                <!-- <posx>0</posx> -->
+                <!-- <posy>0</posy> -->
+                <!-- <width>75</width> -->
+                <!-- <height>75</height> -->
+                <!-- <font>-</font> -->
+                <!-- <texturenofocus colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]" border="5">icon_system.png</texturenofocus> -->
+                <!-- <texturefocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]" border="5">icon_system.png</texturefocus> -->
+                <!-- <onclick>Skin.ToggleSetting(MediaSubMenuVisible2)</onclick> -->
+				<!-- <onleft>666</onleft> -->
+				<!-- <onright>noop</onright> -->
+				<!-- <onup>noop</onup> -->
+				<!-- <ondown condition="Control.IsVisible(50)">50</ondown> -->
+				<!-- <ondown condition="Control.IsVisible(500)">500</ondown> -->
+            <!-- </control> -->
+        <!-- </control> -->
+    <!-- </include> -->
+
+
+
+<!-- This will probably be deleted    --> 
+     <include name="ButtonCommonValues2">
+        <height>60</height>
+        <width>298</width>
+        <textoffsetx>15</textoffsetx>
+        <textwidth>280</textwidth>
+        <textcolor>black</textcolor>
+        <align>left</align>
+        <aligny>center</aligny>
+        <font>font25</font>
+        <texturenofocus colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">button-nofocus.png</texturenofocus>
+        <texturefocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]" border="5">button-nofocus.png</texturefocus>
+        <pulseonselect>false</pulseonselect>
+    </include>
+ 
+
+
+ <!--    <include name="ButtonPulldownMenu">
+        <height>60</height>
+        <width>250</width>
+        <align>center</align>
+        <aligny>center</aligny>
+        <font>font24_title</font>
+        <textcolor>FFFFFFFF</textcolor>
+		<focusedcolor>selected</focusedcolor>
+        <texturenofocus colordiffuse="D9282828">menuitem_black2_nf.png</texturenofocus>
+        <texturefocus colordiffuse="D9353535">menuitem_black_f.png</texturefocus>
+        <pulseonselect>false</pulseonselect>
+    </include>
+ -->
+ 
+ <!-- This will probably be deleted    -->
+    <include name="ButtonInfoDialogsCommonValues2">
+        <height>60</height>
+        <width>180</width>
+        <align>center</align>
+        <aligny>center</aligny>
+        <font>font24_title</font>
+        <textcolor>FFFFFFFF</textcolor>
+		<focusedcolor>selected</focusedcolor>
+        <texturenofocus>menuitem_black2_nf.png</texturenofocus>
+        <texturefocus>menuitem_black_f.png</texturefocus>
+        <pulseonselect>false</pulseonselect>
+    </include>
+
+<!--     <include name="ButtonMenuTopCommonValuesFocus">
+        <height>60</height>
+        <width>300</width>
+        <align>center</align>
+        <aligny>center</aligny>
+        <font>font24_title</font>
+        <textcolor>FFFFFFFF</textcolor>
+		<focusedcolor>$INFO[Skin.String(PlayerButtonsFocus)]</focusedcolor>
+        <texturenofocus colordiffuse="66000000">topmenu2_bg_f.png</texturenofocus>
+        <texturefocus colordiffuse="66000000">topmenu2_bg_f.png</texturefocus>
+        <pulseonselect>false</pulseonselect>
+    </include>
+  -->  
+  
+  <!-- This will probably be deleted    -->
+    <include name="ScrollOffsetLabel">
+        <control type="group">
+
+            <visible>Container.Scrolling + [Skin.String(Container.SortMethod,$LOCALIZE[551]) | Skin.String(Container.SortMethod,$LOCALIZE[561]) | Skin.String(Container.SortMethod,$LOCALIZE[558]) | Skin.String(Container.SortMethod,$LOCALIZE[557]) | Skin.String(Container.SortMethod,$LOCALIZE[556])]</visible>
+            <animation effect="fade" time="100">Visible</animation>
+            <animation effect="fade" time="300">Hidden</animation>
+            <posx>600</posx>
+            <posy>410</posy>
+            <width>320</width>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>80</width>
+                <height>80</height>
+                <texture border="5">IconBack.png</texture>
+            </control>
+            <control type="label">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>80</width>
+                <height>80</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <label>[B]$INFO[ListItem.SortLetter][/B]</label>
+                <textcolor>black</textcolor>
+                <font>font30</font>
+            </control>
+        </control>
+    </include>
+    
+    <include name="Visible_Animation_Slide_Up">
+        <animation effect="slide" start="0,250" end="0,0" time="1000" tween="quadratic" easing="out">Visible</animation>
+        <animation effect="slide" start="0,0" end="0,250" time="1000" tween="quadratic" easing="out">Hidden</animation>
+    </include>
+
+    <include name="Window_OpenClose_Animation_Slide_Down">
+        <animation effect="slide" start="0,-250" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+        <animation effect="slide" start="0,0" end="0,-250" time="500" tween="quadratic" easing="out">WindowClose</animation>
+    </include>
+    
+ <!--    <include name="CenterDialog">
+        <animation effect="slide" start="0,0" end="190,0" time="0" condition="true">conditional</animation>
+    </include> -->
+ 
+
+
+    <include name="KeyboardButton">
+        <width>90</width>
+        <height>90</height>
+        <texturenofocus border="5">keyboardkeydark.png</texturenofocus>
+        <texturefocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]" border="5">KeyboardKey.png</texturefocus>
+        <align>center</align>
+        <aligny>center</aligny>
+        <font>font30</font>
+        <focusedcolor>black</focusedcolor>
+    </include>
+	
+	<include name="CommonListView">
+		<control type="panel" id="50">
+			<posx>80</posx>
+			<posy>75</posy>
+			<width>1106</width>
+			<height>525</height>
+			<onleft condition="Window.IsActive(AddonBrowser)">Control.SetFocus(666)</onleft>
+			<onleft condition="Control.IsVisible(555)">Control.SetFocus(555)</onleft>
+			<onleft condition="!Control.IsVisible(555)">Control.SetFocus(666)</onleft>
+			<onright>60</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<viewtype label="535">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="75" width="1110">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1106</width>
+					<height>75</height>
+					<texture border="4">list_bg.png</texture>
+					<colordiffuse>95FFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+<!-- 
+					<visible>!Container.Content(artists)</visible>
+ -->
+					<posx>7</posx>
+					<posy>4</posy>
+					<width>68</width>
+					<height>68</height>
+					<texture background="true">$VAR[PosterThumb]</texture>
+				</control>
+
+				<control type="image">
+					<visible>Container.Content(artists)</visible>
+					<posx>7</posx>
+					<posy>4</posy>
+					<width>68</width>
+					<height>68</height>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+				</control>
+
+				<control type="label">
+					<posx>102</posx>
+					<posy>10</posy>
+					<width>1000</width>
+					<height>52</height>
+					<font>font36_title</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>$INFO[Skin.String(PlayerButtonsFocus)]</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<visible>!Container.Content(Addons)</visible>
+					<posx>620</posx>
+					<posy>15</posy>
+					<width>450</width>
+					<height>52</height>
+					<font>font36_title</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>$INFO[Skin.String(PlayerButtonsColor)]</selectedcolor> 
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label2]</label>
+				</control>	
+				
+				<control type="label">
+				<visible>Container.Content(Addons)</visible>
+					<posx>620</posx>
+					<posy>15</posy>
+					<width>450</width>
+					<height>52</height>
+					<font>font36_title</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>$INFO[Skin.String(PlayerButtonsFocus)]</selectedcolor> 
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Property(Addon.Status),, - ]$INFO[ListItem.AddonVersion]</label>
+				</control>
+
+				
+			</itemlayout>
+			<focusedlayout height="75" width="1110">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1106</width>
+					<height>75</height>
+					<texture border="4">list_bg_fo.png</texture>
+					<colordiffuse>$INFO[Skin.String(PlayerButtonsFocus)]</colordiffuse>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<posx>7</posx>
+					<posy>4</posy>
+					<width>68</width>
+					<height>68</height>
+					<texture background="true">$VAR[PosterThumb]</texture>
+				</control>
+				<control type="label">
+				
+					<posx>102</posx>
+					<posy>10</posy>
+					<width>922</width>
+					<height>52</height>
+					<font>font36_title</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>$INFO[Skin.String(PlayerButtonsFocus)]</selectedcolor> 
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				
+				
+				
+				<control type="label">
+				<visible>!Container.Content(Addons)</visible>
+					<posx>620</posx>
+					<posy>15</posy>
+					<width>450</width>
+					<height>52</height>
+					<font>font36_title</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>$INFO[Skin.String(PlayerButtonsFocus)]</selectedcolor> 
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label2]</label>
+				</control>
+				
+				<control type="label">
+				<visible>Container.Content(Addons)</visible>
+					<posx>620</posx>
+					<posy>15</posy>
+					<width>450</width>
+					<height>52</height>
+					<font>font36_title</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>$INFO[Skin.String(PlayerButtonsFocus)]</selectedcolor> 
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Property(Addon.Status),, - ]$INFO[ListItem.AddonVersion]</label>
+				</control>
+				
+				<!--<control type="image">
+					<description>Rating value</description>
+					<posx>1415</posx>
+					<posy>30</posy>
+					<width>100</width>
+					<height>70</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture fallback="dark/left_rating/rating0.png">$INFO[ListItem.RatingAndVotes,dark/left_rating/]</texture>
+				</control>-->
+			</focusedlayout>
+		</control>
+	</include>
+
+	
+</includes>

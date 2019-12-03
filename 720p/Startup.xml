@@ -1,0 +1,9 @@
+<window>
+
+    <include>FirstRun</include>
+  
+	<!-- <onload>ReplaceWindow($INFO[System.StartupWindow])</onload> -->
+   	<onload>ActivateWindow(home)</onload>
+	<controls></controls>
+	
+</window>

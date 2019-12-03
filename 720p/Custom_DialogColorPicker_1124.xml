@@ -1,0 +1,68 @@
+<window type="dialog" id="1124">
+	<defaultcontrol always="false">811</defaultcontrol>
+	<!-- removed allowoverlay -->
+
+	<include>Window_OpenClose_Fade</include>
+
+	<controls>
+		<control type="image">
+			<left>50</left>
+			<top>10</top>
+			<width>1180</width>
+			<height>60</height>
+			<texture border="5">DialogHeader.png</texture>
+		</control>
+		<control type="label">
+			<description>header label</description>
+			<left>50</left>
+			<top>10</top>
+			<aligny>center</aligny>
+			<align>center</align>
+			<font>font40_bold</font>
+			<width>1180</width>
+			<height>60</height>
+			<label>31103</label>
+		</control>
+		<control type="image">
+			<left>50</left>
+			<top>70</top>
+			<width>1180</width>
+			<height>610</height>
+			<texture border="5">dialog_back_black.png</texture>
+		</control>
+<!-- 		<control type="group">
+			<left>20</left>
+			<top>75</top>
+			<control type="button">
+				<description>left Arrow</description>
+				<left>0</left>
+				<top>0</top>
+				<width>40</width>
+				<height>40</height>
+				<texturefocus>arrow-big-left.png</texturefocus>
+				<texturenofocus>arrow-big-left.png</texturenofocus>
+				<onclick>Control.Move(9,-1)</onclick>
+				<include>VisibleFadeEffect</include>
+				<visible>Container(9).HasPrevious</visible>
+			</control>
+			<control type="button" id="8">
+				<description>right Arrow</description>
+				<left>920</left>
+				<top>0</top>
+				<width>40</width>
+				<height>40</height>
+				<texturefocus>arrow-big-right.png</texturefocus>
+				<texturenofocus>arrow-big-right.png</texturenofocus>
+				<onclick>Control.Move(9,1)</onclick>
+				<include>VisibleFadeEffect</include>
+				<visible>Container(9).HasNext</visible>
+			</control>
+		</control> -->
+
+		
+<!-- ### Color Lists ### -->
+
+		<include>SkinColorList</include>
+	</controls>
+
+</window>

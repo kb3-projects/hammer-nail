@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colors>
+	<color name="grey1">FFb6b6b6</color>
+	<color name="blue">FF0084FF</color>
+	<color name="red">FFE13500</color>
+	<color name="yellow">FFF9EDCD</color>
+	<color name="magenta">FFC400E1</color>
+	<color name="orange">FFE17A00</color>
+	<color name="grey">FF9f9f9f</color>
+	<color name="grey3">FF505050</color>
+	<color name="selected">FFEB9E17</color>	
+	<color name="white">FFFFFFFF</color> 	
+	<color name="black">FF000000</color> 	
+	<color name="grey2">FF999999</color> 	
+
+<!-- Colorlist -->
+
+	
+<!-- Black and White -->
+	
+	<color name="Color11">FFFEFEFE</color>
+	<color name="Color12">FFDFDFDF</color>
+	<color name="Color13">FFBFBFBF</color>
+	<color name="Color14">FF9F9F9F</color>
+	<color name="Color15">FF7F7F7F</color>
+	<color name="Color16">FF5F5F5F</color>
+	<color name="Color17">FF3F3F3F</color>
+	<color name="Color18">FF1F1F1F</color>
+	<color name="Color19">FF010101</color>
+
+<!-- Reds -->
+	
+	<color name="Color21">FFFF2020</color>
+	<color name="Color22">FFE92020</color>
+	<color name="Color23">FFD32020</color>
+	<color name="Color24">FFBD2020</color>
+	<color name="Color25">FFA72020</color>
+	<color name="Color26">FF912020</color>
+	<color name="Color27">FF7B2020</color>
+	<color name="Color28">FF652020</color>
+	<color name="Color29">FF502020</color>
+
+<!-- greens -->
+	
+	<color name="Color31">FF3EFF6F</color>
+	<color name="Color32">FF39ED67</color>
+	<color name="Color33">FF35DB5F</color>
+	<color name="Color34">FF31CA58</color>
+	<color name="Color35">FF2DB850</color>
+	<color name="Color36">FF28A648</color>
+	<color name="Color37">FF249541</color>
+	<color name="Color38">FF208339</color>
+	<color name="Color39">FF1C7232</color>
+
+<!-- Other greens -->
+	
+	<!-- <color name="Color31">FF22FF20</color> -->
+	<!-- <color name="Color32">FF21E920</color> -->
+	<!-- <color name="Color33">FF21D320</color> -->
+	<!-- <color name="Color34">FF21BD20</color> -->
+	<!-- <color name="Color35">FF21A720</color> -->
+	<!-- <color name="Color36">FF209120</color> -->
+	<!-- <color name="Color37">FF207B20</color> -->
+	<!-- <color name="Color38">FF206520</color> -->
+	<!-- <color name="Color39">FF205020</color> -->
+	
+	
+<!-- Blues -->
+
+	<color name="Color41">FF57E1FA</color>
+	<color name="Color42">FF54D3EA</color>
+	<color name="Color43">FF51C5DA</color>
+	<color name="Color44">FF4EB8C7</color>
+	<color name="Color45">FF4BAABB</color>
+	<color name="Color46">FF489CAB</color>
+	<color name="Color47">FF458F9C</color>
+	<color name="Color48">FF42818C</color>
+	<color name="Color49">FF3F747D</color>
+	
+
+
+</colors>
+

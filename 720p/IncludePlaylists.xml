@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<includes> 
+<include name="ListOfPlaylists">
+
+<item id="1">
+<label>WOW59</label>
+<label2>WOW59.icon</label2>
+<icon>$INFO[Skin.String(WOW59.icon)]</icon>
+<onclick>ActivateWindow(1120)</onclick>
+<onclick>PlayMedia(special://profile/playlists/music/another test filenam.xsp)</onclick> 
+<onclick>Skin.SetBool(NotAnAlbum)</onclick>
+<property name="listpath">special://profile/playlists/music/another test filenam.xsp</property>
+</item> 
+
+<item id="2">
+<label>Alphaville</label>
+<label2>Alphaville.icon</label2>
+<icon>$INFO[Skin.String(Alphaville.icon)]</icon>
+<onclick>ActivateWindow(1120)</onclick>
+<onclick>PlayMedia(special://profile/playlists/music/depeche.xsp)</onclick> 
+<onclick>Skin.SetBool(NotAnAlbum)</onclick>
+<property name="listpath">special://profile/playlists/music/depeche.xsp</property>
+</item> 
+
+<item id="3">
+<label>edit button test</label>
+<label2>edit button test.icon</label2>
+<icon>$INFO[Skin.String(edit button test.icon)]</icon>
+<onclick>ActivateWindow(1120)</onclick>
+<onclick>PlayMedia(special://profile/playlists/music/does window work.xsp)</onclick> 
+<onclick>Skin.SetBool(NotAnAlbum)</onclick>
+<property name="listpath">special://profile/playlists/music/does window work.xsp</property>
+</item> 
+
+<item id="4">
+<label>its 8512</label>
+<label2>its 8512.icon</label2>
+<icon>$INFO[Skin.String(its 8512.icon)]</icon>
+<onclick>ActivateWindow(1120)</onclick>
+<onclick>PlayMedia(special://profile/playlists/music/its 851.xsp)</onclick> 
+<onclick>Skin.SetBool(NotAnAlbum)</onclick>
+<property name="listpath">special://profile/playlists/music/its 851.xsp</property>
+</item> 
+
+<item id="5">
+<label>newline</label>
+<label2>newline.icon</label2>
+<icon>$INFO[Skin.String(newline.icon)]</icon>
+<onclick>ActivateWindow(1120)</onclick>
+<onclick>PlayMedia(special://profile/playlists/music/newline.xsp)</onclick> 
+<onclick>Skin.SetBool(NotAnAlbum)</onclick>
+<property name="listpath">special://profile/playlists/music/newline.xsp</property>
+</item> 
+
+<item id="6">
+<label>regular playlist</label>
+<label2>regular playlist.icon</label2>
+<icon>$INFO[Skin.String(regular playlist.icon)]</icon>
+<onclick>ActivateWindow(1120)</onclick>
+<onclick>PlayMedia(special://profile/playlists/music/regular playlist.m3u)</onclick> 
+<onclick>Skin.SetBool(NotAnAlbum)</onclick>
+<property name="listpath">special://profile/playlists/music/regular playlist.m3u</property>
+</item> 
+
+<item id="7">
+<label>R.E.M.</label>
+<label2>R.E.M..icon</label2>
+<icon>$INFO[Skin.String(R.E.M..icon)]</icon>
+<onclick>ActivateWindow(1120)</onclick>
+<onclick>PlayMedia(special://profile/playlists/music/rem.xsp)</onclick> 
+<onclick>Skin.SetBool(NotAnAlbum)</onclick>
+<property name="listpath">special://profile/playlists/music/rem.xsp</property>
+</item> 
+
+<item id="8">
+<label>yet another test</label>
+<label2>yet another test.icon</label2>
+<icon>$INFO[Skin.String(yet another test.icon)]</icon>
+<onclick>ActivateWindow(1120)</onclick>
+<onclick>PlayMedia(special://profile/playlists/music/test.xsp)</onclick> 
+<onclick>Skin.SetBool(NotAnAlbum)</onclick>
+<property name="listpath">special://profile/playlists/music/test.xsp</property>
+</item> 
+
+<item id="9">
+<label>wow3</label>
+<label2>wow3.icon</label2>
+<icon>$INFO[Skin.String(wow3.icon)]</icon>
+<onclick>ActivateWindow(1120)</onclick>
+<onclick>PlayMedia(special://profile/playlists/music/wow3.xsp)</onclick> 
+<onclick>Skin.SetBool(NotAnAlbum)</onclick>
+<property name="listpath">special://profile/playlists/music/wow3.xsp</property>
+</item> 
+
+</include> 
+</includes> 

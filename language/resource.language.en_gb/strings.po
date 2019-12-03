@@ -1,0 +1,264 @@
+# XBMC Media Center language file
+# Addon Name: SiMPle
+# Addon id: skin.SiMPle
+# Addon Provider: unknown
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Skins\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: XBMC Translation Team\n"
+"Language-Team: English (http://www.transifex.com/projects/p/xbmc-skins/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /720p/Home.xml
+msgctxt "#31000"
+msgid "by"
+msgstr ""
+
+msgctxt "#31001"
+msgid "Close"
+msgstr ""
+
+msgctxt "#31002"
+msgid "Audio Settings"
+msgstr ""
+
+msgctxt "#31003"
+msgid "IP"
+msgstr ""
+
+msgctxt "#31004"
+msgid "Caps[CR]Lock"
+msgstr ""
+
+msgctxt "#31005"
+msgid "Visualization Options"
+msgstr ""
+
+msgctxt "#31006"
+msgid "Visualization Presets"
+msgstr ""
+
+msgctxt "#31007"
+msgid "Context Menu"
+msgstr ""
+
+msgctxt "#31008"
+msgid "Fullscreen"
+msgstr ""
+
+#: /720p/Custom_NowPlaying_1120.xml
+msgctxt "#31009"
+msgid "No Music Selected"
+msgstr ""
+
+#: /720p/Custom_PlaylistIcons_1181.xml
+msgctxt "#31010"
+msgid "Choose Playlist to Assign Art"
+msgstr ""
+
+msgctxt "#31011"
+msgid "N/A"
+msgstr ""
+
+msgctxt "#31012"
+msgid "Music - Files"
+msgstr ""
+
+msgctxt "#31024"
+msgid "Page"
+msgstr ""
+
+msgctxt "#31025"
+msgid "Items"
+msgstr ""
+
+msgctxt "#31030"
+msgid "Info List"
+msgstr ""
+
+msgctxt "#31042"
+msgid "PLAYING"
+msgstr ""
+
+msgctxt "#31043"
+msgid "PAUSED"
+msgstr ""
+
+msgctxt "#31044"
+msgid "FAST FORWARD"
+msgstr ""
+
+msgctxt "#31045"
+msgid "REWIND"
+msgstr ""
+
+msgctxt "#31049"
+msgid "End Time"
+msgstr ""
+
+msgctxt "#31050"
+msgid "Sort: Ascending"
+msgstr ""
+
+msgctxt "#31051"
+msgid "Sort: Descending"
+msgstr ""
+
+msgctxt "#31055"
+msgid "Open playlist"
+msgstr ""
+
+msgctxt "#31056"
+msgid "Save playlist"
+msgstr ""
+
+msgctxt "#31057"
+msgid "Close playlist"
+msgstr ""
+
+msgctxt "#31058"
+msgid "System music files"
+msgstr ""
+
+msgctxt "#31059"
+msgid "Current playlist"
+msgstr ""
+
+msgctxt "#31067"
+msgid "Media"
+msgstr ""
+
+msgctxt "#31075"
+msgid "Appearance"
+msgstr ""
+
+msgctxt "#31076"
+msgid "Service"
+msgstr ""
+
+msgctxt "#31077"
+msgid "Skin Settings"
+msgstr ""
+
+msgctxt "#31078"
+msgid "Addons"
+msgstr ""
+
+msgctxt "#31079"
+msgid "System"
+msgstr ""
+
+msgctxt "#31080"
+msgid "System Info"
+msgstr ""
+
+msgctxt "#31100"
+msgid "Recent Albums"
+msgstr ""
+
+msgctxt "#31101"
+msgid "Enable Soft Buttons"
+msgstr ""
+
+msgctxt "#31102"
+msgid "Enable Notifications"
+msgstr ""
+
+msgctxt "#31103"
+msgid "Choose Color"
+msgstr ""
+
+msgctxt "#31104"
+msgid "Selected Color"
+msgstr ""
+
+msgctxt "#31171"
+msgid "General"
+msgstr ""
+
+msgctxt "#31172"
+msgid "Home Menu"
+msgstr ""
+
+msgctxt "#31173"
+msgid "Media"
+msgstr ""
+
+msgctxt "#31174"
+msgid "Submenu Buttons"
+msgstr ""
+
+msgctxt "#31200"
+msgid "Back"
+msgstr ""
+
+msgctxt "#31202"
+msgid "View"
+msgstr ""
+
+msgctxt "#31207"
+msgid "Main Button Style"
+msgstr ""
+
+msgctxt "#31211"
+msgid "Configuration"
+msgstr ""
+
+msgctxt "#31245"
+msgid "Artist"
+msgstr ""
+
+msgctxt "#31246"
+msgid "Album"
+msgstr ""
+
+msgctxt "#31247"
+msgid "Title"
+msgstr ""
+
+msgctxt "#31291"
+msgid "Player"
+msgstr ""
+
+msgctxt "#31309"
+msgid "Memory Used:"
+msgstr ""
+
+msgctxt "#31325"
+msgid "Playlist Options"
+msgstr ""
+
+msgctxt "#31355"
+msgid "Video Menu"
+msgstr ""
+
+msgctxt "#31356"
+msgid "Download Subtitles"
+msgstr ""
+
+msgctxt "#31390"
+msgid "Skin default"
+msgstr ""
+
+msgctxt "#31391"
+msgid "Arial based"
+msgstr ""
+
+msgctxt "#31421"
+msgid "Select your XBMC user Profile[CR]to login and continue"
+msgstr ""
+
+msgctxt "#40106"
+msgid " Update Options"
+msgstr ""
+
+msgctxt "#40130"
+msgid "Create new playlist"
+msgstr ""

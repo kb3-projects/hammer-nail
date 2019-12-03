@@ -1,0 +1,49 @@
+<window id="503">
+	<defaultcontrol allways="true">6</defaultcontrol>
+	<onunload>Skin.Reset(MediaSubMenuVisible2)</onunload>
+	<backgroundcolor>0</backgroundcolor>
+	<controls>
+		<include>StandardBackground</include>
+	<include content="SoftButtons">
+		<param name="SoftButton1" value="PAUSE"/>
+		<param name="SoftButton1Alternate" value="PLAY"/>
+		<param name="SoftButton1Visible" value="Player.HasAudio"/>		
+		<param name="SoftButton1VisibleAlternate" value="Player.Paused"/>	
+		<param name="SoftButton1Action" value="PlayerControl(Play)"/>	
+		
+		<param name="SoftButton2" value="PREV"/>
+		<param name="SoftButton2Alternate" value=""/>
+		<param name="SoftButton2Visible" value="false"/>
+		<param name="SoftButton2VisibleAlternate" value="false"/>		
+		<param name="SoftButton2Action" value="PlayerControl(Previous)"/>
+		
+		<param name="SoftButton3" value="BACK"/>
+		<param name="SoftButton3Alternate" value=""/>
+		<param name="SoftButton3Visible" value="true"/>
+		<param name="SoftButton3VisibleAlternate" value="false"/>	
+		<param name="SoftButton3Action" value="back"/>			
+		
+		<param name="SoftButton4" value="HOME"/>
+		<param name="SoftButton4Alternate" value="set"/>
+		<param name="SoftButton4Visible" value="true"/>
+		<param name="SoftButton4VisibleAlternate" value="false"/>
+		<param name="SoftButton4Action" value="ActivateWindow(Home)"/>
+	</include>
+
+			<control type="label">
+				<include>Window_OpenClose_Fade</include>
+				<posx>00</posx>
+				<posy>0</posy>
+				<width>ScreenWidth</width>
+				<height>screenheight</height>
+				<font>font70_title</font>
+				<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+				<scroll>false</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Sorry, this feature not enabled.[CR][CR]Please use Smart Playlists.</label>
+			</control>
+			
+	</controls>
+
+</window>

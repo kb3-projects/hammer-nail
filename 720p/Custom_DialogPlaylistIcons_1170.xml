@@ -1,0 +1,281 @@
+<window type="dialog" id="1170">
+	<!-- <defaultcontrol always="false">811</defaultcontrol> -->
+	<!-- removed allowoverlay -->
+	<onload>setfocus(40000)</onload>
+    <onload>Skin.SetString(setnewicon,yes)</onload>
+    <onunload>Skin.SetString(setnewicon,no)</onunload>
+    
+	<defaultcontrol always="true">40000</defaultcontrol>
+	<!-- <onload>Skin.SetBool(IconSelected)</onload> -->
+	<!-- <onload>Skin.SetString(currentplaylist,$INFO[Container(50000).ListItem(0).Label2])</onload> -->
+		<animation type="WindowOpen" reversible="false">
+            <effect type="fade" delay="410" start="0" end="100" time="400" />
+			<!-- <effect type="zoom" start="10" end="100" center="640,360" easing="out"  time="300" />			 -->
+        </animation>
+        <animation type="WindowClose" reversible="false">
+            <effect type="fade" delay="500" start="100" end="0" time="300" />
+        </animation>
+
+	<controls>
+	
+	<include>BehindDialogFadeOut</include>
+	
+
+    
+    
+	<control type="group">
+			<left>50</left>
+		<top>55</top>
+		
+		<control type="group">
+
+		<control type="image">
+			<left>00</left>
+			<top>00</top>
+			<width>1180</width>
+			<height>60</height>
+			<texture border="5">DialogHeader.png</texture>
+
+			<!-- <animation effect="fade" start="100" end="0" time="300" condition="!Skin.HasSetting(IconSelected)">Conditional</animation> -->
+
+			<!-- <animation type="WindowClose" reversible="false"> -->
+				<!-- <effect type="fade" start="100" end="0" time="300" /> -->
+			<!-- </animation> -->
+
+			<!-- <animation type="WindowOpen" reversible="false"> -->
+				<!-- <effect type="fade" start="0" end="100" time="300" /> -->
+			<!-- </animation> -->
+			
+		</control>	
+	
+
+		<control type="label">
+			<description>choose icon</description>
+			<left>00</left>
+			<top>00</top>
+			<width>1180</width>
+			<height>60</height>
+			<aligny>center</aligny>
+			<align>center</align>
+			<font>font40_bold</font>
+			<label>$LOCALIZE[19284]</label>
+
+		</control>
+
+		<control type="image">
+            <!-- <visible>false</visible> -->
+			<left>00</left>
+			<top>60</top>
+			<width>1180</width>
+			<height>520</height>
+			<texture border="5">dialog_back_black.png</texture>
+
+		</control>
+        
+        
+        <control type="image">
+			<description>current icon</description>
+			<left>70</left>
+			<top>320</top>
+			<width>150</width>
+			<height>150</height>
+			<texture>$INFO[Skin.String(currenticon)]</texture>
+		</control>
+		
+        <control type="label">
+			<description>current icon</description>
+			<visible>true</visible>
+			<left>20</left>
+			<top>480</top>
+            <height>50</height>
+			<!-- <include>StandardWindowTitle</include> -->
+			<width>250</width>
+            <font>font40</font>
+			<label>Current Icon</label>
+		    <!-- <label>where where there</label> -->
+		</control>
+		
+		<control type="label">
+			<description>test label</description>
+			<visible>false</visible>
+			<left>00</left>
+			<top>40</top>
+			<include>StandardWindowTitle</include>
+			<width>1180</width>
+			<label>$INFO[Skin.String(Alphaville.icon)]</label>
+		    <!-- <label>where where there</label> -->
+		</control>
+		
+		<control type="label">
+			<description>test label</description>
+			<visible>false</visible>
+			<left>00</left>
+			<top>80</top>
+			<include>StandardWindowTitle</include>
+			<width>1180</width>
+			<info>ListItem.Label2</info>
+		    <!-- <label>where where there</label> -->
+		</control>
+		
+		</control>
+
+	<control type="wraplist" id="40000">
+				<description>home icons navigation</description>
+				<left>-1</left>
+				<top>70</top>
+				<width>1180</width>
+				<height>520</height>
+		
+				<viewtype label="3D list">list</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>25</pagecontrol>
+				<scrolltime tween="linear" easing="inout">200</scrolltime>
+				<autoscroll>false</autoscroll>
+				<focusposition>3</focusposition>
+
+				
+		<!-- this is the list navigation and labels.   Item Display is handled separately. -->
+			<itemlayout width="147" height="130">
+			
+					<control type="label">
+						<description>Icon Name</description>	
+							<left>0</left>
+							<visible>false</visible>
+							<top>000</top>
+							<width>400</width>
+							<height>50</height>
+							<font>font24</font>
+							<!-- <aligny>center</aligny> -->
+							<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+							<!-- <animation reversible="false" effect="fade" time="200">Focus</animation> -->
+							<!-- <label>Albums by</label> -->
+							<!-- <label colordiffuse="77777777">$INFO[ListItem.Label]</label> -->
+					</control>
+					
+					<control type="image">
+							<left>15</left>
+							<top>50</top>
+							<width>100</width>
+							<height>100</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<!-- <texture colordiffuse="FFFFFFFF">playlist.icons/blues.png</texture> -->
+					</control>
+					
+					
+			</itemlayout>
+				<focusedlayout width="Icon.Dialog.Center.Ht" height="Icon.Dialog.Center.Wd">
+					
+					
+					<control type="label">
+						<description>icon Name</description>	
+							<left>0</left>
+							<visible>false</visible>
+							<top>000</top>
+							<width>400</width>
+							<height>50</height>
+							<font>font24_bold</font>
+							<!-- <aligny>left</aligny> -->
+							<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+							<!-- <animation reversible="false" effect="fade" time="200">Focus</animation> -->
+							<!-- <label>Albums by</label> -->
+							<info>ListItem.Label</info>
+							<!-- <label colordiffuse="77777777">$INFO[ListItem.Album]</label> -->
+					</control>
+					
+					<control type="label">
+						<description>icon Name</description>	
+							<left>200</left>
+							<visible>false</visible>
+							<top>130</top>
+							<width>400</width>
+							<height>50</height>
+							<font>font40_bold</font>
+							<!-- <aligny>left</aligny> -->
+							<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+							<!-- <animation reversible="false" effect="fade" time="200">Focus</animation> -->
+							<!-- <label>Albums by</label> -->
+							<info>ListItem.Label2</info>
+							<!-- <label colordiffuse="77777777">$INFO[ListItem.Album]</label> -->
+					</control>
+					
+					
+					<control type="image">
+							<left>0</left>
+							<top>25</top>
+							<width>Icon.Dialog.Center.Wd</width>
+							<height>Icon.Dialog.Center.Ht</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<!-- <texture colordiffuse="FFFFFFFF">playlist.icons/blues.png</texture> -->
+					</control>
+				
+				</focusedlayout>
+				
+				<onclick>Skin.SetString($INFO[Skin.String(currentplaylist)],$INFO[ListItem.Label2])</onclick>
+				<onclick>close</onclick>
+
+				<content>
+				<include>PlaylistIcons</include>
+				</content>
+                
+
+
+
+
+</control>
+
+			<control type="button" id="951">
+                <description>Cancel Button</description>
+            	<left>650</left>
+                <top>458</top>
+				<height>60</height>
+				<width>200</width>
+                
+                <include>ButtonInfoDialogsCommonValues</include>
+                
+				<!-- <font>font44_title</font> -->
+				<!-- <textcolor>white</textcolor> -->
+				<label>222</label>
+				<!-- <align>center</align> -->
+                <!-- <aligny>center</aligny> -->
+				<texturefocus border="20">new_button_focus.png</texturefocus>
+			    <texturenofocus border="20">new_button.png</texturenofocus>
+				<onclick>back</onclick>
+				<!-- <onclick>Dialog.Close(1124)</onclick> -->
+				<onup>950</onup>
+				<ondown>noop</ondown>
+				<onleft>951</onleft>
+				<onright>noop</onright>
+			</control>
+
+			<control type="button" id="952">
+                <description>OK Button</description>
+            	<left>950</left>
+                <top>458</top>
+				<height>60</height>
+				<width>200</width>
+                
+                <include>ButtonInfoDialogsCommonValues</include>
+                
+				<!-- <font>font44_title</font> -->
+				<!-- <textcolor>white</textcolor> -->
+				<label>186</label>
+				<!-- <align>center</align> -->
+                <!-- <aligny>center</aligny> -->
+				<!-- <texturefocus border="20">new_button_focus.png</texturefocus> -->
+			    <!-- <texturenofocus border="20">new_button.png</texturenofocus> -->
+                <onclick>Setfocus(40000)</onclick>
+				<onclick>Skin.SetString($INFO[Skin.String(currentplaylist)],$INFO[ListItem.Label2])</onclick>
+				<onclick>close</onclick>
+				<!-- <onclick>Dialog.Close(1124)</onclick> -->
+				<onup>950</onup>
+				<ondown>noop</ondown>
+				<onleft>951</onleft>
+				<onright>noop</onright>
+			</control>
+
+	</control>
+		
+	
+	</controls>
+
+</window>

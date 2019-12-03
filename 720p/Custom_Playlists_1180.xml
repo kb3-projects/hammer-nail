@@ -1,0 +1,295 @@
+<window id="1180">
+
+	<!-- <animation effect="fade"  time="100">WindowOpen</animation> -->
+	<!-- <animation effect="fade"  time="100">WindowClose</animation> -->
+	<onload>setfocus(50000)</onload>
+	<onload>RunScript(script.listhammer,makelist)</onload>
+    <defaultcontrol always="true">50000</defaultcontrol>
+	<!-- <onload>RunScript(script.playlisticon)</onload> -->
+	<!-- <onload>Skin.SetBool(IconSelected)</onload> -->
+
+	
+	<backgroundcolor>0</backgroundcolor>
+	<controls>
+	
+	<include>StandardBackground</include>
+	<include content="SoftButtons">
+	
+		<param name="SoftButton1" value="PAUSE"/>
+		<param name="SoftButton1Alternate" value="PLAY"/>
+		<param name="SoftButton1Visible" value="Player.HasAudio"/>		
+		<param name="SoftButton1VisibleAlternate" value="Player.Paused"/>	
+		<param name="SoftButton1Action" value="PlayerControl(Play)"/>	
+        
+        <!-- <param name="SoftButton1" value="NEW"/> -->
+		<!-- <param name="SoftButton1Alternate" value="PLAY"/> -->
+		<!-- <param name="SoftButton1Visible" value="true"/>		 -->
+		<!-- <param name="SoftButton1VisibleAlternate" value="false"/>	 -->
+		<!-- <param name="SoftButton1Action" value="RunScript(script.listhammer,newlist)"/>	 -->
+		
+		<param name="SoftButton2" value="EDIT"/>
+		<param name="SoftButton2Alternate" value=""/>
+		<param name="SoftButton2Visible" value="false"/>
+		<param name="SoftButton2VisibleAlternate" value="false"/>		
+		<param name="SoftButton2Action" value="RunScript(script.listhammer,editlist)"/>
+		<!-- <param name="SoftButton2Action" value="ActivateWindow(10136,$INFO[ListItem.Property(listpath)],music)"/> -->
+		
+		<param name="SoftButton3" value="ICON"/>
+		<param name="SoftButton3Alternate" value=""/>
+		<param name="SoftButton3Visible" value="false"/>
+		<param name="SoftButton3VisibleAlternate" value="false"/>	
+		<param name="SoftButton3Action" value="RunScript(script.listhammer,seticon)"/>		
+		
+		<param name="SoftButton4" value="HOME"/>
+		<param name="SoftButton4Alternate" value="set"/>
+		<param name="SoftButton4Visible" value="true"/>
+		<param name="SoftButton4VisibleAlternate" value="false"/>
+		<param name="SoftButton4Action" value="ActivateWindow(Home)"/>
+		<!-- <param name="SoftButton4Action" value="ActivateWindow(1170)"/>		 -->
+	</include>
+
+	<control type="label">
+		<description>test label</description>	
+			<left>240</left>
+			<visible>false</visible>
+			<top>00</top>
+			<width>MusicList.Label.Width</width>
+			<height>MusicList.Label.Height</height>
+			<font>font40_bold</font>
+			<aligny>center</aligny>
+			<align>center</align>
+			<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+			<animation reversible="false" effect="fade" time="200">Focus</animation>
+			<!-- <info>Container(50000).ListItem(0).Label2</info> -->
+			<label colordiffuse="77777777">$INFO[ListItem.Property(listpath)]</label>
+	</control>
+		<control type="label">
+		<description>test label</description>	
+			<left>240</left>
+			<visible>false</visible>
+			<top>50</top>
+			<width>MusicList.Label.Width</width>
+			<height>MusicList.Label.Height</height>
+			<font>font40_bold</font>
+			<aligny>center</aligny>
+			<align>center</align>
+			<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+			<animation reversible="false" effect="fade" time="200">Focus</animation>
+			<!-- <info>Skin.String(currentplaylist)</info> -->
+			<label colordiffuse="77777777">IconSelected</label>
+	</control>
+
+
+	
+	<control type="label">
+			<description>playlists</description>
+				<include>TopCornerTitle</include>
+			<label>136</label>
+	</control>
+	
+<!-- Wraplist for Icons -->
+		<control type="wraplist" id="50000">
+		<visible>true</visible>
+		<onfocus>Container.Refresh</onfocus>
+				<description>home icons navigation</description>
+				<left>0</left>
+				<top>0</top>
+				<width>1280</width>
+				<height>720</height>
+				<hitrect x="0" y="0" w="0" h="0" />			
+				<viewtype label="3D list">list</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>25</pagecontrol>
+				<scrolltime tween="linear" easing="inout">MusicList.Scrolltime</scrolltime>
+				<autoscroll>false</autoscroll>
+				<focusposition>0</focusposition>
+				<movement>0</movement>
+				<!-- <onup>Skin.SetString(currentplaylist,$INFO[ListItem.Label2])</onup> -->
+				
+		<!-- this is the list navigation and labels.   Item Display is handled separately. -->
+			<itemlayout width="0" height="0">
+					<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>1</width>
+							<height>1</height>
+					</control>
+			</itemlayout>
+				<focusedlayout width="0" height="0">
+					<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>1</width>
+							<height>1</height>
+					</control>
+					
+					<control type="label">
+						<description>playlist Name</description>	
+							<!-- <visible>false</visible> -->
+							<!-- <left>240</left> -->
+							<!-- <top>510</top> -->
+							<!-- <width>MusicList.Label.Width</width> -->
+							<!-- <height>MusicList.Label.Height</height> -->
+							<!-- <font>font40_bold</font> -->
+							<!-- <aligny>center</aligny> -->
+							<!-- <align>center</align> -->
+							<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+							<!-- <animation reversible="false" effect="fade" time="200">Focus</animation> -->
+							<include>FlowTitle</include>
+							<info>ListItem.Label</info>
+							<!-- <label colordiffuse="77777777">$INFO[ListItem.Album]</label> -->
+					</control>
+					
+					<control type="label">
+						<description>Artist Name</description>	
+							<left>240</left>
+							<visible>false</visible>
+							<top>550</top>
+							<width>MusicList.Label.Width</width>
+							<height>MusicList.Label.Height</height>
+							<font>font40_bold</font>
+							<aligny>center</aligny>
+							<align>center</align>
+							<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+							<animation reversible="true"  effect="fade" time="200">Focus</animation>
+							<!-- <info>Container(50000).ListItem(0).Label2</info> -->
+							<info>ListItem.Label2</info>
+					</control>
+					
+				</focusedlayout>
+
+<!-- The onclick actions to play music are in the static list called by <include>PlaylistsList</include>	 -->
+
+		<content>
+			<include>PlaylistList</include>
+		</content>
+
+		</control>
+	
+	<!-- Actual display of album list -->
+
+			
+		
+		<control type="group">
+		<description>overall group for icon display</description>
+			<top>Flow.Home.Main.Top</top>  <!-- The centerline of the list is the top -->
+			<left>Flow.Home.Main.Left</left>
+			
+
+
+			<include content="FlowHomeLeft">
+				<param name="ArtType" value="icon"/>
+			</include>
+			<include content="FlowHomeRight">
+				<param name="ArtType" value="icon"/>
+			</include>	  
+			<include content="FlowHomeNotMoving">
+				<param name="ArtType" value="icon"/>
+			</include>	
+
+
+	  
+		</control>	
+
+		<control type="button" id="3501">
+		<visible>false</visible>
+			<description>Set playlist icon</description>
+			<bottom>15</bottom>
+			<right>95</right>
+			<height>55</height>
+			<width>55</width>
+			<label>-</label> 
+			<font>font36_title</font>
+			<!-- <textcolor>-</textcolor> -->
+			<texturenofocus>iconmonstr-art.png</texturenofocus>
+			<texturefocus>iconmonstr-art.png</texturefocus>
+			<!-- <onclick>Skin.SetString(currentplaylist,$INFO[Container(50000).ListItem(0).Label2])</onclick> -->
+			<onclick>ActivateWindow(1181)</onclick>
+
+
+		</control>
+
+
+
+
+<!-- Window Bottom Controls -->
+
+
+
+
+<control type="group">
+	<top>0</top>
+	<left>0</left>
+	<visible>false</visible>
+		
+		<!-- <control type="button" id="3051"> -->
+			<!-- <description>change artwork</description> -->
+			<!-- <right>15</right> -->
+			<!-- <top>15</top> -->
+			<!-- <height>55</height> -->
+			<!-- <width>55</width> -->
+			<!-- <label></label>  -->
+			<!-- <font>font36_title</font> -->
+			<!-- <textcolor>-</textcolor> -->
+			<!-- <texturenofocus>defaulticonwarning.png</texturenofocus> -->
+			<!-- <texturefocus>defaulticonwarning.png</texturefocus> -->
+			<!-- <onclick>Skin.SetString(currentplaylist,$INFO[Container(50000).ListItem(0).Label2])</onclick> -->
+			<!-- <onclick>ActivateWindow(1170)</onclick> -->
+
+
+		<!-- </control> -->
+		
+		<control type="button" id="3052">
+			<description>Other home Button</description>
+			<right>105</right>
+			<top>15</top>
+			<height>55</height>
+			<width>55</width>
+			<label></label> 
+			<font>font36_title</font>
+			<textcolor>-</textcolor>
+			<texturenofocus>iconmonstr-music.png</texturenofocus>
+			<texturefocus>iconmonstr-music.png</texturefocus>
+			<onclick>ActivateWindow(1120)</onclick>
+
+		</control>
+		
+		<control type="button" id="3053">
+		<description>Other home Button</description>
+			<right>155</right>
+			<top>15</top>
+			<height>55</height>
+			<width>55</width>
+			<label></label> 
+			<font>font36_title</font>
+			<textcolor>-</textcolor>
+			<texturenofocus>defaultartist.png</texturenofocus>
+			<texturefocus>defaultartist.png</texturefocus>
+			<onclick>ActivateWindow(1125)</onclick>
+
+		</control>
+		
+		<control type="button" id="3054">
+		<description>Other home Button</description>
+			<right>205</right>
+			<top>15</top>
+			<height>55</height>
+			<width>55</width>
+			<label></label> 
+			<font>font36_title</font>
+			<textcolor>-</textcolor>
+			<texturenofocus>defaultartist.png</texturenofocus>
+			<texturefocus>defaultartist.png</texturefocus>
+			<onclick>ActivateWindow(1190)</onclick>
+
+		</control>
+		
+</control>
+
+
+
+
+
+ 		
+	</controls>	
+</window>
