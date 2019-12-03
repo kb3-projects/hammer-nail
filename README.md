@@ -8,13 +8,16 @@ Why the name?  Using the old expression, "To a child with a hammer, everything i
 
 ### A few usage notes:
 
+#### Advanced settings
+Some artwork types have been turned on in advancedsettings.xml.   A copy of advancedsettings.xml has been included in the /skin.hammernail/other folder
+
 #### Dependency:
 script.listhammer is needed for the skin to fully function.  It available in the same repository as this skin.  
 
 #### Control:
 * This will work with a keyboard and mouse.   
 * Touch functions will generally work, but not for everything.
-* A custom keyboard file is in the /other folder.  
+* A custom keyboard file is in the /skin.hammernail/other folder.  
   * It allows F1 through F4 to control the soft buttons at the bottom of most windows.  
   * F5 will function as select/enter as appropriate, and a longpress F5 will bring up context menus (this is important for playlists, below)
   * The user needs to move it to the proper location so Kodi will recognize it.   (i.e. \userdata\keymaps\)
