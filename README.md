@@ -12,7 +12,7 @@ Why the name?  Using the old expression, "To a child with a hammer, everything i
 script.listhammer is needed for the skin to fully function.  It available in the same repository as this skin.  
 
 #### Control:
-* This will work with a keyboard an mouse.   
+* This will work with a keyboard and mouse.   
 * Touch functions will generally work, but not for everything.
 * A custom keyboard file is in the /other folder.  
   * It allows F1 through F4 to control the soft buttons at the bottom of most windows.  
