@@ -16,10 +16,10 @@ A custom keyboard file is in the /other folder.  It allows F1 through F4 to cont
 
 Playlists:
 The playlists window has a menu that functions the same as a context window.  Longpress F5 will produce a popup selection allows - 
--Choose an icon for the playlist.  Images for the icons are stored in /media/playlist.icons, and can be readily replaced with any other images.
--Create a new playlist
--Edit an existing playlist
--Delete an existing playlist
+*Choose an icon for the playlist.  Images for the icons are stored in /media/playlist.icons, and can be readily replaced with any other images.
+*Create a new playlist
+*Edit an existing playlist
+*Delete an existing playlist
 
 Skin Settings:
 The skin colors are user selectable from a menu.
