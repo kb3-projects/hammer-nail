@@ -14,6 +14,9 @@ Some artwork types have been turned on in advancedsettings.xml.   A copy of adva
 #### Dependency:
 script.listhammer is needed for the skin to fully function.  It available in the same repository as this skin.  
 
+### Known issue:
+When first installed, the default colors do not load.  This results in invisible text.  Exiting Kodi and restarting corrects this.
+
 #### Control:
 * This will work with a keyboard and mouse.   
 * Touch functions will generally work, but not for everything.
