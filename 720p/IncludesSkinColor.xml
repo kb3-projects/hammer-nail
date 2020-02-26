@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--  Skin Color  -->
+
+<includes>
+	<include name="SkinColorList">
+		<control type="group">
+		<posx>50</posx>
+		<posy>60</posy>
+
+		<!-- <control type="label"> -->
+			<!-- <description>Albums</description> -->
+			<!-- <left>0</left> -->
+			<!-- <top>0</top> -->
+			<!-- <width>400</width> -->
+			<!-- <height>25</height> -->
+			<!-- <font>font44_bold</font> -->
+
+			<!-- <label>$INFO[Container(801).CurrentItem]</label> -->
+			<!-- <info>Container(50000).ListItemNoWrap(0).Album</info> -->
+	<!-- </control> -->
+
+		<!-- Color List 1 -->
+		<control type="grouplist" id="801">
+			<description>Colorlist1</description>
+			<posx>36</posx>
+			<posy>40</posy>
+			<width>1200</width>
+			<height>100</height>
+			<itemgap>8</itemgap>
+			<orientation>horizontal</orientation>
+			<visible>True</visible>
+			<control type="button" id="811">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>100</height>
+								
+				<texturenofocus colordiffuse="Color11">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color11">button-focus.png</texturefocus>
+				<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick> -->
+				<!-- <onclick>Control.SetFocus(952)</onclick> -->
+				<onclick>Skin.SetString($VAR[SetColor],Color11)</onclick>
+				<onup>noop</onup>
+				<ondown>826</ondown>
+				<onleft>825</onleft>
+				<onright>812</onright>
+			</control>
+			<control type="button" id="812">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color12">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color12">button-focus.png</texturefocus>
+				<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick> -->
+				<!-- <onclick>Control.SetFocus(952)</onclick> -->
+				<onclick>Skin.SetString($VAR[SetColor],Color12)</onclick>
+				<onup>noop</onup>
+				<ondown>827</ondown>
+				<onleft>811</onleft>
+				<onright>813</onright>
+			</control>
+			<control type="button" id="813">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color13">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color13">button-focus.png</texturefocus>
+				<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick> -->
+				
+				<onclick>Skin.SetString($VAR[SetColor],Color13)</onclick>
+				<onup>noop</onup>
+				<ondown>828</ondown>
+				<onleft>812</onleft>
+				<onright>814</onright>
+			</control>
+			<control type="button" id="814">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color14">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color14">button-focus.png</texturefocus>
+				<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick> -->
+				
+				<onclick>Skin.SetString($VAR[SetColor],Color14)</onclick>
+				<onup>noop</onup>
+				<ondown>829</ondown>
+				<onleft>813</onleft>
+				<onright>815</onright>
+			</control>
+			<control type="button" id="815">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color15">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color15">button-focus.png</texturefocus>
+				<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick> -->
+				
+				<onclick>Skin.SetString($VAR[SetColor],Color15)</onclick>
+				<onup>noop</onup>
+				<ondown>830</ondown>
+				<onleft>814</onleft>
+				<onright>816</onright>
+			</control>
+			<control type="button" id="816">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color16">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color16">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color16)</onclick>
+				<onup>noop</onup>
+				<ondown>831</ondown>
+				<onleft>815</onleft>
+				<onright>817</onright>
+			</control>
+			<control type="button" id="817">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color17">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color17">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color17)</onclick>
+				<onup>noop</onup>
+				<ondown>832</ondown>
+				<onleft>816</onleft>
+				<onright>818</onright>
+			</control>
+			<control type="button" id="818">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color18">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color18">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color18)</onclick>
+				<onup>noop</onup>
+				<ondown>833</ondown>
+				<onleft>817</onleft>
+				<onright>819</onright>
+			</control>
+			<control type="button" id="819">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color19">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color19">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color19)</onclick>
+				<onup>noop</onup>
+				<ondown>834</ondown>
+				<onleft>818</onleft>
+				<onright>820</onright>
+			</control>
+
+		</control>	
+
+		<!-- Color List 2 -->
+		<control type="grouplist" id="802">
+			<description>Colorlist2</description>
+			<posx>36</posx>
+			<posy>148</posy>
+			<width>1200</width>
+			<height>100</height>
+			<itemgap>8</itemgap>
+			<orientation>horizontal</orientation>
+			<visible>True</visible>
+			<control type="button" id="826">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color21">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color21">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color21)</onclick>
+				<onup>811</onup>
+				<ondown>841</ondown>
+				<onleft>825</onleft>
+				<onright>827</onright>
+			</control>
+			<control type="button" id="827">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color22">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color22">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color22)</onclick>
+				<onup>812</onup>
+				<ondown>842</ondown>
+				<onleft>826</onleft>
+				<onright>828</onright>
+			</control>
+			<control type="button" id="828">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color23">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color23">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color23)</onclick>
+				<onup>813</onup>
+				<ondown>843</ondown>
+				<onleft>827</onleft>
+				<onright>829</onright>
+			</control>
+			<control type="button" id="829">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color24">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color24">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color24)</onclick>
+				<onup>814</onup>
+				<ondown>844</ondown>
+				<onleft>828</onleft>
+				<onright>830</onright>
+			</control>
+			<control type="button" id="830">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color25">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color25">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color25)</onclick>
+				<onup>815</onup>
+				<ondown>845</ondown>
+				<onleft>829</onleft>
+				<onright>831</onright>
+			</control>
+			<control type="button" id="831">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color26">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color26">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color26)</onclick>
+				<onup>816</onup>
+				<ondown>846</ondown>
+				<onleft>830</onleft>
+				<onright>832</onright>
+			</control>
+			<control type="button" id="832">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color27">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color27">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color27)</onclick>
+				<onup>817</onup>
+				<ondown>847</ondown>
+				<onleft>831</onleft>
+				<onright>833</onright>
+			</control>
+			<control type="button" id="833">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color28">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color28">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color28)</onclick>
+				<onup>818</onup>
+				<ondown>848</ondown>
+				<onleft>832</onleft>
+				<onright>834</onright>
+			</control>
+			<control type="button" id="834">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color29">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color29">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color29)</onclick>
+				<onup>819</onup>
+				<ondown>849</ondown>
+				<onleft>833</onleft>
+				<onright>835</onright>
+			</control>
+
+		</control>	
+
+		<!-- Color List 3 -->
+		<control type="grouplist" id="803">
+			<description>Colorlist2</description>
+			<posx>36</posx>
+			<posy>256</posy>
+			<width>1200</width>
+			<height>100</height>
+			<itemgap>8</itemgap>
+			<orientation>horizontal</orientation>
+			<visible>True</visible>
+			<control type="button" id="841">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>100</height>
+				
+				<texturenofocus colordiffuse="Color31">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color31">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color31)</onclick>
+				<onup>826</onup>
+				<ondown>856</ondown>
+				<onleft>840</onleft>
+				<onright>842</onright>
+			</control>
+			<control type="button" id="842">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color32">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color32">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color32)</onclick>
+				<onup>827</onup>
+				<ondown>857</ondown>
+				<onleft>841</onleft>
+				<onright>843</onright>
+		   </control>
+			<control type="button" id="843">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color33">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color33">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color33)</onclick>
+				<onup>828</onup>
+				<ondown>858</ondown>
+				<onleft>842</onleft>
+				<onright>844</onright>
+			</control>
+			<control type="button" id="844">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color34">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color34">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color34)</onclick>
+				<onup>829</onup>
+				<ondown>859</ondown>
+				<onleft>843</onleft>
+				<onright>845</onright>
+			</control>
+			<control type="button" id="845">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color35">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color35">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color35)</onclick>
+				<onup>830</onup>
+				<ondown>860</ondown>
+				<onleft>844</onleft>
+				<onright>846</onright>
+			</control>
+			<control type="button" id="846">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color36">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color36">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color36)</onclick>
+				<onup>831</onup>
+				<ondown>861</ondown>
+				<onleft>845</onleft>
+				<onright>847</onright>
+			</control>
+			<control type="button" id="847">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color37">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color37">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color37)</onclick>
+				<onup>832</onup>
+				<ondown>862</ondown>
+				<onleft>846</onleft>
+				<onright>848</onright>
+			</control>
+			<control type="button" id="848">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color38">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color38">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color38)</onclick>
+				<onup>833</onup>
+				<ondown>863</ondown>
+				<onleft>847</onleft>
+				<onright>849</onright>
+			</control>
+			<control type="button" id="848">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color39">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color39">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color39)</onclick>
+				<onup>833</onup>
+				<ondown>863</ondown>
+				<onleft>847</onleft>
+				<onright>849</onright>
+			</control>
+		</control>	
+
+		<!-- Color List 4 -->
+		<control type="grouplist" id="804">
+			<description>Colorlist4</description>
+			<posx>36</posx>
+			<posy>364</posy>
+			<width>1200</width>
+			<height>100</height>
+			<itemgap>8</itemgap>
+			<orientation>horizontal</orientation>
+			<visible>True</visible>
+			<control type="button" id="856">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>100</height>
+				
+				<texturenofocus colordiffuse="Color41">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color41">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color41)</onclick>
+				<onup>841</onup>
+				<ondown>871</ondown>
+				<onleft>855</onleft>
+				<onright>857</onright>
+			</control>
+			<control type="button" id="857">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color42">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color42">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color42)</onclick>
+				<onup>842</onup>
+				<ondown>872</ondown>
+				<onleft>856</onleft>
+				<onright>858</onright>
+			</control>
+			<control type="button" id="858">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color43">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color43">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color43)</onclick>
+				<onup>843</onup>
+				<ondown>873</ondown>
+				<onleft>857</onleft>
+				<onright>859</onright>
+			</control>
+			<control type="button" id="859">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color44">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color44">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color44)</onclick>
+				<onup>844</onup>
+				<ondown>874</ondown>
+				<onleft>858</onleft>
+				<onright>860</onright>
+			</control>
+			<control type="button" id="860">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color45">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color45">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color45)</onclick>
+				<onup>845</onup>
+				<ondown>875</ondown>
+				<onleft>859</onleft>
+				<onright>861</onright>
+			</control>
+			<control type="button" id="861">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color46">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color46">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color46)</onclick>
+				<onup>846</onup>
+				<ondown>876</ondown>
+				<onleft>860</onleft>
+				<onright>862</onright>
+			</control>
+			<control type="button" id="862">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color47">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color47">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color47)</onclick>
+				<onup>847</onup>
+				<ondown>877</ondown>
+				<onleft>861</onleft>
+				<onright>863</onright>
+			</control>
+			<control type="button" id="863">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color48">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color48">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color48)</onclick>
+				<onup>848</onup>
+				<ondown>878</ondown>
+				<onleft>862</onleft>
+				<onright>864</onright>
+			</control>
+			<control type="button" id="864">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>116</width>
+				<height>101</height>
+				
+				<texturenofocus colordiffuse="Color49">button-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="Color49">button-focus.png</texturefocus>
+<!-- <onclick>Skin.Reset($VAR[SetColor])</onclick>
+ -->				
+				<onclick>Skin.SetString($VAR[SetColor],Color49)</onclick>
+				<onup>849</onup>
+				<ondown>879</ondown>
+				<onleft>863</onleft>
+				<onright>865</onright>
+			</control>
+		</control>	
+
+		<!-- Button Area -->
+		<control type="group">
+			<description>confirm colors</description>
+			<posx>0</posx>
+			<posy>490</posy>
+			<width>750</width>
+			<height>100</height>
+			<visible>True</visible>
+
+			<control type="image">
+				<description>background</description>
+				<posx>140</posx>
+				<posy>0</posy>
+				<width>900</width>
+				<height>122</height>
+				<texture>menuitem_white_nf.png</texture>
+			</control>
+			<!-- <control type="button" id="950"> -->
+				<!-- <posx>100</posx> -->
+				<!-- <posy>10</posy> -->
+				<!-- <height>50</height> -->
+				<!-- <width>150</width> -->
+				<!-- <font>font24_title</font> -->
+				<!-- <align>center</align> -->
+				<!-- <aligny>center</aligny> -->
+				<!-- <label>Enter Hex</label>   -->
+				<!-- <textcolor>white</textcolor> -->
+				<!-- <texturefocus border="0,2,0,2">button_outline_black_f.png</texturefocus> -->
+			    <!-- <texturenofocus border="0,2,0,2">button_outline_black.png</texturenofocus> -->
+				<!-- <onclick>Control.SetFocus(952)</onclick> -->
+				<!-- <onclick>Skin.SetString($VAR[SetColor])</onclick> -->
+				<!-- <onup>945</onup> -->
+				<!-- <ondown>951</ondown> -->
+				<!-- <onleft>noop</onleft> -->
+				<!-- <onright>noop</onright> -->
+			<!-- </control>  -->
+			<control type="label">
+				<posx>50</posx>
+				<posy>10</posy>
+				<height>100</height>
+				<width>300</width>
+				<font>font44_title</font>
+				<label>31104</label>
+				<textcolor>white</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="image">
+				<visible>Skin.String(ChangeSkinColor,1)</visible>
+				<description>Sample Color</description>
+				<posx>400</posx>
+				<posy>13</posy>
+				<width>116</width>
+				<height>100</height>
+				<texture colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">button-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<visible>Skin.String(ChangeSkinColor,2)</visible>
+				<description>Sample Color</description>
+				<posx>400</posx>
+				<posy>13</posy>
+				<width>116</width>
+				<height>100</height>
+				<texture colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">button-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<visible>Skin.String(ChangeSkinColor,3)</visible>
+				<description>Sample Color</description>
+				<posx>400</posx>
+				<posy>13</posy>
+				<width>116</width>
+				<height>100</height>
+				<texture colordiffuse="$INFO[Skin.String(PlayerTextColor)]">button-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<visible>Skin.String(ChangeSkinColor,4)</visible>
+				<description>Sample Color</description>
+				<posx>400</posx>
+				<posy>13</posy>
+				<width>116</width>
+				<height>100</height>
+				<texture colordiffuse="$INFO[Skin.String(TextFocusColor)]">button-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<visible>Skin.String(ChangeSkinColor,5)</visible>
+				<description>Sample Color</description>
+				<posx>400</posx>
+				<posy>13</posy>
+				<width>116</width>
+				<height>100</height>
+				<texture colordiffuse="$INFO[Skin.String(BackButtonColor)]">button-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<visible>Skin.String(ChangeSkinColor,6)</visible>
+				<description>Sample Color</description>
+				<posx>400</posx>
+				<posy>13</posy>
+				<width>116</width>
+				<height>100</height>
+				<texture colordiffuse="$INFO[Skin.String(SkinAccentColor)]">button-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<visible>Skin.String(ChangeSkinColor,7)</visible>
+				<description>Sample Color</description>
+				<posx>400</posx>
+				<posy>13</posy>
+				<width>116</width>
+				<height>100</height>
+				<texture colordiffuse="$INFO[Skin.String(SoftButtonOutlineColor)]">button-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<visible>Skin.String(ChangeSkinColor,8)</visible>
+				<description>Sample Color</description>
+				<posx>400</posx>
+				<posy>13</posy>
+				<width>116</width>
+				<height>100</height>
+				<texture colordiffuse="$INFO[Skin.String(SoftButtonColor)]">button-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<visible>Skin.String(ChangeSkinColor,9)</visible>
+				<description>Sample Color</description>
+				<posx>400</posx>
+				<posy>13</posy>
+				<width>116</width>
+				<height>100</height>
+				<texture colordiffuse="$INFO[Skin.String(SoftButtonFocus)]">button-nofocus.png</texture>
+			</control>
+			
+		</control>
+		
+		
+		<control type="grouplist">
+			<description>Button area</description>
+			<posx>600</posx>
+			<posy>508</posy>
+			<width>1000</width>
+			<height>90</height>
+			<orientation>horizontal</orientation>
+			<itemgap>50</itemgap>
+			<pagecontrol></pagecontrol>
+
+			<control type="button" id="951">
+				<description>Clear</description>
+				<height>90</height>
+				<width>200</width>
+				<font>font44_title</font>
+				<textcolor>white</textcolor>
+				<label>192</label>
+				<align>center</align>
+                <aligny>center</aligny>
+				<!-- <focusedcolor>$INFO[Skin.String(PlayerButtonsFocus)]</focusedcolor> -->
+				<texturefocus border="20">new_button_focus.png</texturefocus>
+			    <texturenofocus border="20">new_button.png</texturenofocus>
+				<onclick>Skin.SetString($VAR[SetColor],FFFFFFFF)</onclick>
+				<onup>950</onup>
+				<ondown>noop</ondown>
+				<onleft>noop</onleft>
+				<onright>952</onright>
+			</control>
+			
+			<control type="button" id="952">
+				<height>90</height>
+				<width>200</width>
+				<font>font44_title</font>
+				<textcolor>white</textcolor>
+				<label>186</label>
+				<align>center</align>
+                <aligny>center</aligny>
+				<texturefocus border="20">new_button_focus.png</texturefocus>
+			    <texturenofocus border="20">new_button.png</texturenofocus>
+
+				<onclick>ActivateWindow(1114)</onclick>
+				<onclick>Dialog.Close(1124)</onclick>
+				<onup>950</onup>
+				<ondown>noop</ondown>
+				<onleft>951</onleft>
+				<onright>noop</onright>
+			</control>
+
+		</control>	
+	</control>
+	</include>
+</includes>

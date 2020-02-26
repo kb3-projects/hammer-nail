@@ -1,0 +1,409 @@
+<window id="1120">
+	<!-- <defaultcontrol always="true">999</defaultcontrol> -->
+	<!-- removed allowoverlay -->
+	
+	<!-- <include>Window_OpenClose_Fade</include> -->
+	<onload>SetProperty(SmallPlayerVisible,0,Home)</onload>
+	<onunload>SetProperty(SmallPlayerVisible,1,Home)</onunload>
+	<onload>setfocus(50000)</onload>
+	<onload>Skin.SetBool(HideList)</onload>
+    <onunload>Skin.SetBool(HideList)</onunload>
+	
+	<controls>
+	
+	<include>StandardBackground</include>
+	
+ <control type="button" id="50000">
+ <description>Dummy Focus Button</description>
+ <left>-1</left>
+ <top>-1</top>
+ <width>1</width>
+ <height>1</height>
+ <texturenofocus>1px_transparent.png</texturenofocus>
+ <texturefocus>1px_transparent.png</texturefocus>
+ </control>
+
+	<!-- <control type="group">	 -->
+	<!-- <description>open close list button</description> -->
+		<!-- <left>1200</left> -->
+		<!-- <top>150</top> -->
+
+		
+	<!-- </control> -->
+
+	
+
+	<include content="SoftButtons">
+		<param name="SoftButton1" value="PAUSE"/>
+		<param name="SoftButton1Alternate" value="PLAY"/>
+		<param name="SoftButton1Visible" value="Player.HasAudio"/>		
+		<param name="SoftButton1VisibleAlternate" value="Player.Paused"/>	
+		<param name="SoftButton1Action" value="PlayerControl(Play)"/>	
+		
+		<param name="SoftButton2" value="PREV"/>
+		<param name="SoftButton2Alternate" value=""/>
+		<param name="SoftButton2Visible" value="Player.HasAudio"/>
+		<param name="SoftButton2VisibleAlternate" value="false"/>		
+		<param name="SoftButton2Action" value="PlayerControl(Previous)"/>
+		
+		<param name="SoftButton3" value="NEXT"/>
+		<param name="SoftButton3Alternate" value=""/>
+		<param name="SoftButton3Visible" value="Player.HasAudio"/>
+		<param name="SoftButton3VisibleAlternate" value="false"/>	
+		<param name="SoftButton3Action" value="PlayerControl(Next)"/>			
+		
+		<param name="SoftButton4" value="HOME"/>
+		<param name="SoftButton4Alternate" value="set"/>
+		<param name="SoftButton4Visible" value="true"/>
+		<param name="SoftButton4VisibleAlternate" value="false"/>
+		<param name="SoftButton4Action" value="ActivateWindow(Home)"/>
+	</include>	
+
+
+	
+	
+	<include>RandomRepeatButton</include>
+	
+	
+	<!-- <control type="label"> -->
+	<!-- <visible>!Player.HasAudio</visible> -->
+	<!-- <animation effect="fade" start="00" end="100" delay="200" time="300">Visible</animation> -->
+	<!-- <top>120</top> -->
+	<!-- <left>140</left> -->
+	<!-- <height>100</height> -->
+	<!-- <width>1000</width> -->
+	<!-- <align>center</align> -->
+	<!-- <font>font70_bold</font> -->
+	<!-- <label>$INFO[MusicPlayer.Artist]</label> -->
+	<!-- </control> -->
+	
+	<control type="group">
+			<left>0</left>
+			<top>40</top>
+			<visible>Player.HasAudio</visible>
+			<animation effect="fade" start="10" end="100" time="500">WindowOpen</animation>
+			<animation effect="fade" start="100" end="50" time="300">WindowClose</animation>
+			<!-- <animation effect="fade" delay="100" start="100" end="0" time="300">Hidden</animation> -->
+			<!-- <animation effect="slide" start="0,-200" end="0,0" time="300" easing="out" tween="quadratic" >Visible</animation> -->
+			<!-- <animation effect="slide" start="0,0" end="0,-200" time="300" easing="in" tween="quadratic" >Hidden</animation> -->
+			<control type="group">
+				<control type="image">
+	                <visible>true</visible>
+					<description>cover image</description>
+					<left>40</left>
+					<top>0</top>
+					<width>600</width>
+					<height>560</height>
+					<info>MusicPlayer.offset(0).Cover</info>
+					<!-- <aspectratio></aspectratio> -->
+					<bordersize>2</bordersize>
+					<fadetime>10</fadetime>
+				</control>
+				
+				<!-- this is the reflected image in the player-->
+				<control type="image">
+	                <visible>true</visible>
+					<description>cover image</description>
+					<left>640</left>
+					<top>0</top>
+					<width>585</width>
+					<height>560</height>
+					<texture flipx="true" diffuse="mask-gradient-h.png">$INFO[MusicPlayer.Cover]</texture>
+					<!-- <texture flipx="true" >$INFO[MusicPlayer.Cover]</texture> -->
+					<!-- <aspectratio></aspectratio> -->
+					<bordersize>2</bordersize>
+					<fadetime>10</fadetime>
+				</control>
+			</control>						
+<!-- Artist & Title Info -->
+			<control type="group">
+			<left>650</left>
+			<top>5</top>
+			<description>Labels for music playing</description>
+			
+   				<control type="label">
+                    <visible>false</visible>
+					<description>Artist label</description>
+					<left>0</left>
+					<top>0</top>
+					<width>620</width>
+					<height>50</height>
+					<align>left</align>
+					<font>font24_title</font>
+					<label>$LOCALIZE[31245]</label>
+					<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+				</control>
+                
+				<control type="label">
+					<description>Artist label</description>
+					<left>0</left>
+					<top>0</top>
+					<width>645</width>
+					<height>25</height>
+					<align>left</align>
+					<font>font50_title</font>
+					<label>$INFO[MusicPlayer.Artist]</label>
+					<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+				</control>
+				
+
+				
+				<control type="label">
+					<description>Album label</description>
+                    <visible>false</visible>
+					<left>0</left>
+					<top>180</top>
+					<width>645</width>
+					<height>50</height>
+					<align>left</align>
+					<font>font24_title</font>
+					<label>$LOCALIZE[31246]</label>
+					<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+				</control>	
+                
+				<control type="label">
+					<description>Album label</description>
+					<left>0</left>
+					<top>75</top>
+					<width>645</width>
+					<height>25</height>
+					<align>left</align>
+					<font>font34_title</font>
+					<label>$INFO[MusicPlayer.Album]</label>
+					<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+				</control>
+
+				<control type="label">
+					<description>Title label</description>
+                    <visible>false</visible>
+					<left>0</left>
+					<top>95</top>
+					<width>645</width>
+					<height>50</height>
+					<align>left</align>
+					<font>font24_title</font>
+					<label>$LOCALIZE[31247]</label>
+					<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+				</control>	
+                
+				<control type="label">
+					<left>0</left>
+					<top>125</top>
+					<width>575</width>
+					<height>100</height>
+					<font>font50_title</font>
+					<align>left</align>
+					<aligny>top</aligny>
+                    <wrapmultiline>true</wrapmultiline>
+					<label>$INFO[MusicPlayer.Title]</label>
+					<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+					<scroll>true</scroll>
+				</control>
+
+				<control type="label">
+					<description>Player Time</description>
+					<left>0</left>
+					<top>290</top>
+					<width>645</width>
+					<height>25</height>
+					<align>left</align>
+					<font>font34_title</font>
+					<label>$INFO[Player.Time(mm:ss)] / $INFO[Player.TimeRemaining]</label>
+					<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+				</control>
+				
+				<control type="label">
+					<description>Normal Header label</description>
+					<visible>false</visible>
+					<left>150</left>
+					<top>0</top>
+					<width>225</width>
+					<height>19</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font20</font>
+					<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+					<label>$LOCALIZE[589]</label>
+					<!-- <visible>MusicPartyMode.Enabled</visible> -->
+
+
+				</control>
+				<control type="label">
+					<description>Track Number</description>
+					<left>0</left>
+					<top>350</top>
+					<width>300</width>
+					<height>19</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font34_title</font>
+					<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+					<!-- <label>$INFO[musicplayer.Playlistposition,$LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, / ]</label> -->
+					<label>$INFO[MusicPlayer.TrackNumber,$LOCALIZE[554]: ]</label>
+				</control>
+				
+				<!-- this line displays the playing next info -->
+				
+				<control type="label">
+					<left>0</left>
+					<top>410</top>
+					<width>630</width>
+					<height>19</height>							
+					<label>$LOCALIZE[209] - </label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font34_title</font>
+					<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+					<scroll>true</scroll>
+					<visible>MusicPlayer.HasNext</visible>
+				</control>
+				
+				<control type="label">
+					<left>100</left>
+					<top>410</top>
+					<width>530</width>
+					<height>19</height>							
+					<label>$INFO[MusicPlayer.offset(1).Title]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font34_title</font>
+					<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+					<scroll>false</scroll>
+					<visible>MusicPlayer.HasNext</visible>
+				</control>
+				
+				<control type="label">
+					<left>100</left>
+					<top>450</top>
+					<width>630</width>
+					<height>19</height>							
+					<label>$INFO[MusicPlayer.offset(1).Artist]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font34_title</font>
+					<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+					<scroll>true</scroll>
+					<visible>!String.IsEqual(MusicPlayer.offset(1).Artist,MusicPlayer.Artist)|Skin.HasSetting(NotAnAlbum)</visible>
+				</control>
+				
+			</control>
+		
+		</control>
+
+		<include>PlaylistContent</include>
+
+        <control type="label">
+            <description>message for not playing anything</description>
+            <left>0</left>
+            <top>210</top>
+            <width>1280</width>
+            <height>50</height>							
+            <label>$LOCALIZE[31009]</label>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font70_title</font>
+            <textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+            <visible>!MusicPlayer.HasNext+!Player.HasAudio</visible>
+            <animation effect="fade" delay="500" time="1200">Visible</animation>
+        </control>
+
+    <control type="group">
+        <visible>false</visible>
+        <description>various controls to help with debug</description>
+
+        <control type="image">
+            <visible>Skin.HasSetting(showlines)</visible>
+            <left>40</left>
+            <top>0</top>
+            <width>2</width>
+            <height>720</height>
+            <texture>line_horizontal_light.png</texture>
+        </control>
+        
+        <control type="image">
+            <visible>Skin.HasSetting(showlines)</visible>
+            <left>640</left>
+            <top>0</top>
+            <width>2</width>
+            <height>720</height>
+            <texture>line_horizontal_light.png</texture>
+        </control>
+        
+        <control type="image">
+            <visible>Skin.HasSetting(showlines)</visible>
+            <left>00</left>
+            <top>40</top>
+            <width>1280</width>
+            <height>2</height>
+            <texture>line_horizontal_light.png</texture>
+        </control>
+
+        <control type="image">
+            <visible>Skin.HasSetting(showlines)</visible>
+            <left>1240</left>
+            <top>0</top>
+            <width>2</width>
+            <height>720</height>
+            <texture>line_horizontal_light.png</texture>
+        </control>
+
+        <control type="label">
+            <description>message for track number - for debug only</description>
+            <visible>false</visible>
+            <left>300</left>
+            <top>0</top>
+            <width>50</width>
+            <height>50</height>							
+            <info>MusicPlayer.playlistposition</info>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font40_title</font>
+            <animation effect="fade" time="500">VisibleChange</animation>
+        </control>
+
+        <control type="label">
+            <description>message for track number - for debug only</description>
+            <visible>false</visible>
+            <left>600</left>
+            <top>0</top>
+            <width>250</width>
+            <height>50</height>							
+            <info>MusicPlayer.offset(0).Title</info>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font40_title</font>
+            <animation effect="fade" time="500">VisibleChange</animation>
+        </control>
+
+        <control type="label">
+            <description>message for not an album - for debug only</description>
+            <visible>false</visible>
+            <left>60</left>
+            <top>0</top>
+            <width>200</width>
+            <height>50</height>							
+            <label>Hide List</label>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font40_title</font>
+            <!-- <visible>Skin.HasSetting(HideList)</visible> -->
+            <animation effect="fade" time="500">VisibleChange</animation>
+        </control>
+        
+        <control type="button" id="3051">
+			<description>button to toggle settings - for debug only</description>
+            <visible>true</visible>
+			<left>15</left>
+			<top>15</top>
+			<height>55</height>
+			<width>55</width>
+			<texturenofocus>defaulticonwarning.png</texturenofocus>
+			<texturefocus>defaulticonwarning.png</texturefocus>
+			<onclick>Skin.ToggleSetting(showlines)</onclick>
+		</control>
+    </control>
+
+
+
+	</controls>
+</window>

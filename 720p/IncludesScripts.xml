@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+<include name="needle">
+
+
+    
+
+
+		<description>moving NEEDLE</description>
+
+			<left>100</left>
+			<top>200</top>
+			<width>240</width>
+			<height>180</height>
+			<texture>gauges\needle.png</texture>
+
+ 
+
+
+
+</include>
+    
+<include name="alltheneedles">    
+
+<control type="image">
+<visible>Integer.IsLess(Player.Volume,2)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-0" end="-0">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,2)+Integer.Isless(Player.Volume,4)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-1" end="-1">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,4)+Integer.Isless(Player.Volume,6)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-2" end="-2">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,6)+Integer.Isless(Player.Volume,8)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-3" end="-3">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,8)+Integer.Isless(Player.Volume,10)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-4" end="-4">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,10)+Integer.Isless(Player.Volume,12)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-5" end="-5">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,12)+Integer.Isless(Player.Volume,14)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-6" end="-6">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,14)+Integer.Isless(Player.Volume,16)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-7" end="-7">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,16)+Integer.Isless(Player.Volume,18)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-8" end="-8">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,18)+Integer.Isless(Player.Volume,20)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-9" end="-9">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,20)+Integer.Isless(Player.Volume,22)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-10" end="-10">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,22)+Integer.Isless(Player.Volume,24)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-11" end="-11">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,24)+Integer.Isless(Player.Volume,26)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-12" end="-12">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,26)+Integer.Isless(Player.Volume,28)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-13" end="-13">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,28)+Integer.Isless(Player.Volume,30)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-14" end="-14">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,30)+Integer.Isless(Player.Volume,32)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-15" end="-15">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,32)+Integer.Isless(Player.Volume,34)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-16" end="-16">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,34)+Integer.Isless(Player.Volume,36)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-17" end="-17">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,36)+Integer.Isless(Player.Volume,38)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-18" end="-18">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,38)+Integer.Isless(Player.Volume,40)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-19" end="-19">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,40)+Integer.Isless(Player.Volume,42)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-20" end="-20">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,42)+Integer.Isless(Player.Volume,44)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-21" end="-21">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,44)+Integer.Isless(Player.Volume,46)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-22" end="-22">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,46)+Integer.Isless(Player.Volume,48)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-23" end="-23">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,48)+Integer.Isless(Player.Volume,50)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-24" end="-24">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,50)+Integer.Isless(Player.Volume,52)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-25" end="-25">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,52)+Integer.Isless(Player.Volume,54)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-26" end="-26">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,54)+Integer.Isless(Player.Volume,56)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-27" end="-27">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,56)+Integer.Isless(Player.Volume,58)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-28" end="-28">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,58)+Integer.Isless(Player.Volume,60)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-29" end="-29">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,60)+Integer.Isless(Player.Volume,62)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-30" end="-30">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,62)+Integer.Isless(Player.Volume,64)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-31" end="-31">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,64)+Integer.Isless(Player.Volume,66)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-32" end="-32">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,66)+Integer.Isless(Player.Volume,68)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-33" end="-33">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,68)+Integer.Isless(Player.Volume,70)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-34" end="-34">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,70)+Integer.Isless(Player.Volume,72)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-35" end="-35">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,72)+Integer.Isless(Player.Volume,74)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-36" end="-36">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,74)+Integer.Isless(Player.Volume,76)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-37" end="-37">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,76)+Integer.Isless(Player.Volume,78)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-38" end="-38">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,78)+Integer.Isless(Player.Volume,80)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-39" end="-39">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,80)+Integer.Isless(Player.Volume,82)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-40" end="-40">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,82)+Integer.Isless(Player.Volume,84)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-41" end="-41">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,84)+Integer.Isless(Player.Volume,86)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-42" end="-42">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,86)+Integer.Isless(Player.Volume,88)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-43" end="-43">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,88)+Integer.Isless(Player.Volume,90)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-44" end="-44">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,90)+Integer.Isless(Player.Volume,92)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-45" end="-45">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,92)+Integer.Isless(Player.Volume,94)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-46" end="-46">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,94)+Integer.Isless(Player.Volume,96)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-47" end="-47">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,96)+Integer.Isless(Player.Volume,98)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-48" end="-48">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,98)+Integer.Isless(Player.Volume,100)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-49" end="-49">Visible</animation>
+</control>
+
+<control type="image">
+<visible>Integer.IsGreaterOrEqual(Player.Volume,100)</visible>
+<include>needle</include>
+<animation effect="rotate" center="220,356" start="-50" end="-50">Visible</animation>
+</control>
+
+
+
+
+
+
+
+
+</include>    
+</includes>

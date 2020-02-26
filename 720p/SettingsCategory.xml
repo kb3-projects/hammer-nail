@@ -1,0 +1,250 @@
+<window id="12">
+	<defaultcontrol>3</defaultcontrol>
+	<backgroundcolor>0</backgroundcolor>
+		
+	<controls>
+	<include>StandardBackground</include>
+	
+	<include content="SoftButtons">
+		<param name="SoftButton1" value="PAUSE"/>
+		<param name="SoftButton1Alternate" value="PLAY"/>
+		<param name="SoftButton1Visible" value="Player.HasAudio"/>		
+		<param name="SoftButton1VisibleAlternate" value="Player.Paused"/>	
+		<param name="SoftButton1Action" value="PlayerControl(Play)"/>	
+		
+		<param name="SoftButton2" value="PREV"/>
+		<param name="SoftButton2Alternate" value=""/>
+		<param name="SoftButton2Visible" value="false"/>
+		<param name="SoftButton2VisibleAlternate" value="false"/>		
+		<param name="SoftButton2Action" value="PlayerControl(Previous)"/>
+		
+		<param name="SoftButton3" value="BACK"/>
+		<param name="SoftButton3Alternate" value=""/>
+		<param name="SoftButton3Visible" value="true"/>
+		<param name="SoftButton3VisibleAlternate" value="false"/>	
+		<param name="SoftButton3Action" value="back"/>		
+		
+		<param name="SoftButton4" value="HOME"/>
+		<param name="SoftButton4Alternate" value=""/>
+		<param name="SoftButton4Visible" value="true"/>
+		<param name="SoftButton4VisibleAlternate" value="false"/>
+		<param name="SoftButton4Action" value="ActivateWindow(home)"/>
+	</include>
+
+		<!-- <control type="image"> -->
+			<!-- <posx>0</posx> -->
+			<!-- <posy>0</posy> -->
+			<!-- <width>screenwidth</width> -->
+			<!-- <height>screenheight</height> -->
+			<!-- <texture border="5">dialog_back_black2.png</texture> -->
+		<!-- </control> -->
+
+		<!-- <include>StandardHomeButton</include> -->
+		
+		<control type="label">
+			<description>Window Title at top left</description>
+			<include>TopCornerTitle</include>
+			<label>$LOCALIZE[5]$INFO[Control.GetLabel(2), - ]</label>
+			<!-- <label>2</label> -->
+		</control>
+		<control type="image">
+			<description>separator under window title</description>
+			<top>75</top>
+			<left>100</left>
+			<height>2</height>
+			<texture>separator_1px.png</texture>
+		</control>
+		
+		<control type="panel" id="9002">
+	<!-- have no idea where this button is -->
+			<!-- <visible>!Window.IsActive(PlayerControls)</visible> -->
+			<!-- <include>VisibleFadeEffect</include> -->
+
+			<content>
+				<item>
+					<label>31200</label>
+					<onclick>Back</onclick>
+					<icon>icon_back_w.png</icon>
+				</item>
+			</content>
+		</control>
+		
+		
+		<control type="group">
+			<!-- <include>Window_OpenClose_Fade</include> -->
+			<posx>10</posx>
+			<posy>80</posy>
+			<control type="grouplist" id="3">
+				<description>first column of settings - this interacts with id=10 for width</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<!-- <width>300</width> -->
+				<height>494</height>
+				<itemgap>-1</itemgap>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+			</control>
+			
+			<control type="grouplist" id="5">
+				<description>second column of settings - this interacts with most of the remaining controls</description>
+				<posx>330</posx>
+				<posy>0</posy>
+				<width>870</width>
+				<height>357</height>
+				<itemgap>1</itemgap>
+				<pagecontrol>38</pagecontrol>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+			</control>
+		</control>
+		
+
+		
+		<control type="button" id="10">
+			<description>Default Category Button - first column of settings</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>69</height>
+			<align>left</align>
+			<width>325</width>
+			<aligny>center</aligny>
+			<textoffsetx>20</textoffsetx>
+			<font>font40_title</font>
+			<textcolor>white</textcolor>
+			<!-- <focusedcolor>$INFO[Skin.String(PlayerButtonsFocus)]</focusedcolor> -->
+			<texturefocus colordiffuse="FF9F9F9F" border="5">list_bg_fo.png</texturefocus>
+			<texturenofocus colordiffuse="66000000" border="5">list_bg_fo.png</texturenofocus>
+			<pulseonselect>false</pulseonselect>
+		</control>
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>51</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textoffsetx>20</textoffsetx>
+			<font>font34_title</font>
+			<textcolor>white</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus colordiffuse="FF9F9F9F" border="5">list_bg_fo.png</texturefocus>
+			<texturenofocus colordiffuse="66000000" border="5">list_bg_fo.png</texturenofocus>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>51</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textoffsetx>20</textoffsetx>
+			<font>font34_title</font>
+			<textcolor>white</textcolor>
+			<radiowidth>120</radiowidth>
+			<radioheight>60</radioheight>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus colordiffuse="FF9F9F9F" border="5">list_bg_fo.png</texturefocus>
+			<texturenofocus colordiffuse="66000000" border="5">list_bg_fo.png</texturenofocus>
+		</control>
+		
+		<control type="label" id="14">
+			<description>Default Label that labels separators in settings lists</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>51</height>
+			<font>font34_title</font>
+			<textcolor>white</textcolor>
+			<align>center</align>
+			<textoffsetx>20</textoffsetx>
+		</control>
+		
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>51</height>
+			<font>font34_title</font>
+			<textcolor>white</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus colordiffuse="FF9F9F9F" border="5">list_bg_fo.png</texturefocus>
+			<texturenofocus colordiffuse="66000000" border="5">list_bg_fo.png</texturenofocus>
+			<aligny>center</aligny>
+			<reverse>yes</reverse>
+		</control>
+		<control type="image" id="11">
+			<description>separator image</description>
+			<height>2</height>
+			<texture>separator_1px.png</texture>
+		</control>
+		<!-- <control type="scrollbar" id="37">
+			<visible>!Skin.HasSetting(ScrollbarBold)</visible>
+			<visible>false</visible>
+			<posx>1145</posx>
+			<posy>100</posy>
+			<width>30</width>
+			<height>494</height>
+			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+			<texturesliderbar border="2,16,2,16">osdslidernib.png</texturesliderbar>
+			<texturesliderbarfocus border="2,16,2,16">osdslidernib.png</texturesliderbarfocus>
+			<textureslidernib>-</textureslidernib>
+			<textureslidernibfocus>-</textureslidernibfocus>
+			<ondown>61</ondown>
+			<onup>61</onup>
+			<onright>9000</onright>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			<animation effect="fade" time="150">Visible</animation>
+			<animation effect="fade" time="150">Hidden</animation>
+		</control> -->
+		
+				
+		<control type="scrollbar" id="38">
+		<include>ScrollBarCommon</include>
+		</control>
+		
+		
+		<control type="group">
+			<description>info box text</description>
+			<include>Window_OpenClose_Fade</include>
+			<control type="image">
+				<posx>340</posx>
+				<posy>456</posy>
+				<width>870</width>
+				<height>142</height>
+				<texture colordiffuse="66000000" border="5">list_bg_fo.png</texture>
+			</control>
+			<control type="image">
+				<posx>340</posx>
+				<posy>456</posy>
+				<width>60</width>
+				<height>60</height>
+				<texture>icon-settings-info.png</texture>
+			</control>
+			<control type="textbox" id="6">
+				<description>description area</description>
+				<posx>400</posx>
+				<posy>460</posy>
+				<width>800</width>
+				<height>132</height>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
+			</control>
+		</control>
+
+		<control type="label" id="2">
+			<description>Fake Label so we can pass it on</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>0</width>
+			<height>0</height>
+			<!-- <font>-</font> -->
+			<visible>false</visible>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,3 @@
+0.1 
+First pass.   This started off by working with one of the "carPC" skins avialable across the web.  Mostly pulled from CarPC-xtouch, with some CarPC-Carbon bits and pieces.
+  

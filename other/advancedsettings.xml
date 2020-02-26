@@ -1,0 +1,18 @@
+<advancedsettings>
+	<musiclibrary>
+		<artistextraart>
+			<arttype>banner</arttype>
+			<arttype>clearart</arttype>
+			<arttype>clearlogo</arttype>
+            <arttype>fanart1</arttype> <!-- Multiple fanart -->
+            <arttype>fanart2</arttype> <!-- Add as many as required. -->
+            <arttype>fanart3</arttype> 
+			<arttype>landscape</arttype>
+		</artistextraart>
+		<albumextraart>
+			<arttype>back</arttype>
+			<arttype>discart</arttype>
+			<arttype>spine</arttype>
+		</albumextraart>
+	</musiclibrary>
+</advancedsettings>

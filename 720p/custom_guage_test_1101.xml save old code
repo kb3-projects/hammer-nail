@@ -1,0 +1,366 @@
+<window id="1101">
+
+	<!-- <animation effect="fade"  time="100">WindowOpen</animation> -->
+	<!-- <animation effect="fade"  time="100">WindowClose</animation> -->
+	<defaultcontrol always="true">50000</defaultcontrol>
+	<setfocus>50000</setfocus>
+    <onload>Skin.SetString(NeedleFrom,0)</onload>
+    <onload>Skin.SetString(NeedleTo,0)</onload>
+    <controls>
+    
+    <!-- This prevents a spurious appearance of the playlist content in window 1120 -->
+
+
+	<include>StandardBackground</include>
+
+	<include>SettingsButton</include>
+	<!-- <include>ButtonsProgessAndPlaying</include> -->
+
+	<include content="SoftButtons">
+		<param name="SoftButton1" value="PAUSE"/>
+		<param name="SoftButton1Alternate" value="PLAY"/>
+		<param name="SoftButton1Visible" value="Player.HasAudio"/>		
+		<param name="SoftButton1VisibleAlternate" value="Player.Paused"/>	
+		<param name="SoftButton1Action" value="PlayerControl(Play)"/>	
+		
+		<param name="SoftButton2" value="PREV"/>
+		<param name="SoftButton2Alternate" value=""/>
+		<param name="SoftButton2Visible" value="Player.HasAudio"/>
+		<param name="SoftButton2VisibleAlternate" value="false"/>		
+		<param name="SoftButton2Action" value="PlayerControl(Previous)"/>
+		
+		<param name="SoftButton3" value="NEXT"/>
+		<param name="SoftButton3Alternate" value=""/>
+		<param name="SoftButton3Visible" value="Player.HasAudio"/>
+		<param name="SoftButton3VisibleAlternate" value="false"/>	
+		<param name="SoftButton3Action" value="PlayerControl(Next)"/>		
+		
+		<param name="SoftButton4" value="PLAYING"/>
+		<param name="SoftButton4Alternate" value=""/>
+		<param name="SoftButton4Visible" value="Player.HasAudio"/>
+		<param name="SoftButton4VisibleAlternate" value="false"/>
+		<param name="SoftButton4Action" value="ActivateWindow(1120)"/>
+	</include>
+	
+
+		
+	<control type="image">
+		<description>guage</description>
+			<visible>true</visible>
+			<left>100</left>
+			<top>200</top>
+			<width>240</width>
+			<height>180</height>
+			<texture>gauges\dial.png</texture>
+	</control>
+    
+    <control type="label">
+            <description>from</description>
+            <!-- <visible>!Skin.HasSetting(RotateNeedle)</visible> -->
+            <left>325</left>
+            <top>150</top>
+            <width>200</width>
+            <height>50</height>							
+            <info>skin.string(NeedleFrom)</info>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font40_title</font>
+    </control>
+    
+        <control type="label">
+            <description>to</description>
+            <!-- <visible>!Skin.HasSetting(RotateNeedle)</visible> -->
+            <left>525</left>
+            <top>150</top>
+            <width>200</width>
+            <height>50</height>							
+            <info>skin.string(NeedleTo)</info>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font40_title</font>
+    </control>
+    
+    <control type="image">
+		<description>moving NEEDLE</description>
+			<visible>String.IsEqual(skin.string(NeedleFrom),0)</visible>
+            <visible>String.IsEqual(skin.string(NeedleTo),30)</visible>
+			<left>100</left>
+			<top>200</top>
+			<width>240</width>
+			<height>180</height>
+			<texture>gauges\needle.png</texture>
+         
+            <!-- <animation type="WindowOpen" > -->
+             <!-- <effect type="rotate" center="220,356" start="-60" end="60" time="2200" pulse="true"/> -->
+            <!-- </animation> -->
+            
+                <animation reversible="false" type="Visible">
+                    <effect type="rotate"  center="220,356" start="0" end="30" time="500" reversible="false"/>
+					<!-- <effect type="fade" start="0" end="100" time="0"/> -->
+					<!-- <effect type="fade" delay="1500" start="100" end="0" time="0"/> -->
+				</animation> 
+
+				<!-- <animation reversible="false" type="Visible"> -->
+					<!-- <effect type="fade" start="0" end="1" time="100"/> -->
+				<!-- </animation> -->
+                
+            <!-- <animation type="Conditional" condition="Skin.HasSetting(RotateNeedle)"> -->
+             <!-- <effect type="rotate"  center="220,356"  end="30" time="500" reversible="false"/> -->
+            <!-- </animation> -->
+                        <!-- <animation type="Conditional" condition="!Skin.HasSetting(RotateNeedle)"> -->
+             <!-- <effect type="rotate"  center="220,356"  end="30" time="500" reversible="false"/> -->
+            <!-- </animation> -->
+	</control>
+
+    <control type="image">
+		<description>moving NEEDLE</description>
+			<visible>String.IsEqual(skin.string(NeedleFrom),30)</visible>
+            <visible>String.IsEqual(skin.string(NeedleTo),60)</visible>
+			<left>100</left>
+			<top>200</top>
+			<width>240</width>
+			<height>180</height>
+			<texture>gauges\needle.png</texture>
+                     
+                <animation reversible="false" type="Visible">
+                    <effect type="rotate"  center="220,356" start="30" end="60" time="500" reversible="false"/>
+                </animation> 
+	</control>
+
+    <control type="image">
+		<description>moving NEEDLE</description>
+			<visible>String.IsEqual(skin.string(NeedleFrom),60)</visible>
+            <visible>String.IsEqual(skin.string(NeedleTo),90)</visible>
+			<left>100</left>
+			<top>200</top>
+			<width>240</width>
+			<height>180</height>
+			<texture>gauges\needle.png</texture>
+                     
+                <animation reversible="false" type="Visible">
+                    <effect type="rotate"  center="220,356" start="60" end="90" time="500" reversible="false"/>
+                </animation> 
+	</control>
+
+    <control type="image">
+		<description>moving NEEDLE</description>
+			<visible>String.IsEqual(skin.string(NeedleFrom),90)</visible>
+            <visible>String.IsEqual(skin.string(NeedleTo),60)</visible>
+			<left>100</left>
+			<top>200</top>
+			<width>240</width>
+			<height>180</height>
+			<texture>gauges\needle.png</texture>
+                     
+                <animation reversible="false" type="Visible">
+                    <effect type="rotate"  center="220,356" start="90" end="60" time="500" reversible="false"/>
+                </animation> 
+	</control>
+
+    <control type="image">
+		<description>moving NEEDLE</description>
+			<visible>String.IsEqual(skin.string(NeedleFrom),60)</visible>
+            <visible>String.IsEqual(skin.string(NeedleTo),30)</visible>
+			<left>100</left>
+			<top>200</top>
+			<width>240</width>
+			<height>180</height>
+			<texture>gauges\needle.png</texture>
+                     
+                <animation reversible="false" type="Visible">
+                    <effect type="rotate"  center="220,356" start="60" end="30" time="500" reversible="false"/>
+                </animation> 
+	</control>
+
+    <control type="image">
+		<description>moving NEEDLE</description>
+			<visible>String.IsEqual(skin.string(NeedleFrom),30)</visible>
+            <visible>String.IsEqual(skin.string(NeedleTo),0)</visible>
+			<left>100</left>
+			<top>200</top>
+			<width>240</width>
+			<height>180</height>
+			<texture>gauges\needle.png</texture>
+                     
+                <animation reversible="false" type="Visible">
+                    <effect type="rotate"  center="220,356" start="30" end="0" time="500" reversible="false"/>
+                </animation> 
+	</control>
+
+    <control type="image">
+		<description>stationary NEEDLE</description>
+			<!-- <visible>Skin.HasSetting(RotateNeedle)</visible> -->
+            <visible>false</visible>
+			<left>100</left>
+			<top>200</top>
+			<width>240</width>
+			<height>180</height>
+			<texture>gauges\needle.png</texture>
+         
+            <!-- <animation type="WindowOpen" > -->
+             <!-- <effect type="rotate" center="220,356" start="-60" end="60" time="2200" pulse="true"/> -->
+            <!-- </animation> -->
+            
+                <animation reversible="false" type="VisibleChange">
+                    <effect type="rotate"  center="220,356"  end="30" time="0" reversible="false"/>
+					<!-- <effect type="fade" start="0" end="100" time="0"/> -->
+					<effect type="fade" delay="1500" start="0" end="100" time="0"/>
+				</animation> 
+
+				<!-- <animation reversible="false" type="Visible"> -->
+					<!-- <effect type="fade" start="0" end="1" time="100"/> -->
+				<!-- </animation> -->
+                
+            <!-- <animation type="Conditional" condition="Skin.HasSetting(RotateNeedle)"> -->
+             <!-- <effect type="rotate"  center="220,356"  end="30" time="500" reversible="false"/> -->
+            <!-- </animation> -->
+                        <!-- <animation type="Conditional" condition="!Skin.HasSetting(RotateNeedle)"> -->
+             <!-- <effect type="rotate"  center="220,356"  end="30" time="500" reversible="false"/> -->
+            <!-- </animation> -->
+	</control>
+
+			<control type="button" id="500">
+				<description>Soft button1</description>
+				<visible>true</visible>
+				<left>400</left>
+				<top>200</top>
+				<width>100</width>
+				<height>90</height>
+				<texturenofocus colordiffuse="$INFO[Skin.String(SoftButtonOutlineColor)]">softbuttonoutline.png</texturenofocus>
+                <label>UP 30</label>
+			    <!-- <texturefocus colordiffuse="$INFO[Skin.String(SoftButtonFocus)]">softbuttonbackground.png</texturefocus> -->
+				<onclick>Runscript(script.listhammer,NeedleUp)</onclick>
+				<!-- <onclick>Skin.Reset(RotateNeedle)</onclick> -->
+				<!-- <onclick>Skin.Setbool(RotateNeedle)</onclick> -->
+			</control>
+
+			<control type="button" id="501">
+				<description>Soft button1</description>
+				<visible>true</visible>
+				<left>600</left>
+				<top>200</top>
+				<width>100</width>
+				<height>90</height>
+				<texturenofocus colordiffuse="$INFO[Skin.String(SoftButtonOutlineColor)]">softbuttonoutline.png</texturenofocus>
+                <label>Down 30</label>
+			    <!-- <texturefocus colordiffuse="$INFO[Skin.String(SoftButtonFocus)]">softbuttonbackground.png</texturefocus> -->
+				<onclick>Runscript(script.listhammer,NeedleDown)</onclick>
+				<!-- <onclick>Skin.Setbool(RotateNeedle)</onclick> -->
+				<!-- <onclick>Skin.Reset(RotateNeedle)</onclick> -->
+			</control>
+
+<!-- Random Buttons for testing stuff -->
+<!-- nothing below this line is needed for the skin to function -->
+
+		<control type="button" id="3052">
+			<visible>false</visible>
+			<description>Other home Button</description>
+			<right>205</right>
+			<top>15</top>
+			<height>55</height>
+			<width>55</width>
+			<label></label> 
+			<font>font36_title</font>
+			<textcolor>-</textcolor>
+			<texturenofocus>iconmonstr-music.png</texturenofocus>
+			<texturefocus>iconmonstr-music.png</texturefocus>
+			<onclick>ActivateWindow(1199)</onclick>
+			<!-- <onup>Window(Home).Property(ToControl)</onup> -->
+			<!-- <ondown>Window(Home).Property(ToControl)</ondown> -->
+		</control>
+		
+
+        <control type="button" id="500">
+			<description>button to toggle settings - for debug only</description>
+            <visible>false</visible>
+			<left>15</left>
+			<top>15</top>
+			<height>55</height>
+			<width>55</width>
+			<texturenofocus>defaulticonwarning.png</texturenofocus>
+			<texturefocus>defaulticonwarning.png</texturefocus>
+			<onclick>Skin.ToggleSetting(HideList)</onclick>
+		</control>
+
+<control type="group">
+	<top>0</top>
+	<left>0</left>
+	<visible>false</visible>
+		
+       <control type="label">
+            <description>message for not an album - for debug only</description>
+            <left>0</left>
+            <top>0</top>
+            <width>1280</width>
+            <height>50</height>							
+            <label>Hide List</label>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font40_title</font>
+            <visible>Skin.HasSetting(HideList)</visible>
+        </control>
+        
+
+		
+		<control type="button" id="3052">
+			<description>Other home Button</description>
+                   	<visible>false</visible>
+			<right>105</right>
+			<top>15</top>
+			<height>55</height>
+			<width>55</width>
+			<label></label> 
+			<font>font36_title</font>
+			<textcolor>-</textcolor>
+			<texturenofocus>iconmonstr-music.png</texturenofocus>
+			<texturefocus>iconmonstr-music.png</texturefocus>
+			<onclick>ActivateWindow(501)</onclick>
+			<!-- <onup>Window(Home).Property(ToControl)</onup> -->
+			<!-- <ondown>Window(Home).Property(ToControl)</ondown> -->
+		</control>
+		
+		<control type="button" id="3053">
+		<description>Other home Button</description>
+                   	<visible>false</visible>
+			<right>155</right>
+			<top>35</top>
+			<height>55</height>
+			<width>55</width>
+			<label></label> 
+			<font>font36_title</font>
+			<textcolor>-</textcolor>
+			<texturenofocus>defaultartist.png</texturenofocus>
+			<texturefocus>defaultartist.png</texturefocus>
+			<onclick>ActivateWindow(10502,library://music/playlists.xml/)</onclick>
+			<!-- <onup>Window(Home).Property(ToControl)</onup> -->
+			<!-- <ondown>Window(Home).Property(ToControl)</ondown> -->
+		</control>
+		
+		<control type="button" id="3054">
+		<description>Other home Button</description>
+                   	<visible>false</visible>
+			<right>205</right>
+			<top>15</top>
+			<height>55</height>
+			<width>55</width>
+			<label></label> 
+			<font>font36_title</font>
+			<textcolor>-</textcolor>
+			<texturenofocus>defaultartist.png</texturenofocus>
+			<texturefocus>defaultartist.png</texturefocus>
+			<onclick>ActivateWindow(smartplaylisteditor)</onclick>
+			<!-- <onup>Window(Home).Property(ToControl)</onup> -->
+			<!-- <ondown>Window(Home).Property(ToControl)</ondown> -->
+		</control>
+		
+</control>
+
+
+
+
+
+
+
+ 		
+	</controls>	
+</window>

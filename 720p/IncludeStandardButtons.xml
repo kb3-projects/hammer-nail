@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes> 
+
+ <include name="PlayerButtons">
+ 
+        <control type="group" id="100">
+            <left>0</left>
+            <top>0</top>
+            <control type="button" id="600">
+			<description>Previous Button</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>80</width>
+                <height>80</height>
+				<texturefocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">iconmonstr-prev.png</texturefocus>
+                <texturenofocus colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">iconmonstr-prev.png</texturenofocus>
+
+				<onleft>noop</onleft>
+                <onright>Control.SetFocus(602)</onright>
+				
+                <onclick>PlayerControl(Previous)</onclick>
+            </control>
+
+            <control type="togglebutton" id="602">
+			<description>Play Pause Button</description>
+                <posx>90</posx>
+                <posy>0</posy>
+                <width>80</width>
+                <height>80</height>
+				<label></label>
+				
+				<texturefocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">iconmonstr-play.png</texturefocus>
+                <texturenofocus colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">iconmonstr-play.png</texturenofocus>
+                <!-- <usealttexture>Player.Paused</usealttexture> -->
+				
+                <alttexturefocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">iconmonstr-pause.png</alttexturefocus>
+                <alttexturenofocus colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">iconmonstr-pause.png</alttexturenofocus>
+				
+				
+                <onleft>Control.SetFocus(600)</onleft>
+                <onright>Control.SetFocus(603)</onright>
+			
+                <onclick>PlayerControl(Play)</onclick>
+            </control>
+			
+		<!-- commented out stop button for now.  what good is it anyway?	 -->
+<!--             <control type="button" id="603">
+                <posx>180</posx>
+                <posy>0</posy>
+                <width>80</width>
+                <height>80</height>
+
+                <texturefocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">OSDStopNF.png</texturefocus>
+                <texturenofocus colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">OSDStopNF.png</texturenofocus>
+                <onleft>Control.SetFocus(602)</onleft>
+                <onright>Control.SetFocus(605)</onright>
+				<onup condition="Control.IsVisible(50)">50</onup>
+                <onup condition="Control.IsVisible(500)">500</onup>
+                <onup condition="Control.IsVisible(4181)">4181</onup>
+                <onup condition="Control.IsVisible(3001)">3001</onup>
+				<onup condition="Control.IsVisible(87)">Control.SetFocus(87)</onup>
+                <onclick>PlayerControl(Stop)</onclick>
+            </control> -->
+			
+            <control type="button" id="605">
+			<description>Next Button</description>
+                <posx>180</posx>
+                <posy>0</posy>
+                <width>80</width>
+                <height>80</height>
+			
+				<texturefocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">iconmonstr-next.png</texturefocus>
+                <texturenofocus colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">iconmonstr-next.png</texturenofocus>
+				
+                <onleft>Control.SetFocus(603)</onleft>
+				
+				<onright condition="Control.IsVisible(3050)">Control.SetFocus(3050)</onright>
+				
+               <onclick>PlayerControl(Next)</onclick>
+			   </control>
+			   
+        </control>
+    </include>
+	
+
+	<include name="StandardDialogCloseButton">  
+        <control type="button">
+            <description>Close Button</description>
+            <posx></posx>
+            <posy>0</posy>
+            <width>40</width>
+            <height>40</height>
+            <!-- <font>-</font> -->
+            <onclick>back</onclick>
+            <texturefocus colordiffuse="$INFO[Skin.String(PlayerButtonsFocus)]">icon_close.png</texturefocus>
+            <texturenofocus colordiffuse="$INFO[Skin.String(PlayerButtonsColor)]">icon_close.png</texturenofocus>
+        </control>
+    </include>
+	
+	<include name="ButtonInfoDialogsCommonValues">
+        <height>60</height>
+        <width>200</width>
+        <align>center</align>
+        <aligny>center</aligny>
+        <font>font36</font>
+        <textcolor>FFFFFFFF</textcolor>
+		<!-- <focusedcolor>$INFO[Skin.String(SkinAccentColor)]</focusedcolor> -->
+            <texturefocus border="10" colordiffuse="$INFO[Skin.String(SkinAccentColor)]">light_button_focus.png</texturefocus>
+            <texturenofocus border="15">light_button.png</texturenofocus>
+        <pulseonselect>false</pulseonselect>
+    </include>
+	
+
+	<include name="StandardHomeButton">
+        <control type="group" id="666">
+	        <include>Window_OpenClose_Fade</include>
+            <posx>0</posx>
+            <posy>0</posy>
+            <include>VisibleFadeEffect</include>
+            <control type="button">
+                <description>Home Button</description>
+                <posx>10</posx>
+                <posy>10</posy>
+                <width>50</width>
+                <height>50</height>
+                <!-- <font>-</font> -->
+                <texturenofocus colordiffuse="$INFO[Skin.String(HomeButtonColor)]">iconmonstr-home.png</texturenofocus>
+                <texturefocus colordiffuse="$INFO[Skin.String(HomeButtonsColor)]">iconmonstr-home.png</texturefocus>
+				<onclick>ActivateWindow(Home)</onclick>
+                <!-- <ondown condition="Control.IsVisible(555)">Control.SetFocus(555)</ondown> -->
+                <!-- <ondown condition="Control.IsVisible(4101)">Control.SetFocus(4101)</ondown> -->
+                <!-- <ondown condition="Control.IsVisible(87)">Control.SetFocus(87)</ondown> -->
+				<!-- <onright condition="Control.IsVisible(667)">Control.SetFocus(667)</onright> -->
+				<!-- <onright condition="Control.IsVisible(557)">Control.SetFocus(557)</onright> -->
+                <!-- <ondown condition="Control.IsVisible(5001)">Control.SetFocus(5001)</ondown> -->
+                <!-- <ondown condition="Control.IsVisible(8001)">Control.SetFocus(8001)</ondown> -->
+				<!-- <onright condition="Control.IsVisible(8020)">Control.SetFocus(8020)</onright> -->
+            </control>
+		</control>
+	</include>
+		
+		
+   <include name="StandardBackButton">
+        <control type="group" id="4300">
+           <!-- <include>Window_OpenClose_Fade</include> -->
+            <posx>75r</posx>
+            <posy>80r</posy>
+            <control type="button" id="4301">
+
+                <description>Back Button</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>70</width>
+                <height>70</height>
+                <texturenofocus colordiffuse="$INFO[Skin.String(BackButtonColor)]">iconmonstr-back.png</texturenofocus>
+                <texturefocus colordiffuse="$INFO[Skin.String(BackButtonColor)]">iconmonstr-back.png</texturefocus>
+				
+			
+                <onclick>back</onclick>
+            </control>   
+        </control>
+	</include>
+
+</includes>

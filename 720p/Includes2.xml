@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes> 
+	
+	<include name="StandardBackground">
+        <control type="image">
+            <description>Normal Default Background Image</description>
+            <left>0</left>
+            <top>0</top>
+			<width>ScreenWidth</width>
+			<height>ScreenHeight</height>
+            <texture>background\background.png</texture>
+        </control>
+    </include>
+    
+	 <include name="StandardWindowTitle">
+        <height>60</height>
+        <align>center</align>
+        <aligny>center</aligny>
+        <font>font40</font>
+        <textcolor>white</textcolor>
+        <shadowcolor>black</shadowcolor>
+    </include>
+	
+    <include name="DialogBackgroundCommons">
+		<control type="image">
+			<description>background image</description>
+			<left>0</left>
+			<top>0</top>
+			<width>$PARAM[DialogBackgroundWidth]</width>
+			<height>$PARAM[DialogBackgroundHeight]</height>
+			<texture border="40">dialog_back_black2.png</texture>
+		</control>
+		<control type="image">
+			<description>Dialog Header image</description>
+			<left>40</left>
+			<top>16</top>
+			<width>$PARAM[DialogHeaderWidth]</width>
+			<height>40</height>
+			<texture border="5">dialogheader.png</texture>
+		</control>
+		<control type="label" id="$PARAM[DialogHeaderId]">
+			<description>header label</description>
+			<left>40</left>
+			<top>20</top>
+			<width>$PARAM[DialogHeaderWidth]</width>
+			<height>30</height>
+			<font>font13_title</font>
+			<label>$PARAM[DialogHeaderLabel]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<control type="button">
+			<description>Close Window button</description>
+			<left>$PARAM[CloseButtonLeft]</left>
+			<top>15</top>
+			<width>64</width>
+			<height>32</height>
+			<label/>
+			<font/>
+			<onclick>PreviousMenu</onclick>
+			<texturefocus>DialogCloseButton-focus.png</texturefocus>
+			<texturenofocus>DialogCloseButton.png</texturenofocus>
+			<onleft>$PARAM[CloseButtonNav]</onleft>
+			<onright>$PARAM[CloseButtonNav]</onright>
+			<onup>$PARAM[CloseButtonNav]</onup>
+			<ondown>$PARAM[CloseButtonNav]</ondown>
+			<visible>system.getbool(input.enablemouse)</visible>
+		</control>
+	</include>
+    
+	<include name="FlowTitle">
+		<left>0</left>
+		<top>490</top>
+		<width>ScreenWidth</width>
+		<height>100</height>
+		<font>font70_bold</font>
+		<aligny>center</aligny>
+		<align>center</align>
+		<scroll>false</scroll>
+		<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+		<animation reversible="false" effect="fade" time="200">Focus</animation>
+	</include>
+	
+	<include name="TopCornerTitle">
+		<left>25</left>
+			<top>10</top>
+			<width>1200</width>
+			<height>25</height>
+			<font>font50_bold</font>
+		<!-- <font>font50_bold</font> -->
+		<!-- <aligny>center</aligny> -->
+		<align>left</align>
+		<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+		<animation reversible="false" effect="fade" time="200">Focus</animation>
+	</include>
+	
+	
+	<include name="FlowHomeTitle2">
+		<left>0</left>
+		<top>550</top>
+		<width>ScreenWidth</width>
+		<height>MusicList.Label.Height</height>
+		<font>font40_bold</font>
+		<aligny>center</aligny>
+		<align>center</align>
+		<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+		<animation reversible="false" effect="fade" time="200">Focus</animation>
+	</include>
+	
+
+	
+	<include name="FlowAlbumTitle">
+		<left>0</left>
+		<top>490</top>
+		<width>ScreenWidth</width>
+		<height>MusicList.Label.Height</height>
+		<font>font70_bold</font>
+		<aligny>center</aligny>
+		<align>center</align>
+		<scroll>false</scroll>
+		<textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+		<animation reversible="false" effect="fade" time="200">Focus</animation>
+	</include>
+	
+	
+	<include name="SettingsButton">
+		<control type="button" id="3050">
+			<description>Settings Button</description>
+			<top>15</top>
+			<right>15</right>
+			<height>55</height>
+			<width>55</width>
+			<label></label> 
+			<font>font36_title</font>
+			<textcolor>-</textcolor>
+			<texturenofocus>iconmonstr-gear.png</texturenofocus>
+			<texturefocus>iconmonstr-gear.png</texturefocus>
+			<onclick>ActivateWindow(Settings)</onclick>
+		</control>
+    </include>
+		
+	<include name="StandardMediaWindowTitle">
+        <left>79</left>
+        <top>25</top>
+        <width>669</width>
+        <height>28</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <font>font30_title</font>
+        <textcolor>white</textcolor>
+        <shadowcolor>black</shadowcolor>
+        <scroll>false</scroll>
+        <include>Window_OpenClose_Fade</include>
+    </include>
+
+	<include name="MusicProgressBar">
+			<control type="progress">
+				<description>Progressbar</description>
+				<left>75</left>
+				<top>0</top>
+				<width>1130</width>
+				<height>10</height>
+                <reveal>true</reveal>
+				<info>Player.Progress</info>
+				<texturebg border="1" colordiffuse="F6333333">whitelistbackground.png</texturebg>
+				<midtexture border="1" colordiffuse="$INFO[Skin.String(SkinAccentColor)]">whitelistbackground.png</midtexture>
+			</control>
+			<control type="slider" id="87">
+				<description>Seek Slider</description>
+				<left>75</left>
+				<top>-20</top>
+				<width>1130</width>
+				<height>30</height>
+				<action>seek</action>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+			</control>
+        <!-- <control type="button" id="3052"> -->
+		<!-- <description>quick button to show click area of bar</description> -->
+			<!-- <posx>75</posx> -->
+			<!-- <posy>-20</posy> -->
+			<!-- <width>1130</width> -->
+			<!-- <height>30</height> -->
+			<!-- <texturefocus>1px_transparent.png</texturefocus> -->
+			<!-- <texturenofocus>whitelistbackground.png</texturenofocus> -->
+		<!-- </control> -->
+    </include>
+
+	<include name="ButtonsProgessAndPlaying">
+		<control type="group">
+			<left>0</left>
+			<top>610</top>
+			<include>MusicProgressBar</include>
+		</control>
+		
+		<control type="group">
+			<description>Music Playing Info Small</description>
+			<left>350</left>
+			<top>630</top>
+			<width>400</width>
+			<height>80</height>
+			<include>SmallNowPlaying</include>
+		</control>
+		
+		<control type="group">
+			<description>Player Buttons</description>
+			<left>75</left>
+			<top>630</top>
+			<width>400</width>
+			<height>80</height>
+			<include>PlayerButtons</include>
+		</control>
+		
+		
+	</include>
+
+	<include name="ButtonsAndProgess">
+		<control type="group">
+			<left>0</left>
+			<top>610</top>
+			<include>MusicProgressBar</include>
+		</control>
+		
+		<control type="group">
+			<description>Player Buttons</description>
+			<left>75</left>
+			<top>630</top>
+			<width>400</width>
+			<height>80</height>
+			<include>PlayerButtons</include>
+		</control>
+	</include>		
+	
+	<include name="SetColorButton">
+			<control type="button">
+			<description>Set Color Button</description>
+				<left>55</left>
+				<top>5</top>
+
+				<include content="StandardUserButton">
+                    <param name="ButtonLabel" value="$PARAM[ColorButtonLabel]"/>	
+                    <param name="ButtonFont" value="font44_title"/>	
+                    <param name="ButtonWidth" value="325"/>	
+                    <param name="ButtonHeight" value="90"/>	
+				</include>
+                
+				<align>center</align>
+				<aligny>center</aligny>
+
+				<!-- <textcolor>white</textcolor> -->
+				<!-- <texturefocus border="20">new_button_focus.png</texturefocus> -->
+			    <!-- <texturenofocus border="20">new_button.png</texturenofocus> -->
+				<onclick>$PARAM[ColorButtonClick]</onclick>
+				<onclick>ActivateWindow(1124)</onclick>
+			</control>
+			<!-- <control type="label"> -->
+				<!-- <left>350</left> -->
+				<!-- <top>5</top> -->
+				<!-- <height>60</height> -->
+				<!-- <width>200</width> -->
+				<!-- <font>font24_title</font> -->
+				<!-- <label>Current:</label> -->
+				<!-- <textcolor>white</textcolor> -->
+				<!-- <align>left</align> -->
+				<!-- <aligny>center</aligny> -->
+			<!-- </control> -->
+            <control type="image">
+                <description>Sample Color</description>
+				<left>440</left>
+				<top>15</top>
+                <width>120</width>
+                <height>70</height>
+                <texture colordiffuse="$INFO[Skin.String($PARAM[ColorSample])]">button-nofocus.png</texture>
+            </control>
+		</include>
+	
+    	<include name="StandardUserButton">
+			<description>Generic button for use throughout skin</description>
+				<height>$PARAM[ButtonHeight]</height>
+			   	<width>$PARAM[ButtonWidth]</width>
+				<font>$PARAM[ButtonFont]</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$PARAM[ButtonLabel]</label>  
+				<textcolor>white</textcolor>
+				<texturefocus border="15">new_button_focus.png</texturefocus>
+			    <texturenofocus border="15">new_button.png</texturenofocus>
+			
+			<!-- <control type="label"> -->
+				<!-- <left>350</left> -->
+				<!-- <top>5</top> -->
+				<!-- <height>60</height> -->
+				<!-- <width>200</width> -->
+				<!-- <font>font24_title</font> -->
+				<!-- <label>Current:</label> -->
+				<!-- <textcolor>white</textcolor> -->
+				<!-- <align>left</align> -->
+				<!-- <aligny>center</aligny> -->
+			<!-- </control> -->
+		</include>
+        
+        <include name="StandardLightUserButton">
+			<description>Generic button for use throughout skin</description>
+				<height>$PARAM[ButtonHeight]</height>
+			   	<width>$PARAM[ButtonWidth]</width>
+				<font>$PARAM[ButtonFont]</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$PARAM[ButtonLabel]</label>  
+				<textcolor>white</textcolor>
+				<texturefocus border="15">new_button_focus.png</texturefocus>
+			    <texturenofocus border="15">new_button.png</texturenofocus>
+			
+			<!-- <control type="label"> -->
+				<!-- <left>350</left> -->
+				<!-- <top>5</top> -->
+				<!-- <height>60</height> -->
+				<!-- <width>200</width> -->
+				<!-- <font>font24_title</font> -->
+				<!-- <label>Current:</label> -->
+				<!-- <textcolor>white</textcolor> -->
+				<!-- <align>left</align> -->
+				<!-- <aligny>center</aligny> -->
+			<!-- </control> -->
+		</include>
+    
+	<include name="UserSetButton">
+			
+			<description>User Set Button</description>
+				<height>90</height>
+			   	<width>275</width>
+				<font>font44_title</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$PARAM[ButtonLabel]</label>  
+				<textcolor>white</textcolor>
+				<texturefocus border="20">new_button_focus.png</texturefocus>
+			    <texturenofocus border="20">new_button.png</texturenofocus>
+			
+			<!-- <control type="label"> -->
+				<!-- <left>350</left> -->
+				<!-- <top>5</top> -->
+				<!-- <height>60</height> -->
+				<!-- <width>200</width> -->
+				<!-- <font>font24_title</font> -->
+				<!-- <label>Current:</label> -->
+				<!-- <textcolor>white</textcolor> -->
+				<!-- <align>left</align> -->
+				<!-- <aligny>center</aligny> -->
+			<!-- </control> -->
+
+
+		</include>
+		
+	<include name="RandomRepeatButton">  
+	    <control type="togglebutton">
+            <description>Random Button</description>
+            <posx>490</posx>
+            <posy>630</posy>
+            <width>70</width>
+            <height>70</height>
+            <!-- <font>-</font> -->
+            <onclick>PlayerControl(Random)</onclick>
+            <texturefocus colordiffuse="FF666666">shuffle_button.png</texturefocus>
+            <texturenofocus colordiffuse="FF666666">shuffle_button.png</texturenofocus>
+			<usealttexture>Playlist.IsRandom</usealttexture>
+			<alttexturefocus colordiffuse="FFDDDDDD">shuffle_button.png</alttexturefocus>
+			<alttexturenofocus colordiffuse="FFDDDDDD">shuffle_button.png</alttexturenofocus>
+        </control>
+		
+		
+		<control type="button">
+            <description>Repeat Button inactive</description>
+			<visible>!playlist.isrepeat</visible>
+            <posx>720</posx>
+            <posy>630</posy>
+            <width>70</width>
+            <height>70</height>
+            <!-- <font>-</font> -->
+            <onclick>PlayerControl(RepeatAll)</onclick>
+            <texturefocus colordiffuse="FF666666">repeat_button.png</texturefocus>
+            <texturenofocus colordiffuse="FF666666">repeat_button.png</texturenofocus>
+        </control>
+		
+		<control type="button">
+            <description>Repeat Button inactive</description>
+			<visible>playlist.isrepeat</visible>
+            <posx>720</posx>
+            <posy>630</posy>
+            <width>70</width>
+            <height>70</height>
+            <!-- <font>-</font> -->
+            <onclick>PlayerControl(RepeatOff)</onclick>
+            <texturefocus colordiffuse="FFDDDDDD">repeat_button.png</texturefocus>
+            <texturenofocus colordiffuse="FFDDDDDD">repeat_button.png</texturenofocus>
+        </control>
+	</include>
+
+</includes>

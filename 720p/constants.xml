@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes> 
+
+<!-- overall screen size -->
+	<constant name="ScreenWidth">1280</constant>
+    <constant name="ScreenHeight">720</constant>
+
+<!-- Dimensions of some objects to help with window layout editing -->
+	
+
+	
+<!-- Dimensions of music scrolls lists on home screen -->
+
+	<!-- <constant name="MusicList.Antiflash">0</constant> -->
+
+	<constant name="MusicList.Scrolltime">1500</constant>
+
+	<constant name="MusicList.Label.Y">500</constant>
+	<constant name="MusicList.Label.Height">60</constant>
+	<constant name="MusicList.Label.Width">800</constant>
+
+
+
+<!-- Album Cover Flow animation data -->
+<constant name="Flow.Main.Top">260</constant>
+<constant name="Flow.Main.Left">640</constant>
+
+
+<constant name="Flow.Scrolltime">100</constant>
+<constant name="Flow.opentime">200</constant>
+<constant name="Flow.openfadetime">200</constant>
+
+<constant name="Flow.Ht">300</constant>
+<constant name="Flow.Wd">300</constant>
+<constant name="Flow.Top">-150</constant>
+<constant name="Flow.Left">-150</constant>
+<constant name="Flow.Center.Zoom">150</constant>
+
+<constant name="Flow.Fade.1">100</constant>
+<constant name="Flow.Fade.2">90</constant>
+<constant name="Flow.Fade.3">90</constant>
+<constant name="Flow.Fade.4">90</constant>
+<constant name="Flow.Fade.5">90</constant>
+<constant name="Flow.Fade.6">90</constant>
+
+<constant name="Flow.Ang.R1">80</constant>
+<constant name="Flow.Ang.R2">95</constant>
+<constant name="Flow.Ang.R3">105</constant>
+<constant name="Flow.Ang.R4">115</constant>
+<constant name="Flow.Ang.R5">120</constant>
+<constant name="Flow.Ang.R6">130</constant>
+
+<constant name="Flow.Sld.R1">240</constant>
+<constant name="Flow.Sld.R2">340</constant>
+<constant name="Flow.Sld.R3">430</constant>
+<constant name="Flow.Sld.R4">505</constant>
+<constant name="Flow.Sld.R5">565</constant>
+<constant name="Flow.Sld.R6">655</constant>
+
+<constant name="Flow.Ang.L1">-80</constant>
+<constant name="Flow.Ang.L2">-95</constant>
+<constant name="Flow.Ang.L3">-105</constant>
+<constant name="Flow.Ang.L4">-115</constant>
+<constant name="Flow.Ang.L5">-120</constant>
+<constant name="Flow.Ang.L6">-130</constant>
+
+<constant name="Flow.Sld.L1">-240</constant>
+<constant name="Flow.Sld.L2">-340</constant>
+<constant name="Flow.Sld.L3">-430</constant>
+<constant name="Flow.Sld.L4">-505</constant>
+<constant name="Flow.Sld.L5">-565</constant>
+<constant name="Flow.Sld.L6">-655</constant>
+
+
+
+<!-- Home/setting/playlist/artist Screen animation data -->
+
+<constant name="Flow.Home.Main.Top">300</constant>
+<constant name="Flow.Home.Main.Left">640</constant>
+
+<constant name="Flow.Home.Ht">250</constant>
+<constant name="Flow.Home.Wd">250</constant>
+<constant name="Flow.Home.Top">-125</constant>
+<constant name="Flow.Home.Left">-125</constant>
+<constant name="Flow.Home.Center.Zoom">150</constant>
+<constant name="Icon.Dialog.Center.Ht">300</constant>
+<constant name="Icon.Dialog.Center.Wd">300</constant>
+<constant name="Camera.X.home">0</constant>
+<constant name="Camera.Y.home">-200</constant>
+
+<constant name="Flow.Home.Fade.1">100</constant>
+<constant name="Flow.Home.Fade.2">100</constant>
+<constant name="Flow.Home.Fade.3">10</constant>
+<constant name="Flow.Home.Fade.4">0</constant>
+<constant name="Flow.Home.Fade.5">0</constant>
+<constant name="Flow.Home.Fade.6">0</constant>
+
+<constant name="Flow.Home.Zoom.0">120</constant>
+<constant name="Flow.Home.Zoom.1">100</constant>
+<constant name="Flow.Home.Zoom.2">90</constant>
+<constant name="Flow.Home.Zoom.3">40</constant>
+<constant name="Flow.Home.Zoom.4">40</constant>
+<constant name="Flow.Home.Zoom.5">40</constant>
+<constant name="Flow.Home.Zoom.6">40</constant>
+
+<constant name="Flow.Home.Ang.R1">-20</constant>
+<constant name="Flow.Home.Ang.R2">-40</constant>
+<constant name="Flow.Home.Ang.R3">-55</constant>
+<constant name="Flow.Home.Ang.R4">-85</constant>
+<constant name="Flow.Home.Ang.R5">-135</constant>
+<constant name="Flow.Home.Ang.R6">-160</constant>
+
+<constant name="Flow.Home.Sld.R1">340</constant>
+<constant name="Flow.Home.Sld.R2">540</constant>
+<constant name="Flow.Home.Sld.R3">680</constant>
+<constant name="Flow.Home.Sld.R4">480</constant>
+<constant name="Flow.Home.Sld.R5">280</constant>
+<constant name="Flow.Home.Sld.R6">130</constant>
+
+<constant name="Flow.Home.Sld.Z1">-50</constant>
+<constant name="Flow.Home.Sld.Z2">-100</constant>
+<constant name="Flow.Home.Sld.Z3">-150</constant>
+<constant name="Flow.Home.Sld.Z4">-150</constant>
+<constant name="Flow.Home.Sld.Z5">-150</constant>
+<constant name="Flow.Home.Sld.Z6">-150</constant>
+
+<constant name="Flow.Home.Ang.L1">20</constant>
+<constant name="Flow.Home.Ang.L2">40</constant>
+<constant name="Flow.Home.Ang.L3">55</constant>
+<constant name="Flow.Home.Ang.L4">85</constant>
+<constant name="Flow.Home.Ang.L5">135</constant>
+<constant name="Flow.Home.Ang.L6">160</constant>
+
+<constant name="Flow.Home.Sld.L1">-340</constant>
+<constant name="Flow.Home.Sld.L2">-540</constant>
+<constant name="Flow.Home.Sld.L3">-680</constant>
+<constant name="Flow.Home.Sld.L4">-480</constant>
+<constant name="Flow.Home.Sld.L5">-280</constant>
+<constant name="Flow.Home.Sld.L6">-130</constant>
+
+
+
+
+
+</includes>

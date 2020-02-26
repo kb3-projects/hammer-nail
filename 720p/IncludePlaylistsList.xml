@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<includes> 
+<include name="PlaylistList">
+
+<item id="1">
+<label>REM</label>
+<label2>REM.icon</label2>
+<icon>$INFO[Skin.String(REM.icon)]</icon>
+<onclick>ActivateWindow(1120)</onclick>
+<onclick>PlayMedia(special://profile/playlists/music/1884893.xsp)</onclick> 
+<onclick>Skin.SetBool(NotAnAlbum)</onclick>
+<property name="listpath">special://profile/playlists/music/1884893.xsp</property>
+</item> 
+
+<item id="2">
+<label>80's Alternative</label>
+<label2>80's Alternative.icon</label2>
+<icon>$INFO[Skin.String(80's Alternative.icon)]</icon>
+<onclick>ActivateWindow(1120)</onclick>
+<onclick>PlayMedia(special://profile/playlists/music/80's Alternative.xsp)</onclick> 
+<onclick>Skin.SetBool(NotAnAlbum)</onclick>
+<property name="listpath">special://profile/playlists/music/80's Alternative.xsp</property>
+</item> 
+
+</include> 
+</includes> 

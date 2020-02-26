@@ -1,0 +1,300 @@
+<window id="1114">
+
+	<!-- <include>Window_OpenClose_Fade</include> -->
+	<setfocus>50000</setfocus>
+	
+<!-- Notes: the default colors are set in variables.xml -->
+
+	<controls>
+
+		<control type="group">
+			<left>0</left>
+			<top>0</top>
+			<include>StandardBackground</include>
+			<!-- <include>StandardHomeButton</include> -->
+			<!-- <include>PlayerButtons</include> -->
+			<!-- <include>StandardBackButton</include> -->
+		</control> 
+		
+		<include content="SoftButtons">
+			<param name="SoftButton1" value="PAUSE"/>
+			<param name="SoftButton1Alternate" value="PLAY"/>
+			<param name="SoftButton1Visible" value="Player.HasAudio"/>		
+			<param name="SoftButton1VisibleAlternate" value="Player.Paused"/>	
+			<param name="SoftButton1Action" value="PlayerControl(Play)"/>	
+			
+			<param name="SoftButton2" value="PREV"/>
+			<param name="SoftButton2Alternate" value=""/>
+			<param name="SoftButton2Visible" value="false"/>
+			<param name="SoftButton2VisibleAlternate" value="false"/>		
+			<param name="SoftButton2Action" value="PlayerControl(Previous)"/>
+			
+			<param name="SoftButton3" value="BACK"/>
+			<param name="SoftButton3Alternate" value=""/>
+			<param name="SoftButton3Visible" value="true"/>
+			<param name="SoftButton3VisibleAlternate" value="false"/>	
+			<param name="SoftButton3Action" value="back"/>		
+			
+			<param name="SoftButton4" value="HOME"/>
+			<param name="SoftButton4Alternate" value="set"/>
+			<param name="SoftButton4Visible" value="true"/>
+			<param name="SoftButton4VisibleAlternate" value="false"/>
+			<param name="SoftButton4Action" value="ActivateWindow(Home)"/>
+	</include>
+		
+		<!-- Temp labels to help with debug -->
+			<control type="label">
+			<visible>false</visible>
+			<description>header label</description>
+			<left>120</left>
+			<top>0</top>
+			<font>font12</font>
+			<width>760</width>
+			<label>Settings Menu[CR]$INFO[Window(1114).Property(SettingsMenu)]</label>
+			</control>
+			
+	<control type="group">
+	<include>Window_OpenClose_Fade</include>
+		<control type="image">
+	        <description>Separator Line</description>
+			<left>50</left>
+			<top>180</top>
+			<width>1180</width>
+			<height>1</height>
+			<texture>line_horizontal_light.png</texture>
+		</control>
+		
+<!-- Seletions for sub menus -->
+
+			<control type="button" id="10">
+				<description>Settings Menu1 Button for colors</description>
+				<left>55</left>
+				<top>65</top>
+				
+				<include content="StandardUserButton">
+                    <param name="ButtonLabel" value="Colors"/>	
+                    <param name="ButtonFont" value="font44_title"/>	
+                    <param name="ButtonWidth" value="275"/>	
+                    <param name="ButtonHeight" value="90"/>	
+				</include>
+				<onclick>SetProperty(SettingsMenu,1)</onclick>
+				<!-- <onclick>SetFocus(103)</onclick> -->
+				<onleft>noop</onleft>
+				<onright>20</onright>
+				<onup>noop</onup>
+				<ondown>11</ondown>
+			</control>
+			
+			<control type="button" id="20">
+				<description>Settings Menu2 button for options</description>
+				<left>450</left>
+				<top>65</top>
+		
+				
+				<include content="StandardUserButton">
+                    <param name="ButtonLabel" value="Options"/>	
+                    <param name="ButtonFont" value="font44_title"/>	
+                    <param name="ButtonWidth" value="275"/>	
+                    <param name="ButtonHeight" value="90"/>	
+				</include>
+				
+        		<!-- <texturenofocus>1px_transparent.png</texturenofocus> -->
+		        <!-- <texturefocus>1px_transparent.png</texturefocus> -->
+				
+				<onclick>SetProperty(SettingsMenu,2)</onclick>
+				<onclick>SetFocus(203)</onclick>
+				<onleft>noop</onleft>
+				<onright>20</onright>
+				<onup>noop</onup>
+				<ondown>11</ondown>
+			</control>
+	</control>		
+	
+
+	<!-- Menu 1 Buttons -->
+	<control type="group" id="102">
+	<include>Window_OpenClose_Fade</include>
+			<description>Color Selections</description>
+			<left>0</left>
+			<top>200</top>
+			<width>800</width>
+			<height>60</height>
+			<visible>String.IsEqual(Window(1114).Property(SettingsMenu),1)</visible>
+			
+		<control type="group" id="103">
+			<top>0</top>
+			<left>0</left>
+			<include content="SetColorButton">
+				<param name="ColorButtonLabel" value="Player Text"/>
+				<param name="ColorButtonClick" value="Skin.SetString(ChangeSkinColor,3)"/>
+				<param name="ColorSample" value="PlayerTextColor"/>
+			</include>
+		</control>
+		
+		<control type="group" id="104">
+			<description>Player Text Focus</description>
+			<top>100</top>
+			<left>0</left>
+			<include content="SetColorButton">
+				<param name="ColorButtonLabel" value="Text Focus"/>
+				<param name="ColorButtonClick" value="Skin.SetString(ChangeSkinColor,4)"/>
+				<param name="ColorSample" value="TextFocusColor"/>
+			</include>
+		</control>
+			
+		<control type="group" id="105">
+		<visible>True</visible>
+			<description>Player Button Color</description>
+			<top>200</top>
+			<left>0</left>
+			<include content="SetColorButton">
+				<param name="ColorButtonLabel" value="Buttons"/>
+				<param name="ColorButtonClick" value="Skin.SetString(ChangeSkinColor,1)"/>
+				<param name="ColorSample" value="PlayerButtonsColor"/>
+			</include>
+		</control>
+		
+		
+		<control type="group" id="106">
+		<visible>true</visible>
+			<description>Player Button Focus</description>
+			<top>300</top>
+			<left>0</left>
+			<include content="SetColorButton">
+				<param name="ColorButtonLabel" value="Button Focus"/>
+				<param name="ColorButtonClick" value="Skin.SetString(ChangeSkinColor,2)"/>
+				<param name="ColorSample" value="PlayerButtonsFocus"/>
+			</include>
+		</control>
+		
+		<!-- <control type="group" id="107"> -->
+		<!-- <visible>false</visible> -->
+			<!-- <description>Back Button Color</description> -->
+			<!-- <top>400</top> -->
+			<!-- <left>0</left> -->
+			<!-- <include content="SetColorButton"> -->
+				<!-- <param name="ColorButtonLabel" value="Back Button"/> -->
+				<!-- <param name="ColorButtonClick" value="Skin.SetString(ChangeSkinColor,5)"/> -->
+				<!-- <param name="ColorSample" value="BackButtonColor"/> -->
+			<!-- </include> -->
+		<!-- </control>			 -->
+		
+		<control type="group" id="108">
+		
+			<description>Soft Button Color</description>
+			<top>0</top>
+			<left>640</left>
+			<include content="SetColorButton">
+				<param name="ColorButtonLabel" value="Soft Button"/>
+				<param name="ColorButtonClick" value="Skin.SetString(ChangeSkinColor,8)"/>
+				<param name="ColorSample" value="SoftButtonColor"/>
+			</include>
+		</control>	
+		
+		<control type="group" id="109">
+			<description>Soft Button Outline</description>
+			<top>100</top>
+			<left>640</left>
+			<include content="SetColorButton">
+				<param name="ColorButtonLabel" value="Soft Outline"/>
+				<param name="ColorButtonClick" value="Skin.SetString(ChangeSkinColor,7)"/>
+				<param name="ColorSample" value="SoftButtonOutlineColor"/>
+			</include>
+		</control>	
+
+		<control type="group" id="110">
+			<description>Soft Button Focus</description>
+			<top>200</top>
+			<left>640</left>
+			<include content="SetColorButton">
+				<param name="ColorButtonLabel" value="Soft Focus"/>
+				<param name="ColorButtonClick" value="Skin.SetString(ChangeSkinColor,9)"/>
+				<param name="ColorSample" value="SoftButtonFocus"/>
+			</include>
+		</control>	
+			
+		<control type="group" id="111">
+			<description>Skin Accent</description>
+			<top>300</top>
+			<left>640</left>
+			<include content="SetColorButton">
+				<param name="ColorButtonLabel" value="Skin Accent"/>
+				<param name="ColorButtonClick" value="Skin.SetString(ChangeSkinColor,6)"/>
+				<param name="ColorSample" value="SkinAccentColor"/>
+			</include>
+		</control>	
+	
+		
+		</control>
+
+
+
+<control type="group" id="202">
+<include>Window_OpenClose_Fade</include>
+			<description>Other user options</description>
+			<left>50</left>
+			<top>225</top>
+			<!-- <width>800</width> -->
+			<!-- <height>200</height> -->
+			<visible>String.IsEqual(Window(1114).Property(SettingsMenu),2)</visible>
+
+
+			<control type="radiobutton" id="203">
+			<description>Enable Soft Buttons</description>
+				<left>30</left>
+				<top>10</top>
+				<height>100</height>
+			   	<width>500</width>
+				<radiowidth>80</radiowidth>
+				<radioheight>80</radioheight>
+				<radioposx>430</radioposx>
+				<font>font44_title</font>
+				<!-- <align>center</align> -->
+				<aligny>center</aligny>
+				<label>31101</label>  
+				<textcolor>white</textcolor>
+				<texturefocus></texturefocus>
+				<texturenofocus></texturenofocus>
+				<selected>Skin.HasSetting(DisableSoftButtons)</selected>
+				<textureradiooff>icon_check.png</textureradiooff>
+				<textureradioon>icon_uncheck.png</textureradioon>
+				<onclick>Skin.ToggleSetting(DisableSoftButtons)</onclick>
+			</control> 
+			
+			<control type="radiobutton" id="204">
+			<description>Enable Notifications</description>
+				<left>30</left>
+				<top>120</top>
+				<height>100</height>
+			   	<width>500</width>
+				<radiowidth>80</radiowidth>
+				<radioheight>80</radioheight>
+				<radioposx>430</radioposx>
+				<font>font44_title</font>
+				<!-- <align>center</align> -->
+				<aligny>center</aligny>
+				<label>31102</label>  
+				<textcolor>white</textcolor>
+				<texturefocus></texturefocus>
+				<texturenofocus></texturenofocus>
+				<selected>Skin.HasSetting(EnableNotification)</selected>
+				<textureradioon>icon_check.png</textureradioon>
+				<textureradiooff>icon_uncheck.png</textureradiooff>
+				<onclick>Skin.ToggleSetting(EnableNotification)</onclick>
+			</control> 
+			
+			
+			</control>
+
+
+
+
+</controls>
+
+
+
+
+
+
+
+</window>

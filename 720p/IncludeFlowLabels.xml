@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes> 
+
+<include name="FlowLabels">
+		
+<control type="group">
+	<visible>true</visible>
+	
+	<control type="label">
+			<left>-60</left>
+			<top>200</top>
+			<width>140</width>
+			<height>52</height>
+			<angle>0</angle>
+			<font>font14</font>
+			<label>0.[CR]$INFO[ListItem(0).Album]</label>
+		</control>
+	
+	<control type="group">
+	<description>Right Side Labels</description>
+	<top>0</top>
+	<left>-40</left>
+		<control type="label">
+			<left>Flow.Sld.R6</left>
+			<top>300</top>
+			<width>140</width>
+			<height>52</height>
+			<angle>75</angle>
+			<font>font14</font>
+			<label>R6.[CR]$INFO[ListItem(6).Album]</label>
+		</control>
+		<control type="label">
+			<left>Flow.Sld.R5</left>
+			<top>300</top>
+			<width>140</width>
+			<height>52</height>
+			<angle>75</angle>
+			<font>font14</font>
+			<label>R5.[CR]$INFO[ListItem(5).Album]</label>
+		</control>
+		<control type="label">
+			<left>Flow.Sld.R4</left>
+			<top>300</top>
+			<width>140</width>
+			<height>52</height>
+			<angle>75</angle>
+			<font>font14</font>
+			<label>R4.[CR]$INFO[ListItem(4).Album]</label>
+		</control>
+		<control type="label">
+			<left>Flow.Sld.R3</left>
+			<top>300</top>
+			<width>140</width>
+			<height>52</height>
+			<angle>75</angle>
+			<font>font14</font>
+			<label>R3.[CR]$INFO[ListItem(3).Album]</label>
+		</control>
+		<control type="label">
+			<left>Flow.Sld.R2</left>
+			<top>300</top>
+			<width>140</width>
+			<height>52</height>
+			<angle>75</angle>
+			<font>font14</font>
+			<label>R2.[CR]$INFO[ListItem(2).Album]</label>
+		</control>
+		<control type="label">
+			<left>Flow.Sld.R1</left>
+			<top>300</top>
+			<width>140</width>
+			<height>52</height>
+			<angle>75</angle>
+			<font>font14</font>
+			<label>R1.[CR]$INFO[ListItem(1).Album]</label>
+		</control>
+	</control>
+	
+	
+	<control type="group">
+	<top>-100</top>
+	<left>-30</left>
+		
+	<control type="label">
+			<left>Flow.Sld.L6</left>
+			<top>300</top>
+			<width>140</width>
+			<height>52</height>
+			<angle>-75</angle>
+			<font>font14</font>
+			<label>L6.[CR]$INFO[ListItem(-6).Album]</label>
+		</control>
+		<control type="label">
+			<left>Flow.Sld.L5</left>
+			<top>300</top>
+			<width>140</width>
+			<height>52</height>
+			<angle>-75</angle>
+			<font>font14</font>
+			<label>L5.[CR]$INFO[ListItem(-5).Album]</label>
+		</control>
+		<control type="label">
+			<left>Flow.Sld.L4</left>
+			<top>300</top>
+			<width>140</width>
+			<height>52</height>
+			<angle>-75</angle>
+			<font>font14</font>
+			<label>L4.[CR]$INFO[ListItem(-4).Album]</label>
+		</control>
+		<control type="label">
+			<left>Flow.Sld.L3</left>
+			<top>300</top>
+			<width>140</width>
+			<height>52</height>
+			<angle>-75</angle>
+			<font>font14</font>
+			<label>L3.[CR]$INFO[ListItem(-3).Album]</label>
+		</control>
+		<control type="label">
+			<left>Flow.Sld.L2</left>
+			<top>300</top>
+			<width>140</width>
+			<height>52</height>
+			<angle>-75</angle>
+			<font>font14</font>
+			<label>L2.[CR]$INFO[ListItem(-2).Album]</label>
+		</control>
+		<control type="label">
+			<left>Flow.Sld.L1</left>
+			<top>300</top>
+			<width>140</width>
+			<height>52</height>
+			<angle>-75</angle>
+			<font>font14</font>
+			<label>L1.[CR]$INFO[ListItem(-1).Album]</label>
+		</control>	
+	</control>
+	</control>	
+
+</include>		
+</includes>

@@ -1,0 +1,130 @@
+<keymap>
+   <global>
+       <keyboard>
+         <F5>Select</F5>
+         <F5 mod="longpress">ContextMenu</F5>
+        </keyboard>
+   </global>
+
+   <home>
+        <keyboard>
+		<F1>PlayPause</F1>
+        <F2>PlayerControl(Previous)</F2>
+        <F3>PlayerControl(Next)</F3>
+        <F4>ActivateWindow(1120)</F4>
+        <F5 mod="longpress">ActivateWindow(111)</F5>
+        </keyboard>
+   </home>
+
+   <window1114>
+   <!-- custom_skinsettings_1114.xml -->
+        <keyboard>
+        <F1>PlayPause</F1>
+        <F2>noop</F2>
+        <F3>back</F3>
+        <F4>ActivateWindow(Home)</F4>
+        </keyboard>
+   </window1114>
+
+
+   <window1120>
+   <!-- custom_nowplaying_1120.xml -->
+        <keyboard>
+        <F1>PlayPause</F1>
+        <F2>PlayerControl(Previous)</F2>
+        <F3>PlayerControl(Next)</F3>
+        <F4>ActivateWindow(Home)</F4>
+        <F5>Runscript(script.listhammer,showlist)</F5>
+        <!-- <F5>Runscript(script.simplekeyboard,select)<F5> -->
+        <F5 mod="longpress">Runscript(script.listhammer,hidelist)</F5>
+        </keyboard>
+   </window1120>
+   
+   <window1123>
+   <!-- custom_albums_1123.xml -->
+        <keyboard>
+		<F1>PlayPause</F1>
+        <F2>PrevLetter</F2>
+        <F3>NextLetter</F3>
+        <F4>ActivateWindow(Home)</F4>
+        </keyboard>
+	</window1123>
+
+	<window1125>
+   <!-- custom_artists_1125.xml -->
+        <keyboard>
+		<F1>PlayPause</F1>
+        <F2>Runscript(script.simplekeyboard,playartist)</F2>
+        <F3>noop</F3>
+        <F4>ActivateWindow(Home)</F4>
+        </keyboard>
+	</window1125>
+
+	<window1126>
+   <!-- custom_albumsbyartist_1126.xml -->
+        <keyboard>
+		<F1>PlayPause</F1>
+        <F2>PlayerControl(Previous)</F2>
+        <F3>PlayerControl(Next)</F3>
+        <F4>ActivateWindow(Home)</F4>
+        </keyboard>
+	</window1126>
+   
+    <window1127>
+   <!-- custom_recentalbums_1127.xml -->
+        <keyboard>
+		<F1>PlayPause</F1>
+        <F2>PlayerControl(Previous)</F2>
+        <F3>PlayerControl(Next)</F3>
+        <F4>ActivateWindow(Home)</F4>
+        </keyboard>
+	</window1127>
+
+    <window1130>
+   <!-- custom_user_settings_1130.xml -->
+        <keyboard>
+		<F1>PlayPause</F1>
+        <F2>noop</F2>
+        <F3>back</F3>
+        <F4>ActivateWindow(Home)</F4>
+        </keyboard>
+	</window1130>
+
+    <window1170>
+   <!-- Custom_DialogPlaylistIcons_1170.xml -->
+        <keyboard>
+		<F1>noop</F1>
+        <F2>noop</F2>
+        <F3>back</F3>
+        <F4>back</F4>
+        </keyboard>
+	</window1170>
+
+    <window1180>
+   <!-- custom_playlists_1180.xml -->
+        <keyboard>
+		<F1>PlayPause</F1>
+		<F2>noop</F2>
+        <F3>noop</F3>
+        <F4>ActivateWindow(Home)</F4>
+        <F5 mod="longpress">ActivateWindow(1150)</F5>
+        </keyboard>
+	</window1180>
+
+    <window1181>
+   <!-- custom_playlisticons_1181.xml -->
+        <keyboard>
+		<F1>noop</F1>
+        <F2>noop</F2>
+        <F3>noop</F3>
+        <F4>noop</F4>
+        </keyboard>
+	</window1181>
+
+<!--    <home>
+    <mouse>
+      <mousemove>noop</mousemove>
+    </mouse>
+   </home> -->
+   
+</keymap>

@@ -1,0 +1,212 @@
+<window id="4">
+
+	<!-- <animation effect="fade"  time="100">WindowOpen</animation> -->
+	<!-- <animation effect="fade"  time="100">WindowClose</animation> -->
+	<defaultcontrol>50000</defaultcontrol>
+	<!-- <onload>RunScript(script.playlists,type=music)</onload> -->
+	<backgroundcolor>0</backgroundcolor>
+	<controls>
+		
+		<include>StandardBackground</include>
+		<!-- <include>StandardHomeButton</include> -->
+		<!-- <include>ButtonsProgessAndPlaying</include>	 -->
+		<!-- <include>StandardBackButton</include> -->
+	
+		<include content="SoftButtons">
+			<param name="SoftButton1" value="PAUSE"/>
+			<param name="SoftButton1Alternate" value="PLAY"/>
+			<param name="SoftButton1Visible" value="Player.HasAudio"/>		
+			<param name="SoftButton1VisibleAlternate" value="Player.Paused"/>	
+			<param name="SoftButton1Action" value="PlayerControl(Play)"/>	
+			
+			<param name="SoftButton2" value="PREV"/>
+			<param name="SoftButton2Alternate" value=""/>
+			<param name="SoftButton2Visible" value="false"/>
+			<param name="SoftButton2VisibleAlternate" value="false"/>		
+			<param name="SoftButton2Action" value="PlayerControl(Previous)"/>
+			
+			<param name="SoftButton3" value="BACK"/>
+			<param name="SoftButton3Alternate" value=""/>
+			<param name="SoftButton3Visible" value="true"/>
+			<param name="SoftButton3VisibleAlternate" value="false"/>	
+			<param name="SoftButton3Action" value="back"/>		
+			
+			<param name="SoftButton4" value="HOME"/>
+			<param name="SoftButton4Alternate" value="set"/>
+			<param name="SoftButton4Visible" value="true"/>
+			<param name="SoftButton4VisibleAlternate" value="false"/>
+			<param name="SoftButton4Action" value="ActivateWindow(Home)"/>
+	</include>
+	
+		<control type="label">
+		<description>Window label</description>
+		<include>TopCornerTitle</include>
+		<label>$LOCALIZE[5]</label>
+		</control>
+	
+	
+
+<!-- The xml file actually starts here -->
+
+<!-- Wraplist for Icons -->
+		<control type="wraplist" id="50000">
+				<description>home icons navigation</description>
+				<left>0</left>
+				<top>0</top>
+				<width>ScreenWidth</width>
+				<height>ScreenHeight</height>
+			
+				<!-- <ondown>setfocus(50001)</ondown> -->
+				<!-- <onup>setfocus(50003)</onup> -->
+				<!-- <ondown>SetProperty(ToControl,50001,Home)</ondown> -->
+				<!-- <onup>SetProperty(ToControl,50003,Home)</onup> -->
+				<!-- <ondown>SetProperty(FromControl,50000,Home)</ondown> -->
+				<!-- <onup>SetProperty(FromControl,50000,Home)</onup> -->
+				<!-- <onleft>SetProperty(ListMoved,1,Home)</onleft> -->
+		
+				<hitrect x="0" y="0" w="0" h="0" />			
+
+				<viewtype label="3D list">list</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>25</pagecontrol>
+				<scrolltime tween="linear" easing="inout">MusicList.Scrolltime</scrolltime>
+				<autoscroll>false</autoscroll>
+		
+			
+				
+		<!-- this is the list navigation and labels.   Item Diplay is handled separately. -->
+			<itemlayout width="0" height="0">
+					<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>1</width>
+							<height>1</height>
+					</control>
+			</itemlayout>
+				<focusedlayout width="0" height="0">
+					<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>1</width>
+							<height>1</height>
+					</control>
+					
+					<control type="label">
+						<description>List Label</description>	
+						<include>FlowTitle</include>
+						<info>ListItem.Label</info>
+					</control>
+					
+					<control type="label">
+						<description>List Label 2</description>
+						<visible>false</visible>
+						<include>FlowHomeTitle2</include>
+						<info>ListItem.Label2</info>
+					</control>
+					
+				</focusedlayout>
+				
+			
+			<content>
+				<item id="1">
+					<label>$LOCALIZE[31077]</label>
+					<label2>$LOCALIZE[31077]</label2>
+					<onclick>SetProperty(SettingsMenu,99,1114)</onclick>
+					<onclick>ActivateWindow(1114)</onclick>
+					<icon>iconmonstr-gear.png</icon>
+				</item>
+				<item id="2">
+					<label>$LOCALIZE[31067]</label>
+					<label2>$LOCALIZE[31067]</label2>
+					<onclick>ActivateWindow(MediaSettings)</onclick>
+					<icon>iconmonstr-music.png</icon>
+				</item>
+				<item id="3">
+					<label>$LOCALIZE[31291]</label>
+					<label2>$LOCALIZE[31291]</label2>
+					<onclick>ActivateWindow(PlayerSettings)</onclick>
+					<icon>iconmonstr-player.png</icon>
+				</item>
+				<item id="4">
+					<label>$LOCALIZE[31075]</label>
+					<label2>$LOCALIZE[31075]</label2>
+					<onclick>ActivateWindow(InterfaceSettings)</onclick>
+					<icon>iconmonstr-appearance.png</icon>
+				</item>
+				<item id="5">
+					<label>$LOCALIZE[31078]</label>
+					<label2>$LOCALIZE[31078]</label2>
+					<onclick>ActivateWindow(AddonBrowser)</onclick>
+					<icon>iconmonstr-addon.png</icon>
+				</item>
+				<item id="6">
+					<label>$LOCALIZE[31076]</label>
+					<label2>$LOCALIZE[31076]</label2>
+					<onclick>ActivateWindow(ServiceSettings)</onclick>
+					<icon>iconmonstr-service.png</icon>
+				</item>
+				<item id="7">
+					<label>$LOCALIZE[31079]</label>
+					<label2>$LOCALIZE[31079]</label2>
+					<onclick>ActivateWindow(SystemSettings)</onclick>
+					<icon>iconmonstr-system.png</icon>
+				</item>
+				<item id="8">
+					<label>$LOCALIZE[31080]</label>
+					<label2>$LOCALIZE[31080]</label2>
+					<onclick>ActivateWindow(SystemInfo)</onclick>
+					<icon>iconmonstr-info.png</icon>
+				</item>
+				<item id="9">
+					<label>$LOCALIZE[136]</label>
+					<onclick>ActivateWindow(Music,Playlists)</onclick>
+					<icon>iconmonstr-playlist.png</icon>
+				</item>
+                <item id="9">
+					<label>Programs</label>
+					<onclick>ActivateWindow(programs)</onclick>
+					<icon>iconmonstr-window.png</icon>
+				</item>
+			</content>
+			
+		</control>
+	
+	<!-- Actual display of album list -->
+	<!-- 	<control type="group">	
+			<left>0</left>
+			<top>0</top> -->
+			
+		
+		<control type="group">
+		<description>overall group for icon display</description>
+			<top>Flow.Home.Main.Top</top>  <!-- The centerline of the list is the top -->
+			<left>Flow.Home.Main.Left</left>	
+			
+			<!-- <include>FlowHomeRight</include> -->
+			<!-- <include>FlowHomeLeft</include> -->
+			<!-- <include>FlowHomeNotMoving</include>	 -->
+
+			<include content="FlowHomeLeft">
+				<param name="ArtType" value="icon"/>
+			</include>
+			<include content="FlowHomeRight">
+				<param name="ArtType" value="icon"/>
+			</include>	  
+			<include content="FlowHomeNotMoving">
+				<param name="ArtType" value="icon"/>
+			</include>	
+
+
+	  
+		</control>	
+
+<!-- Labels for each of the home views -->
+
+
+
+
+<!-- Window Bottom Controls -->
+
+ 		
+	</controls>	
+</window>

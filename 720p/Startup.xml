@@ -1,0 +1,19 @@
+<window>
+
+    <!-- <include>FirstRun</include> -->
+  
+  	<onload condition="String.IsEmpty(Skin.String(PlayerTextColor))">Skin.SetString(PlayerTextColor,Color14)</onload>
+	<onload condition="String.IsEmpty(Skin.String(TextFocusColor))">Skin.SetString(TextFocusColor,Color11)</onload>
+	<onload condition="String.IsEmpty(Skin.String(PlayerButtonsColor))">Skin.SetString(PlayerButtonsColor,Color14)</onload>
+	<onload condition="String.IsEmpty(Skin.String(PlayerButtonsFocus))">Skin.SetString(PlayerButtonsFocus,Color11)</onload>
+	<onload condition="String.IsEmpty(Skin.String(SkinAccentColor))">Skin.SetString(SkinAccentColor,Color25)</onload>
+	<onload condition="String.IsEmpty(Skin.String(SoftButtonOutlineColor))">Skin.SetString(SoftButtonOutlineColor,Color25)</onload>
+	<onload condition="String.IsEmpty(Skin.String(SoftButtonColor))">Skin.SetString(SoftButtonColor,Color15)</onload>
+	<onload condition="String.IsEmpty(Skin.String(SoftButtonFocus))">Skin.SetString(SoftButtonFocus,Color13)</onload>
+  
+  
+	<!-- <onload>ReplaceWindow($INFO[System.StartupWindow])</onload> -->
+   	<onload>ActivateWindow(home)</onload>
+	<controls></controls>
+	
+</window>

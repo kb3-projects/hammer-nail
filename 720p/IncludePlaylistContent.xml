@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    
+	<include name="ListSetFocus">
+<onclick condition="MusicPlayer.offset(0).Exists">SetFocus(9900,0,absolute)</onclick>
+<onclick condition="MusicPlayer.offset(-1).Exists">SetFocus(9900,1,absolute)</onclick>
+<onclick condition="MusicPlayer.offset(-2).Exists">SetFocus(9900,2,absolute)</onclick>
+<onclick condition="MusicPlayer.offset(-3).Exists">SetFocus(9900,3,absolute)</onclick>
+<onclick condition="MusicPlayer.offset(-4).Exists">SetFocus(9900,4,absolute)</onclick>
+<onclick condition="MusicPlayer.offset(-5).Exists">SetFocus(9900,5,absolute)</onclick>
+<onclick condition="MusicPlayer.offset(-6).Exists">SetFocus(9900,6,absolute)</onclick>
+<onclick condition="MusicPlayer.offset(-7).Exists">SetFocus(9900,7,absolute)</onclick>
+<onclick condition="MusicPlayer.offset(-8).Exists">SetFocus(9900,8,absolute)</onclick>
+<onclick condition="MusicPlayer.offset(-9).Exists">SetFocus(9900,9,absolute)</onclick>
+<onclick condition="MusicPlayer.offset(-10).Exists">SetFocus(9900,10,absolute)</onclick>
+<onclick condition="MusicPlayer.offset(-11).Exists">SetFocus(9900,11,absolute)</onclick>
+<onclick condition="MusicPlayer.offset(-12).Exists">SetFocus(9900,12,absolute)</onclick>
+<onclick condition="MusicPlayer.offset(-13).Exists">SetFocus(9900,13,absolute)</onclick>
+<onclick condition="MusicPlayer.offset(-14).Exists">SetFocus(9900,14,absolute)</onclick>
+<onclick condition="MusicPlayer.offset(-15).Exists">SetFocus(9900,15,absolute)</onclick>
+<onclick condition="MusicPlayer.offset(-16).Exists">SetFocus(9900,16,absolute)</onclick>
+<onclick condition="MusicPlayer.offset(-17).Exists">SetFocus(9900,17,absolute)</onclick>
+<onclick condition="MusicPlayer.offset(-18).Exists">SetFocus(9900,18,absolute)</onclick>
+<onclick condition="MusicPlayer.offset(-19).Exists">SetFocus(9900,19,absolute)</onclick>
+<onclick condition="MusicPlayer.offset(-20).Exists">SetFocus(9900,20,absolute)</onclick>
+
+
+	</include>
+    
+ 	<include name="PlaylistContent">
+
+    <control type="group">
+    <left>1225</left>
+    <top>350</top>
+    <visible>!Skin.HasSetting(DisableSoftButtons)</visible>
+    		<control type="image">
+				<description>playlist background</description>
+				<visible>true</visible>
+				<left>0</left>
+				<top>-32</top>
+				<width>200</width>
+				<height>120</height>
+				<texture colordiffuse="$INFO[Skin.String(SoftButtonColor)]">softbuttonbackground.png</texture>
+			</control>
+			
+			<control type="image">
+				<width>200</width>
+				<height>120</height>
+				<top>-32</top>
+				<description>Soft button1 outline</description>
+				<texture colordiffuse="$INFO[Skin.String(SoftButtonOutlineColor)]">softbuttonoutline.png</texture>
+			</control>
+    
+
+        <control type="button" id="950" >
+		<left>0</left>
+		<top>0</top>
+			<visible>Skin.HasSetting(HideList)</visible>
+            <!-- <visible>String.IsEqual(Hide,ListStatus)</visible> -->
+			<animation delay="400" start="0" end="100" effect="fade" time="100">Visible</animation>
+			<animation delay="200" start="100" end="0" effect="fade" time="100">Hidden</animation>
+			<height>55</height>
+			<width>55</width>
+			<texturenofocus colordiffuse="$INFO[Skin.String(PlayerTextColor)]">iconmonstr-left.png</texturenofocus>
+			<texturefocus colordiffuse="$INFO[Skin.String(PlayerTextColor)]">iconmonstr-left.png</texturefocus>
+			<include>ListSetFocus</include>
+			<onclick>Skin.Reset(HideList)</onclick>
+            <!-- <onclick>Skin.SetString(ListStatus,Show)</onclick> -->
+			<onclick>SetFocus(9900)</onclick>
+            
+			<!-- <onup>Window(Home).Property(ToControl)</onup> -->
+			<!-- <ondown>Window(Home).Property(ToControl)</ondown> -->
+		</control>
+		
+		<control type="button" id="950">
+		<left>0</left>
+		<top>0</top>
+			<visible>!Skin.HasSetting(HideList)</visible>
+            <!-- <visible>String.IsEqual(Show,ListStatus)</visible> -->
+			<animation delay="400" start="0" end="100" effect="fade" time="100">Visible</animation>
+			<animation delay="400" start="100" end="0" effect="fade" time="100">Hidden</animation>
+			<height>55</height>
+			<width>55</width>
+			<label></label> 
+			<texturenofocus colordiffuse="$INFO[Skin.String(PlayerTextColor)]">iconmonstr-right.png</texturenofocus>
+			<texturefocus colordiffuse="$INFO[Skin.String(PlayerTextColor)]">iconmonstr-right.png</texturefocus>
+			<onclick>SetFocus(50000)</onclick>
+			<onclick>Skin.SetBool(HideList)</onclick>
+            <!-- <onclick>Skin.SetString(ListStatus,Hide)</onclick> -->
+			<!-- <onup>Window(Home).Property(ToControl)</onup> -->
+			<!-- <ondown>Window(Home).Property(ToControl)</ondown> -->
+	</control>
+	</control>
+
+
+	<control type="group">		
+	
+
+
+	<control type="image">
+	<description>list background</description>
+		<animation type="Visible" reversible="false">
+            <effect type="slide" tween="sine" easing="out" start="0,0" end="-635,0" delay="00" time="650" />
+        </animation>
+		<animation type="Hidden" reversible="false">
+            <effect type="slide" tween="sine" easing="in" start="-635,0" end="0,0" delay="200" time="650" />
+        </animation>
+	                <visible>!Skin.HasSetting(HideList)</visible>
+	                <!-- <visible>true</visible> -->
+					<description>cover image</description>
+					<left>1280</left>
+					<top>40</top>
+					<width>580</width>
+					<height>560</height>
+					<texture colordiffuse="F6333333">whitelistbackground.png</texture>
+					<!-- <aspectratio></aspectratio> -->
+					<bordersize>1</bordersize>
+					<!-- <fadetime>10</fadetime> -->
+	</control>
+
+
+
+
+				<!-- <control type="image">                 -->
+                    <!-- <visible>Skin.HasSetting(NotAnAlbum)</visible> -->
+						<!-- <top>0</top> -->
+						<!-- <left>0</left> -->
+						<!-- <height>250</height> -->
+						<!-- <width>250</width> -->
+						<!-- <description>List Label</description>	 -->
+						<!-- <texture>$INFO[ListItem.Icon]</texture> -->
+				<!-- </control>   -->
+
+	<control type="fixedlist" id="9900">
+		<description>list of songs in playlist</description>
+        
+		<visible allowhiddenfocus="true">!Skin.HasSetting(HideList)+Player.Hasaudio</visible>
+        		<!-- <visible allowhiddenfocus="true">true</visible> -->
+
+		<animation type="Visible" reversible="true">
+            <effect type="slide" tween="sine" easing="out"  start="0,0" end="-702,0" delay="100" time="750" />
+        </animation>
+		<animation type="Hidden" reversible="true">
+            <effect type="slide" tween="sine" easing="in"  start="-702,0" end="0,0" time="750" />
+        </animation>
+ 		
+			<left>1359</left>
+			<top>52</top>
+			<width>640</width>
+			<height>535</height>
+			<!-- use of noop keeps the list from looping -->
+			<onup>noop</onup>
+			<ondown>noop</ondown>
+			<viewtype label="3D list">list</viewtype>
+				<pagecontrol>25</pagecontrol>			
+			<orientation>vertical</orientation>
+				<autoscroll>false</autoscroll>
+				<focusposition>3</focusposition>
+				<!-- <movement>6</movement> -->
+             
+			<itemlayout width="340" height="68">
+				<control type="label">
+					<visible>Skin.HasSetting(NotAnAlbum)</visible>
+                
+                    <top>0</top>
+                    <left>75</left>
+                    <height>90</height>
+                    <width>470</width>
+                    <font>font40</font>
+                    <textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+                    <description>List Label</description>	
+                    <label>$INFO[ListItem.Label]</label>
+				</control>
+
+				<control type="label">
+					<visible>!Skin.HasSetting(NotAnAlbum)</visible>
+                
+                    <top>0</top>
+                    <left>0</left>
+                    <height>90</height>
+                    <width>545</width>
+                    <font>font40</font>
+                    <textcolor>$INFO[Skin.String(PlayerTextColor)]</textcolor>
+                    <description>List Label</description>	
+                    <label>$INFO[ListItem.Label]</label>
+				</control>
+
+
+				<control type="image">
+                    <visible>Skin.HasSetting(NotAnAlbum)</visible>
+                    <top>0</top>
+                    <left>0</left>
+                    <height>60</height>
+                    <width>60</width>
+                    <description>List Label</description>	
+                    <texture>$INFO[ListItem.Icon]</texture>
+				</control>
+				
+			</itemlayout>
+	
+			<focusedlayout width="340" height="68">
+						
+                        
+                        
+				<control type="label">
+					<visible>Skin.HasSetting(NotAnAlbum)+Player.HasAudio</visible>
+                    <top>0</top>
+                    <left>75</left>
+                    <height>90</height>
+                    <width>470</width>
+                    <font>font40_bold</font>
+                    <textcolor>$INFO[Skin.String(TextFocusColor)]</textcolor>
+                    <description>List Label</description>	
+                    <scroll>false</scroll>
+                    <label>$INFO[ListItem.Label]</label>
+				</control>
+                
+                <control type="label">
+					<visible>Skin.HasSetting(NotAnAlbum)+!Player.HasAudio</visible>
+                    <top>0</top>
+                    <left>75</left>
+                    <height>90</height>
+                    <width>470</width>
+                    <font>font40</font>
+                    <textcolor>$INFO[Skin.String(TextFocusColor)]</textcolor>
+                    <description>List Label</description>	
+                    <scroll>false</scroll>
+                    <label>$INFO[ListItem.Label]</label>
+				</control>
+
+				<control type="label">
+					<visible>!Skin.HasSetting(NotAnAlbum)</visible>
+                
+                    <top>0</top>
+                    <left>0</left>
+                    <height>90</height>
+                    <width>545</width>
+                    <font>font40_bold</font>
+                    <textcolor>$INFO[Skin.String(TextFocusColor)]</textcolor>
+                    <description>List Label</description>	
+                    <label>$INFO[ListItem.Label]</label>
+                    <scroll>false</scroll>
+				</control>
+
+				<control type="image">
+                <visible>Skin.HasSetting(NotAnAlbum)</visible>>
+						<top>0</top>
+						<left>00</left>
+						<height>60</height>
+						<width>60</width>
+						<description>List Label</description>	
+						<texture>$INFO[ListItem.Icon]</texture>
+				</control>
+				
+				<control type="label">
+					<visible>false</visible>
+						<description>show list item number and offset for help with debug</description>
+						<top>0</top>
+						<left>0</left>
+						<height>90</height>
+						<width>600</width>
+						<font>font30_title</font>
+						<textcolor>white</textcolor>
+						<description>List Label</description>	
+						<info>ListItem.Label2</info>
+					</control>
+
+			</focusedlayout>
+	
+
+		<content>
+             <item id="1">	
+                <visible>MusicPlayer.offset(-20).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(-20).Title]</label>
+                <label2>$NUMBER[1],$NUMBER[-20]</label2>
+                <icon>$INFO[MusicPlayer.Offset(-20).Cover]</icon>
+                <onclick>Playlist.PlayOffset(-20)</onclick>
+                <property name="play_song">Playlist.PlayOffset(-20)</property>
+                <property name="position">1</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="2">	
+                <visible>MusicPlayer.offset(-19).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(-19).Title]</label>
+                <label2>$NUMBER[2],$NUMBER[-19]</label2>
+                <icon>$INFO[MusicPlayer.Offset(-19).Cover]</icon>
+                <onclick>Playlist.PlayOffset(-19)</onclick>
+                <property name="position">2</property>
+                <property name="play_song">Playlist.PlayOffset(-19)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="3">	
+                <visible>MusicPlayer.offset(-18).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(-18).Title]</label>
+                <label2>$NUMBER[3],$NUMBER[-18]</label2>
+                <icon>$INFO[MusicPlayer.Offset(-18).Cover]</icon>
+                <onclick>Playlist.PlayOffset(-18)</onclick>
+                <property name="position">3</property>
+                <property name="play_song">Playlist.PlayOffset(-18)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="4">	
+                <visible>MusicPlayer.offset(-17).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(-17).Title]</label>
+                <label2>$NUMBER[4],$NUMBER[-17]</label2>
+                <icon>$INFO[MusicPlayer.Offset(-17).Cover]</icon>
+                <onclick>Playlist.PlayOffset(-17)</onclick>
+                <property name="position">4</property>
+                <property name="play_song">Playlist.PlayOffset(-17)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="5">	
+                <visible>MusicPlayer.offset(-16).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(-16).Title]</label>
+                <label2>$NUMBER[5],$NUMBER[-16]</label2>
+                <icon>$INFO[MusicPlayer.Offset(-16).Cover]</icon>
+                <onclick>Playlist.PlayOffset(-16)</onclick>
+                <property name="position">5</property>
+                <property name="play_song">Playlist.PlayOffset(-16)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="6">	
+                <visible>MusicPlayer.offset(-15).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(-15).Title]</label>
+                <label2>$NUMBER[6],$NUMBER[-15]</label2>
+                <icon>$INFO[MusicPlayer.Offset(-15).Cover]</icon>
+                <onclick>Playlist.PlayOffset(-15)</onclick>
+                <property name="position">6</property>
+                <property name="play_song">Playlist.PlayOffset(-15)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="7">	
+                <visible>MusicPlayer.offset(-14).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(-14).Title]</label>
+                <label2>$NUMBER[7],$NUMBER[-14]</label2>
+                <icon>$INFO[MusicPlayer.Offset(-14).Cover]</icon>
+                <onclick>Playlist.PlayOffset(-14)</onclick>
+                <property name="position">7</property>
+                <property name="play_song">Playlist.PlayOffset(-14)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="8">	
+                <visible>MusicPlayer.offset(-13).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(-13).Title]</label>
+                <label2>$NUMBER[8],$NUMBER[-13]</label2>
+                <icon>$INFO[MusicPlayer.Offset(-13).Cover]</icon>
+                <onclick>Playlist.PlayOffset(-13)</onclick>
+                <property name="position">8</property>
+                <property name="play_song">Playlist.PlayOffset(-13)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="9">	
+                <visible>MusicPlayer.offset(-12).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(-12).Title]</label>
+                <label2>$NUMBER[9],$NUMBER[-12]</label2>
+                <icon>$INFO[MusicPlayer.Offset(-12).Cover]</icon>
+                <onclick>Playlist.PlayOffset(-12)</onclick>
+                <property name="position">9</property>
+                <property name="play_song">Playlist.PlayOffset(-12)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="10">	
+                <visible>MusicPlayer.offset(-11).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(-11).Title]</label>
+                <label2>$NUMBER[10],$NUMBER[-11]</label2>
+                <icon>$INFO[MusicPlayer.Offset(-11).Cover]</icon>
+                <onclick>Playlist.PlayOffset(-11)</onclick>
+                <property name="position">10</property>
+                <property name="play_song">Playlist.PlayOffset(-11)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="11">	
+                <visible>MusicPlayer.offset(-10).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(-10).Title]</label>
+                <label2>$NUMBER[11],$NUMBER[-10]</label2>
+                <icon>$INFO[MusicPlayer.Offset(-10).Cover]</icon>
+                <onclick>Playlist.PlayOffset(-10)</onclick>
+                <property name="position">11</property>
+                <property name="play_song">Playlist.PlayOffset(-10)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="12">	
+                <visible>MusicPlayer.offset(-9).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(-9).Title]</label>
+                <label2>$NUMBER[12],$NUMBER[-9]</label2>
+                <icon>$INFO[MusicPlayer.Offset(-9).Cover]</icon>
+                <onclick>Playlist.PlayOffset(-9)</onclick>
+                <property name="position">12</property>
+                <property name="play_song">Playlist.PlayOffset(-9)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="13">	
+                <visible>MusicPlayer.offset(-8).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(-8).Title]</label>
+                <label2>$NUMBER[13],$NUMBER[-8]</label2>
+                <icon>$INFO[MusicPlayer.Offset(-8).Cover]</icon>
+                <onclick>Playlist.PlayOffset(-8)</onclick>
+                <property name="position">13</property>
+                <property name="play_song">Playlist.PlayOffset(-8)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="14">	
+                <visible>MusicPlayer.offset(-7).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(-7).Title]</label>
+                <label2>$NUMBER[14],$NUMBER[-7]</label2>
+                <icon>$INFO[MusicPlayer.Offset(-7).Cover]</icon>
+                <onclick>Playlist.PlayOffset(-7)</onclick>
+                <property name="position">14</property>
+                <property name="play_song">Playlist.PlayOffset(-7)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="15">	
+                <visible>MusicPlayer.offset(-6).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(-6).Title]</label>
+                <label2>$NUMBER[15],$NUMBER[-6]</label2>
+                <icon>$INFO[MusicPlayer.Offset(-6).Cover]</icon>
+                <onclick>Playlist.PlayOffset(-6)</onclick>
+                <property name="position">15</property>
+                <property name="play_song">Playlist.PlayOffset(-6)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="16">	
+                <visible>MusicPlayer.offset(-5).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(-5).Title]</label>
+                <label2>$NUMBER[16],$NUMBER[-5]</label2>
+                <icon>$INFO[MusicPlayer.Offset(-5).Cover]</icon>
+                <onclick>Playlist.PlayOffset(-5)</onclick>
+                <property name="position">16</property>
+                <property name="play_song">Playlist.PlayOffset(-5)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="17">	
+                <visible>MusicPlayer.offset(-4).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(-4).Title]</label>
+                <label2>$NUMBER[17],$NUMBER[-4]</label2>
+                <icon>$INFO[MusicPlayer.Offset(-4).Cover]</icon>
+                <onclick>Playlist.PlayOffset(-4)</onclick>
+                <property name="position">17</property>
+                <property name="play_song">Playlist.PlayOffset(-4)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="18">	
+                <visible>MusicPlayer.offset(-3).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(-3).Title]</label>
+                <label2>$NUMBER[18],$NUMBER[-3]</label2>
+                <icon>$INFO[MusicPlayer.Offset(-3).Cover]</icon>
+                <onclick>Playlist.PlayOffset(-3)</onclick>
+                <property name="position">18</property>
+                <property name="play_song">Playlist.PlayOffset(-3)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="19">	
+                <visible>MusicPlayer.offset(-2).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(-2).Title]</label>
+                <label2>$NUMBER[19],$NUMBER[-2]</label2>
+                <icon>$INFO[MusicPlayer.Offset(-2).Cover]</icon>
+                <onclick>Playlist.PlayOffset(-2)</onclick>
+                <property name="position">19</property>
+                <property name="play_song">Playlist.PlayOffset(-2)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="20">	
+                <visible>MusicPlayer.offset(-1).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(-1).Title]</label>
+                <label2>$NUMBER[20],$NUMBER[-1]</label2>
+                <icon>$INFO[MusicPlayer.Offset(-1).Cover]</icon>
+                <onclick>Playlist.PlayOffset(-1)</onclick>
+                <property name="position">20</property>
+                <property name="play_song">Playlist.PlayOffset(-1)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="21">	
+                <visible>MusicPlayer.offset(0).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(0).Title]</label>
+                <label2>$NUMBER[21],$NUMBER[0]</label2>
+                <icon>$INFO[MusicPlayer.Offset(0).Cover]</icon>
+                <onclick>Playlist.PlayOffset(0)</onclick>
+                <property name="position">21</property>
+                <property name="play_song">Playlist.PlayOffset(0)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="22">	
+                <visible>MusicPlayer.offset(1).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(1).Title]</label>
+                <label2>$NUMBER[22],$NUMBER[1]</label2>
+                <icon>$INFO[MusicPlayer.Offset(1).Cover]</icon>
+                <onclick>Playlist.PlayOffset(1)</onclick>
+                <property name="position">22</property>
+                <property name="play_song">Playlist.PlayOffset(1)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="23">	
+                <visible>MusicPlayer.offset(2).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(2).Title]</label>
+                <label2>$NUMBER[23],$NUMBER[2]</label2>
+                <icon>$INFO[MusicPlayer.Offset(2).Cover]</icon>
+                <onclick>Playlist.PlayOffset(2)</onclick>
+                <property name="position">23</property>
+                <property name="play_song">Playlist.PlayOffset(2)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="24">	
+                <visible>MusicPlayer.offset(3).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(3).Title]</label>
+                <label2>$NUMBER[24],$NUMBER[3]</label2>
+                <icon>$INFO[MusicPlayer.Offset(3).Cover]</icon>
+                <onclick>Playlist.PlayOffset(3)</onclick>
+                <property name="position">24</property>
+                <property name="play_song">Playlist.PlayOffset(3)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="25">	
+                <visible>MusicPlayer.offset(4).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(4).Title]</label>
+                <label2>$NUMBER[25],$NUMBER[4]</label2>
+                <icon>$INFO[MusicPlayer.Offset(4).Cover]</icon>
+                <onclick>Playlist.PlayOffset(4)</onclick>
+                <property name="position">25</property>
+                <property name="play_song">Playlist.PlayOffset(4)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="26">	
+                <visible>MusicPlayer.offset(5).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(5).Title]</label>
+                <label2>$NUMBER[26],$NUMBER[5]</label2>
+                <icon>$INFO[MusicPlayer.Offset(5).Cover]</icon>
+                <onclick>Playlist.PlayOffset(5)</onclick>
+                <property name="position">26</property>
+                <property name="play_song">Playlist.PlayOffset(5)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="27">	
+                <visible>MusicPlayer.offset(6).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(6).Title]</label>
+                <label2>$NUMBER[27],$NUMBER[6]</label2>
+                <icon>$INFO[MusicPlayer.Offset(6).Cover]</icon>
+                <onclick>Playlist.PlayOffset(6)</onclick>
+                <property name="position">27</property>
+                <property name="play_song">Playlist.PlayOffset(6)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="28">	
+                <visible>MusicPlayer.offset(7).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(7).Title]</label>
+                <label2>$NUMBER[28],$NUMBER[7]</label2>
+                <icon>$INFO[MusicPlayer.Offset(7).Cover]</icon>
+                <onclick>Playlist.PlayOffset(7)</onclick>
+                <property name="position">28</property>
+                <property name="play_song">Playlist.PlayOffset(7)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="29">	
+                <visible>MusicPlayer.offset(8).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(8).Title]</label>
+                <label2>$NUMBER[29],$NUMBER[8]</label2>
+                <icon>$INFO[MusicPlayer.Offset(8).Cover]</icon>
+                <onclick>Playlist.PlayOffset(8)</onclick>
+                <property name="position">29</property>
+                <property name="play_song">Playlist.PlayOffset(8)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="30">	
+                <visible>MusicPlayer.offset(9).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(9).Title]</label>
+                <label2>$NUMBER[30],$NUMBER[9]</label2>
+                <icon>$INFO[MusicPlayer.Offset(9).Cover]</icon>
+                <onclick>Playlist.PlayOffset(9)</onclick>
+                <property name="position">30</property>
+                <property name="play_song">Playlist.PlayOffset(9)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="31">	
+                <visible>MusicPlayer.offset(10).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(10).Title]</label>
+                <label2>$NUMBER[31],$NUMBER[10]</label2>
+                <icon>$INFO[MusicPlayer.Offset(10).Cover]</icon>
+                <onclick>Playlist.PlayOffset(10)</onclick>
+                <property name="position">31</property>
+                <property name="play_song">Playlist.PlayOffset(10)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="32">	
+                <visible>MusicPlayer.offset(11).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(11).Title]</label>
+                <label2>$NUMBER[32],$NUMBER[11]</label2>
+                <icon>$INFO[MusicPlayer.Offset(11).Cover]</icon>
+                <onclick>Playlist.PlayOffset(11)</onclick>
+                <property name="position">32</property>
+                <property name="play_song">Playlist.PlayOffset(11)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="33">	
+                <visible>MusicPlayer.offset(12).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(12).Title]</label>
+                <label2>$NUMBER[33],$NUMBER[12]</label2>
+                <icon>$INFO[MusicPlayer.Offset(12).Cover]</icon>
+                <onclick>Playlist.PlayOffset(12)</onclick>
+                <property name="position">33</property>
+                <property name="play_song">Playlist.PlayOffset(12)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="34">	
+                <visible>MusicPlayer.offset(13).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(13).Title]</label>
+                <label2>$NUMBER[34],$NUMBER[13]</label2>
+                <icon>$INFO[MusicPlayer.Offset(13).Cover]</icon>
+                <onclick>Playlist.PlayOffset(13)</onclick>
+                <property name="position">34</property>
+                <property name="play_song">Playlist.PlayOffset(13)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="35">	
+                <visible>MusicPlayer.offset(14).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(14).Title]</label>
+                <label2>$NUMBER[35],$NUMBER[14]</label2>
+                <icon>$INFO[MusicPlayer.Offset(14).Cover]</icon>
+                <onclick>Playlist.PlayOffset(14)</onclick>
+                <property name="position">35</property>
+                <property name="play_song">Playlist.PlayOffset(14)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="36">	
+                <visible>MusicPlayer.offset(15).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(15).Title]</label>
+                <label2>$NUMBER[36],$NUMBER[15]</label2>
+                <icon>$INFO[MusicPlayer.Offset(15).Cover]</icon>
+                <onclick>Playlist.PlayOffset(15)</onclick>
+                <property name="position">36</property>
+                <property name="play_song">Playlist.PlayOffset(15)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="37">	
+                <visible>MusicPlayer.offset(16).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(16).Title]</label>
+                <label2>$NUMBER[37],$NUMBER[16]</label2>
+                <icon>$INFO[MusicPlayer.Offset(16).Cover]</icon>
+                <onclick>Playlist.PlayOffset(16)</onclick>
+                <property name="position">37</property>
+                <property name="play_song">Playlist.PlayOffset(16)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="38">	
+                <visible>MusicPlayer.offset(17).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(17).Title]</label>
+                <label2>$NUMBER[38],$NUMBER[17]</label2>
+                <icon>$INFO[MusicPlayer.Offset(17).Cover]</icon>
+                <onclick>Playlist.PlayOffset(17)</onclick>
+                <property name="position">38</property>
+                <property name="play_song">Playlist.PlayOffset(17)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="39">	
+                <visible>MusicPlayer.offset(18).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(18).Title]</label>
+                <label2>$NUMBER[39],$NUMBER[18]</label2>
+                <icon>$INFO[MusicPlayer.Offset(18).Cover]</icon>
+                <onclick>Playlist.PlayOffset(18)</onclick>
+                <property name="position">39</property>
+                <property name="play_song">Playlist.PlayOffset(18)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="40">	
+                <visible>MusicPlayer.offset(19).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(19).Title]</label>
+                <label2>$NUMBER[40],$NUMBER[19]</label2>
+                <icon>$INFO[MusicPlayer.Offset(19).Cover]</icon>
+                <onclick>Playlist.PlayOffset(19)</onclick>
+                <property name="position">40</property>
+                <property name="play_song">Playlist.PlayOffset(19)</property>
+                <include>ListSetFocus</include>
+            </item>	
+                
+            <item id="41">	
+                <visible>MusicPlayer.offset(20).Exists</visible>
+                <label>$INFO[MusicPlayer.offset(20).Title]</label>
+                <label2>$NUMBER[41],$NUMBER[20]</label2>
+                <icon>$INFO[MusicPlayer.Offset(20).Cover]</icon>
+                <onclick>Playlist.PlayOffset(20)</onclick>
+                <property name="position">41</property>
+                <property name="play_song">Playlist.PlayOffset(20)</property>
+                <include>ListSetFocus</include>
+            </item>	
+
+
+
+ 
+		</content>
+	
+
+	</control>
+	</control>
+	
+	</include>
+	
+</includes>
