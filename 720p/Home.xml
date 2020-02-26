@@ -206,7 +206,7 @@
 		
         <control type="button" id="3099">
 			<description>Other home Button</description>
-                   	<visible>true</visible>
+                   	<visible>false</visible>
 			<right>105</right>
 			<top>15</top>
 			<height>55</height>
